@@ -1,0 +1,262 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
+import { CheckCircle2, Award, DollarSign, Shield } from "lucide-react";
+import { Container } from "@/components/ui/container";
+import { useLanguageStore } from "@/store/language-store";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const uspContent = {
+    de: {
+        title: "Unsere Vorteile",
+        subtitle: "Warum AQUA ROOKS?",
+        description: "Wir setzen neue Standards für Qualität und Reinheit im togolesischen Mineralwassermarkt.",
+        benefits: [
+            {
+                icon: Award,
+                title: "Höchste Qualität",
+                description: "70% der verkauften Mineralwasser-Plastikbeutel in Togo erreichen nicht unsere Qualitätsstandards. Wir garantieren erstklassige Wasserqualität.",
+            },
+            {
+                icon: Shield,
+                title: "Zertifizierte Reinheit",
+                description: "Unsere Quelle wurde von der Université de Lomé / Lamicoda geprüft und bestätigt. Höchste Hygienestandards.",
+            },
+            {
+                icon: DollarSign,
+                title: "Preisgünstig",
+                description: "Trotz Premium-Qualität bieten wir wettbewerbsfähige Preise. Günstiger als Importware, dennoch profitabel.",
+            },
+            {
+                icon: CheckCircle2,
+                title: "Nachhaltig & Verantwortlich",
+                description: "Wir wachsen mit Gewissen. Umwelt-, Sozial- und Governance-Standards (ESG) sind uns wichtig.",
+            },
+        ],
+        stats: [
+            { value: "70%", label: "Qualitätsvorsprung gegenüber Konkurrenz" },
+            { value: "19.42%", label: "Verbesserte Wasserquellen in Togo" },
+        ],
+    },
+    en: {
+        title: "Our Benefits",
+        subtitle: "Why AQUA ROOKS?",
+        description: "We set new standards for quality and purity in Togo's mineral water market.",
+        benefits: [
+            {
+                icon: Award,
+                title: "Highest Quality",
+                description: "70% of sold mineral water sachets in Togo don't meet our quality standards. We guarantee first-class water quality.",
+            },
+            {
+                icon: Shield,
+                title: "Certified Purity",
+                description: "Our source has been tested and confirmed by Université de Lomé / Lamicoda. Highest hygiene standards.",
+            },
+            {
+                icon: DollarSign,
+                title: "Affordable",
+                description: "Despite premium quality, we offer competitive prices. Cheaper than imports, yet profitable.",
+            },
+            {
+                icon: CheckCircle2,
+                title: "Sustainable & Responsible",
+                description: "We grow with conscience. Environmental, Social, and Governance (ESG) standards are important to us.",
+            },
+        ],
+        stats: [
+            { value: "70%", label: "Quality advantage over competitors" },
+            { value: "19.42%", label: "Improved water sources in Togo" },
+        ],
+    },
+    fr: {
+        title: "Nos Avantages",
+        subtitle: "Pourquoi AQUA ROOKS?",
+        description: "Nous établissons de nouvelles normes de qualité et de pureté sur le marché togolais de l'eau minérale.",
+        benefits: [
+            {
+                icon: Award,
+                title: "Qualité Supérieure",
+                description: "70% des sachets d'eau minérale vendus au Togo n'atteignent pas nos normes de qualité. Nous garantissons une qualité d'eau de première classe.",
+            },
+            {
+                icon: Shield,
+                title: "Pureté Certifiée",
+                description: "Notre source a été testée et confirmée par l'Université de Lomé / Lamicoda. Normes d'hygiène les plus élevées.",
+            },
+            {
+                icon: DollarSign,
+                title: "Abordable",
+                description: "Malgré la qualité premium, nous offrons des prix compétitifs. Moins cher que les importations, mais rentable.",
+            },
+            {
+                icon: CheckCircle2,
+                title: "Durable & Responsable",
+                description: "Nous grandissons avec conscience. Les normes environnementales, sociales et de gouvernance (ESG) nous tiennent à cœur.",
+            },
+        ],
+        stats: [
+            { value: "70%", label: "Avantage qualité sur les concurrents" },
+            { value: "19.42%", label: "Sources d'eau améliorées au Togo" },
+        ],
+    },
+};
+
+export function USP() {
+    const { language } = useLanguageStore();
+    const content = uspContent[language];
+    const sectionRef = useRef<HTMLElement>(null);
+    const benefitsRef = useRef<HTMLDivElement>(null);
+    const statsRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Animate benefits cards
+            if (benefitsRef.current) {
+                const cards = benefitsRef.current.children;
+                gsap.fromTo(
+                    cards,
+                    {
+                        opacity: 0,
+                        y: 60,
+                        scale: 0.95
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.7,
+                        stagger: 0.2,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: benefitsRef.current,
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            }
+
+            // Animate stats
+            if (statsRef.current) {
+                const stats = statsRef.current.children;
+                gsap.fromTo(
+                    stats,
+                    {
+                        opacity: 0,
+                        scale: 0.8,
+                        y: 30
+                    },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        y: 0,
+                        duration: 0.6,
+                        stagger: 0.15,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: statsRef.current,
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            }
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    return (
+        <section ref={sectionRef} id="usp" className="py-28 md:py-40 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 scroll-mt-20 relative overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+            <Container className="relative z-10">
+                <div className="max-w-3xl mx-auto text-center mb-20">
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+                    >
+                        {content.subtitle}
+                    </motion.span>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-bold text-primary mb-6"
+                    >
+                        {content.title}
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-lg text-muted-foreground leading-relaxed"
+                    >
+                        {content.description}
+                    </motion.p>
+                </div>
+
+                <div ref={benefitsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    {content.benefits.map((benefit, index) => {
+                        const Icon = benefit.icon;
+                        return (
+                            <div
+                                key={index}
+                                className="group p-10 rounded-3xl bg-white/90 backdrop-blur-xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-white/70 hover:border-accent/40 shadow-xl hover:-translate-y-2 relative overflow-hidden"
+                            >
+                                {/* Gradient overlay on hover */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="relative z-10">
+                                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-blue-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl">
+                                        <Icon className="w-8 h-8 text-accent group-hover:text-white transition-all duration-300" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                                        {benefit.description}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* Stats */}
+                <div
+                    ref={statsRef}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
+                >
+                    {content.stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="text-center p-10 rounded-3xl bg-gradient-to-br from-primary via-primary/95 to-primary/90 backdrop-blur-xl text-white border border-white/30 shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+                        >
+                            {/* Animated background gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="relative z-10">
+                                <div className="text-6xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+                                    {stat.value}
+                                </div>
+                                <div className="text-primary-foreground/90 text-sm font-medium">
+                                    {stat.label}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </Container>
+        </section>
+    );
+}
+
