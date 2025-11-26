@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -28,12 +29,12 @@ const impressionenContent = {
 };
 
 const images = [
-    { src: "/images/gallery/source.png", alt: "Source" },
-    { src: "/images/gallery/production.png", alt: "Production" },
-    { src: "/images/gallery/bottle.png", alt: "Bottle" },
-    { src: "/images/gallery/nature.png", alt: "Nature" },
-    { src: "/images/gallery/aqua1.jpg", alt: "Water" },
-    { src: "/images/gallery/aqua2.jpg", alt: "Community" },
+    { src: "/images/gallery/1aqua.png", alt: "Aqua Gallery 1" },
+    { src: "/images/gallery/2aqua.png", alt: "Aqua Gallery 2" },
+    { src: "/images/gallery/3aqua.png", alt: "Aqua Gallery 3" },
+    { src: "/images/gallery/4aqua.png", alt: "Aqua Gallery 4" },
+    { src: "/images/gallery/5aqua.png", alt: "Aqua Gallery 5" },
+    { src: "/images/gallery/water.jpg", alt: "Water" },
 ];
 
 export function Impressionen() {
@@ -157,12 +158,15 @@ export function Impressionen() {
                             }}
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(index)}
-                            className="relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer group bg-secondary"
+                            className="relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer group bg-secondary shadow-2xl"
                         >
-                            <img
+                            <Image
                                 src={image.src}
                                 alt={image.alt}
-                                className="absolute inset-0 w-full h-full object-cover will-change-transform"
+                                fill
+                                className="object-cover will-change-transform transition-transform duration-700"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                quality={90}
                             />
                             {/* B&W Overlay */}
                             <div className="overlay absolute inset-0 bg-black mix-blend-color opacity-100 transition-opacity duration-300 z-10" />

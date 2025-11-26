@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -12,15 +13,17 @@ const impressumContent = {
         subtitle: "Angaben gemäß § 5 TMG",
         company: {
             title: "Firmenangaben",
-            name: "AQUA ROOKS",
-            address: "Togo, Westafrika",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            name: "AQUA ROOKS S.A.",
+            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
         },
         responsible: {
-            title: "Verantwortlich für den Inhalt",
-            name: "AQUA ROOKS",
-            address: "Togo, Westafrika",
+            title: "Kontakt Deutschland",
+            name: "Xfaktor GmbH / Christoph Kreuzer",
+            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Deutschland",
+            email: "kreuzer@aqua-rooks.com",
+            phone: "+49 173 720 1850",
         },
         disclaimer: {
             title: "Haftungsausschluss",
@@ -36,15 +39,17 @@ const impressumContent = {
         subtitle: "Information according to § 5 TMG",
         company: {
             title: "Company Information",
-            name: "AQUA ROOKS",
-            address: "Togo, West Africa",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            name: "AQUA ROOKS S.A.",
+            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
         },
         responsible: {
-            title: "Responsible for Content",
-            name: "AQUA ROOKS",
-            address: "Togo, West Africa",
+            title: "Contact Germany",
+            name: "Xfaktor GmbH / Christoph Kreuzer",
+            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Germany",
+            email: "kreuzer@aqua-rooks.com",
+            phone: "+49 173 720 1850",
         },
         disclaimer: {
             title: "Disclaimer",
@@ -60,15 +65,17 @@ const impressumContent = {
         subtitle: "Informations selon § 5 TMG",
         company: {
             title: "Informations sur l'entreprise",
-            name: "AQUA ROOKS",
-            address: "Togo, Afrique de l'Ouest",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            name: "AQUA ROOKS S.A.",
+            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
         },
         responsible: {
-            title: "Responsable du contenu",
-            name: "AQUA ROOKS",
-            address: "Togo, Afrique de l'Ouest",
+            title: "Contact Allemagne",
+            name: "Xfaktor GmbH / Christoph Kreuzer",
+            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Allemagne",
+            email: "kreuzer@aqua-rooks.com",
+            phone: "+49 173 720 1850",
         },
         disclaimer: {
             title: "Avertissement",
@@ -84,6 +91,7 @@ const impressumContent = {
 export default function ImpressumPage() {
     const { language } = useLanguageStore();
     const content = impressumContent[language];
+    const router = useRouter();
 
     return (
         <main className="min-h-screen bg-background">
@@ -91,19 +99,32 @@ export default function ImpressumPage() {
             <section className="pt-32 pb-24 md:pt-40 md:pb-32">
                 <Container>
                     <div className="max-w-4xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="mb-12"
-                        >
-                            <h1 className="text-4xl md:text-5xl font-bold text-primary font-heading mb-4">
-                                {content.title}
-                            </h1>
-                            <p className="text-foreground/60 text-lg">
-                                {content.subtitle}
-                            </p>
-                        </motion.div>
+                        <div className="flex items-center justify-between mb-12 gap-4">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <h1 className="text-4xl md:text-5xl font-bold text-primary font-heading mb-2">
+                                    {content.title}
+                                </h1>
+                                <p className="text-foreground/60 text-lg">
+                                    {content.subtitle}
+                                </p>
+                            </motion.div>
+                            <motion.button
+                                type="button"
+                                onClick={() => router.push("/")}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="px-4 py-2 text-sm rounded-full border border-primary/30 text-primary hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                            >
+                                {language === "de" && "Zurück"}
+                                {language === "en" && "Back"}
+                                {language === "fr" && "Retour"}
+                            </motion.button>
+                        </div>
 
                         <div className="space-y-12">
                             {/* Company Information */}
@@ -157,6 +178,28 @@ export default function ImpressumPage() {
                                         <span className="font-semibold">{content.responsible.name}</span>
                                     </p>
                                     <p>{content.responsible.address}</p>
+                                    {content.responsible.email && (
+                                        <p>
+                                            <span className="font-semibold">E-Mail:</span>{" "}
+                                            <a
+                                                href={`mailto:${content.responsible.email}`}
+                                                className="text-accent hover:underline"
+                                            >
+                                                {content.responsible.email}
+                                            </a>
+                                        </p>
+                                    )}
+                                    {content.responsible.phone && (
+                                        <p>
+                                            <span className="font-semibold">Telefon:</span>{" "}
+                                            <a
+                                                href={`tel:${content.responsible.phone.replace(/\s/g, '')}`}
+                                                className="text-accent hover:underline"
+                                            >
+                                                {content.responsible.phone}
+                                            </a>
+                                        </p>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -184,4 +227,6 @@ export default function ImpressumPage() {
         </main>
     );
 }
+
+
 

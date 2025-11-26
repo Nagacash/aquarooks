@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -111,6 +112,7 @@ const privacyContent = {
 export default function PrivacyPage() {
     const { language } = useLanguageStore();
     const content = privacyContent[language];
+    const router = useRouter();
 
     return (
         <main className="min-h-screen bg-background">
@@ -118,19 +120,32 @@ export default function PrivacyPage() {
             <section className="pt-32 pb-24 md:pt-40 md:pb-32">
                 <Container>
                     <div className="max-w-4xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="mb-12"
-                        >
-                            <h1 className="text-4xl md:text-5xl font-bold text-primary font-heading mb-4">
-                                {content.title}
-                            </h1>
-                            <p className="text-foreground/60 text-lg">
-                                {content.subtitle}
-                            </p>
-                        </motion.div>
+                        <div className="flex items-center justify-between mb-12 gap-4">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <h1 className="text-4xl md:text-5xl font-bold text-primary font-heading mb-2">
+                                    {content.title}
+                                </h1>
+                                <p className="text-foreground/60 text-lg">
+                                    {content.subtitle}
+                                </p>
+                            </motion.div>
+                            <motion.button
+                                type="button"
+                                onClick={() => router.push("/")}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="px-4 py-2 text-sm rounded-full border border-primary/30 text-primary hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                            >
+                                {language === "de" && "Zurück"}
+                                {language === "en" && "Back"}
+                                {language === "fr" && "Retour"}
+                            </motion.button>
+                        </div>
 
                         <div className="space-y-12">
                             {/* Introduction */}

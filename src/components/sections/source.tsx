@@ -130,15 +130,91 @@ export function Source() {
                     >
                         {content.title}
                     </motion.h2>
-                    <motion.p
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-300 leading-relaxed"
+                        className="text-lg text-slate-300 leading-relaxed space-y-4 text-left md:text-center"
                     >
-                        {content.description}
-                    </motion.p>
+                        {language === "de" && (
+                            <>
+                                <p>Wasser ist Leben.</p>
+                                <p>
+                                    Sauberes Trinkwasser verbessert und schützt die Gesundheit und Lebensqualität. Dennoch
+                                    haben viele Menschen in Togo keinen Zugang zu diesem kostbaren Gut.
+                                </p>
+                                <p>
+                                    Der Prozentsatz der Menschen in Togo, die Trinkwasser aus einer verbesserten Quelle
+                                    beziehen, beträgt im Jahr 2022 nur 19,42 % der Bevölkerung.
+                                </p>
+                                <p>(United Nations / SDG Target 6.1)</p>
+                                <p>
+                                    Zu den verbesserten Wasserquellen (frei von fäkalen, bakteriell verunreinigten und
+                                    chemischen Verunreinigungen) gehören Leitungswasser, geschützte gegrabene Brunnen,
+                                    geschützte Quellen sowie verpacktes oder geliefertes Wasser.
+                                </p>
+                                <p>
+                                    Die zunehmende Urbanisierung, also der Zuzug der ländlichen Bevölkerung in die Städte,
+                                    fördert die Nachfrage nach abgefüllten Getränken. Der Grund: Menschen, die in Städten
+                                    wie der Hauptstadt Lomé leben, konsumieren in der Regel abgepackte Produkte und
+                                    abgepacktes Wasser.
+                                </p>
+                            </>
+                        )}
+
+                        {language === "en" && (
+                            <>
+                                <p>Water is life.</p>
+                                <p>
+                                    Clean drinking water improves and protects health and quality of life. Yet many people
+                                    in Togo still have no access to this precious resource.
+                                </p>
+                                <p>
+                                    In 2022, the percentage of people in Togo who obtained drinking water from an improved
+                                    source was only 19.42% of the population.
+                                </p>
+                                <p>(United Nations / SDG Target 6.1)</p>
+                                <p>
+                                    Improved water sources (free from faecal, bacterially contaminated and chemical
+                                    pollution) include piped water, protected dug wells, protected springs, as well as
+                                    packaged or delivered water.
+                                </p>
+                                <p>
+                                    Increasing urbanisation – the movement of people from rural areas into cities – is
+                                    driving demand for packaged beverages. People living in cities such as the capital Lomé
+                                    generally consume packaged products and packaged water.
+                                </p>
+                            </>
+                        )}
+
+                        {language === "fr" && (
+                            <>
+                                <p>L&apos;eau, c&apos;est la vie.</p>
+                                <p>
+                                    L&apos;eau potable améliore et protège la santé ainsi que la qualité de vie. Pourtant,
+                                    de nombreuses personnes au Togo n&apos;ont toujours pas accès à cette ressource
+                                    précieuse.
+                                </p>
+                                <p>
+                                    En 2022, le pourcentage de la population togolaise ayant accès à de l&apos;eau de
+                                    boisson provenant d&apos;une source améliorée n&apos;était que de 19,42 %.
+                                </p>
+                                <p>(Nations Unies / ODD Objectif 6.1)</p>
+                                <p>
+                                    Les sources d&apos;eau améliorées (exemptes de contamination fécale, bactérienne et
+                                    chimique) comprennent l&apos;eau de conduite, les puits creusés protégés, les sources
+                                    protégées, ainsi que l&apos;eau conditionnée ou livrée.
+                                </p>
+                                <p>
+                                    L&apos;urbanisation croissante, c&apos;est-à-dire l&apos;exode des populations rurales
+                                    vers les villes, stimule la demande en boissons conditionnées. En effet, les habitants
+                                    des villes, comme la capitale Lomé, consomment généralement des produits et de l&apos;eau
+                                    emballés.
+                                </p>
+                            </>
+                        )}
+                    </motion.div>
                 </div>
 
                 {/* Stats Counters */}
@@ -152,13 +228,15 @@ export function Source() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}
-                                className="flex flex-col items-center justify-center p-10 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10"
+                                className="flex flex-col items-center justify-center p-10 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-accent/20"
                             >
-                                <Icon className="w-12 h-12 text-accent mb-4" />
-                                <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+                                <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mb-4">
+                                    <Icon className="w-8 h-8 text-accent" />
+                                </div>
+                                <div className="text-5xl md:text-6xl font-bold text-white mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-200">
                                     {stat.value}
                                 </div>
-                                <div className="text-slate-400 uppercase tracking-wider text-sm font-medium">
+                                <div className="text-slate-300 uppercase tracking-wider text-sm font-semibold text-center">
                                     {stat.label}
                                 </div>
                             </motion.div>
@@ -177,13 +255,13 @@ export function Source() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 + index * 0.1 }}
-                                className="text-center p-6"
+                                className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                             >
-                                <div className="w-16 h-16 mx-auto bg-accent/20 rounded-full flex items-center justify-center mb-6 text-accent">
-                                    <Icon className="w-8 h-8" />
+                                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-accent/30 to-accent/10 rounded-2xl flex items-center justify-center mb-6 text-accent shadow-lg">
+                                    <Icon className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-                                <p className="text-slate-400 leading-relaxed">
+                                <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">{feature.title}</h3>
+                                <p className="text-slate-300 leading-relaxed text-sm md:text-base">
                                     {feature.description}
                                 </p>
                             </motion.div>

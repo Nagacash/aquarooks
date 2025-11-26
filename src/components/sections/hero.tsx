@@ -50,8 +50,8 @@ export function Hero() {
             // Animate title with split text effect
             gsap.fromTo(
                 titleRef.current,
-                { opacity: 0, y: 50, scale: 0.9 },
-                { opacity: 1, y: 0, scale: 1, duration: 1, delay: 0.4, ease: "power3.out" }
+                { opacity: 0, y: 60, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: 1.2, delay: 0.4, ease: "power4.out" }
             );
 
             // Animate button
@@ -140,7 +140,7 @@ export function Hero() {
 
                 <h1
                     ref={titleRef}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-10 tracking-tight font-heading px-8 py-6 md:px-12 md:py-8 rounded-3xl bg-primary/30 backdrop-blur-md border border-white/20 shadow-2xl shadow-black/20 relative overflow-hidden"
+                    className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-10 tracking-tight font-heading px-8 py-6 md:px-12 md:py-8 rounded-3xl bg-primary/20 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/30 relative overflow-hidden"
                 >
                     {/* Shimmer effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer" />
@@ -168,7 +168,7 @@ export function Hero() {
                     <Button
                         enableTilt
                         size="lg"
-                        className="text-lg px-12 py-8 bg-accent hover:bg-accent/90 text-white border-none shadow-[0_0_40px_-10px_rgba(0,191,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(0,191,255,0.6)] transition-all duration-300 relative overflow-hidden group rounded-full"
+                        className="text-lg px-12 py-8 bg-accent hover:bg-accent/90 text-white border-none shadow-[0_0_40px_-10px_rgba(56,189,248,0.5)] hover:shadow-[0_0_60px_-15px_rgba(56,189,248,0.6)] transition-all duration-300 relative overflow-hidden group rounded-full"
                     >
                         <span className="relative z-10 font-semibold tracking-wide">{content.cta}</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-accent via-white/20 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -179,9 +179,25 @@ export function Hero() {
             {/* Scroll Indicator */}
             <div
                 ref={scrollIndicatorRef}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+                className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white/50 z-10"
             >
                 <ArrowDown className="w-6 h-6" />
+            </div>
+
+            {/* Wave Divider */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-[5]">
+                <svg
+                    className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[100px]"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        className="fill-white"
+                    ></path>
+                </svg>
             </div>
         </section>
     );

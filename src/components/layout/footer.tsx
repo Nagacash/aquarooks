@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
@@ -22,8 +23,8 @@ const footerContent = {
         },
         contact: {
             title: "Kontakt",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
             address: "Togo, Westafrika",
         },
         legal: {
@@ -49,8 +50,8 @@ const footerContent = {
         },
         contact: {
             title: "Contact",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
             address: "Togo, West Africa",
         },
         legal: {
@@ -76,8 +77,8 @@ const footerContent = {
         },
         contact: {
             title: "Contact",
-            email: "info@aquareoks.com",
-            phone: "+228 XX XX XX XX",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
             address: "Togo, Afrique de l'Ouest",
         },
         legal: {
@@ -125,9 +126,18 @@ export function Footer() {
                             transition={{ duration: 0.5 }}
                             className="lg:col-span-1"
                         >
-                            <h3 className="text-2xl font-bold font-heading mb-4">
-                                {content.company.title}
-                            </h3>
+                            <div className="flex items-center gap-3 mb-4">
+                                <Image
+                                    src="/images/logos/logo1.png"
+                                    alt="AQUA ROOKS Logo"
+                                    width={40}
+                                    height={40}
+                                    className="h-10 w-auto object-contain"
+                                />
+                                <h3 className="text-2xl font-bold font-heading">
+                                    {content.company.title}
+                                </h3>
+                            </div>
                             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
                                 {content.company.description}
                             </p>
@@ -244,12 +254,20 @@ export function Footer() {
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                                    <a
-                                        href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
-                                        className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
-                                    >
-                                        {content.contact.phone}
-                                    </a>
+                                    <div className="flex flex-col text-sm text-primary-foreground/80">
+                                        <a
+                                            href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
+                                            className="hover:text-accent transition-colors"
+                                        >
+                                            Togo WhatsApp: {content.contact.phone}
+                                        </a>
+                                        <a
+                                            href="tel:+491737201850"
+                                            className="hover:text-accent transition-colors"
+                                        >
+                                            Allemagne: +49 173 720 1850
+                                        </a>
+                                    </div>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />

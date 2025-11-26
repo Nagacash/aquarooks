@@ -195,15 +195,190 @@ export function USP() {
                     >
                         {content.title}
                     </motion.h2>
-                    <motion.p
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-muted-foreground leading-relaxed"
+                        className="max-w-4xl mx-auto"
                     >
-                        {content.description}
-                    </motion.p>
+                        {language === "de" && (
+                            <>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                                    Wir setzen neue Standards für Qualität und Reinheit im togolesischen Mineralwassermarkt.
+                                </p>
+
+                                {/* Alleinstellungsmerkmal & Vision Card */}
+                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
+                                    <div className="text-center mb-8">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                            Alleinstellungsmerkmal &amp; Vision
+                                        </h3>
+                                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
+                                    </div>
+
+                                    <div className="space-y-6">
+                                        {/* Key Stat Highlight */}
+                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex items-center gap-4 mb-3">
+                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
+                                                <div className="flex-1">
+                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                                        des importierten Wassers aus <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (u. a. Coca-Cola, Nestlé) besitzen nachweislich <span className="font-semibold text-accent">nicht die Wasserqualität</span> von ROOK&apos;S AQUA.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Main Content */}
+                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-base md:text-lg">
+                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – das in PET-Flaschen abgefüllte, qualitativ erstklassige Mineralwasser – wird im Durchschnitt <span className="font-semibold text-accent">preisgünstiger als die Importware</span> und dennoch profitabel auf dem togolesischen Markt angeboten.
+                                            </p>
+                                            
+                                            <p className="text-base md:text-lg">
+                                                Unsere Vision ist es, ROOK&apos;S AQUA zukünftig zu <span className="font-semibold text-primary">der Water Brand</span> im togolesischen Markt für bestes Trink- bzw. Mineralwasser zu machen.
+                                            </p>
+                                        </div>
+
+                                        {/* Vision Pillars */}
+                                        <div className="mt-8 pt-8 border-t border-slate-200/60">
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                {["Profitabel", "Sozial", "Regional", "National"].map((pillar, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"
+                                                    >
+                                                        <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                                                            {pillar}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+
+                        {language === "en" && (
+                            <>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                                    We are setting new standards for quality and purity in Togo&apos;s mineral water market.
+                                </p>
+
+                                {/* Unique Selling Proposition & Vision Card */}
+                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
+                                    <div className="text-center mb-8">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                            Unique Selling Proposition &amp; Vision
+                                        </h3>
+                                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
+                                    </div>
+
+                                    <div className="space-y-6">
+                                        {/* Key Stat Highlight */}
+                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex items-center gap-4 mb-3">
+                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
+                                                <div className="flex-1">
+                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                                        of imported water from <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (including brands such as Coca-Cola and Nestlé) demonstrably <span className="font-semibold text-accent">does not reach the water quality</span> of ROOK&apos;S AQUA.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Main Content */}
+                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-base md:text-lg">
+                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – a premium-quality mineral water bottled in PET – is offered on the Togolese market at, on average, a <span className="font-semibold text-accent">lower price than imported products</span>, while remaining profitable.
+                                            </p>
+                                            
+                                            <p className="text-base md:text-lg">
+                                                Our vision is to make ROOK&apos;S AQUA <span className="font-semibold text-primary">the water brand</span> in the Togolese market for the best drinking and mineral water.
+                                            </p>
+                                        </div>
+
+                                        {/* Vision Pillars */}
+                                        <div className="mt-8 pt-8 border-t border-slate-200/60">
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                {["Profitable", "Social", "Regional", "National"].map((pillar, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"
+                                                    >
+                                                        <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                                                            {pillar}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+
+                        {language === "fr" && (
+                            <>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                                    Nous établissons de nouvelles normes de qualité et de pureté sur le marché togolais de l&apos;eau minérale.
+                                </p>
+
+                                {/* Proposition unique & vision Card */}
+                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
+                                    <div className="text-center mb-8">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                            Proposition unique &amp; vision
+                                        </h3>
+                                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
+                                    </div>
+
+                                    <div className="space-y-6">
+                                        {/* Key Stat Highlight */}
+                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex items-center gap-4 mb-3">
+                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
+                                                <div className="flex-1">
+                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                                        de l&apos;eau importée du <span className="font-semibold text-primary">Ghana, du Bénin et du Burkina Faso</span> (y compris des marques comme Coca-Cola et Nestlé) <span className="font-semibold text-accent">n&apos;atteignent pas la qualité</span> de l&apos;eau de ROOK&apos;S AQUA.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Main Content */}
+                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-base md:text-lg">
+                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – une eau minérale de première qualité embouteillée en PET – est proposée sur le marché togolais à un prix en moyenne <span className="font-semibold text-accent">inférieur à celui des produits importés</span>, tout en restant rentable.
+                                            </p>
+                                            
+                                            <p className="text-base md:text-lg">
+                                                Notre vision est de faire de ROOK&apos;S AQUA <span className="font-semibold text-primary">la marque d&apos;eau de référence</span> sur le marché togolais pour la meilleure eau potable et minérale.
+                                            </p>
+                                        </div>
+
+                                        {/* Vision Pillars */}
+                                        <div className="mt-8 pt-8 border-t border-slate-200/60">
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                {["Rentable", "Sociale", "Régionale", "Nationale"].map((pillar, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"
+                                                    >
+                                                        <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                                                            {pillar}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </motion.div>
                 </div>
 
                 <div ref={benefitsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -212,7 +387,7 @@ export function USP() {
                         return (
                             <div
                                 key={index}
-                                className="group p-10 rounded-3xl bg-white/90 backdrop-blur-xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-white/70 hover:border-accent/40 shadow-xl hover:-translate-y-2 relative overflow-hidden"
+                                className="group p-10 rounded-3xl bg-white/95 backdrop-blur-xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-slate-200/60 hover:border-accent/50 shadow-xl hover:-translate-y-3 relative overflow-hidden"
                             >
                                 {/* Gradient overlay on hover */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

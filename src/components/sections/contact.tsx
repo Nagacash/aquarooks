@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { CheckCircle2, Send, Loader2 } from "lucide-react";
+import { CheckCircle2, Send, Loader2, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { useLanguageStore } from "@/store/language-store";
@@ -127,10 +128,60 @@ export function Contact() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-5xl font-bold text-primary mb-6"
+                            className="text-4xl md:text-5xl font-bold text-primary mb-8"
                         >
                             {content.title}
                         </motion.h2>
+                        
+                        {/* Contact Information Cards */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12"
+                        >
+                            <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mx-auto mb-3">
+                                    <Mail className="w-6 h-6 text-accent" />
+                                </div>
+                                <p className="text-sm font-semibold text-primary mb-1">E-Mail</p>
+                                <a 
+                                    href="mailto:office@aqua-rooks.com" 
+                                    className="text-sm text-muted-foreground hover:text-accent transition-colors break-all"
+                                >
+                                    office@aqua-rooks.com
+                                </a>
+                            </div>
+                            
+                            <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mx-auto mb-3">
+                                    <Phone className="w-6 h-6 text-primary" />
+                                </div>
+                                <p className="text-sm font-semibold text-primary mb-1">Togo WhatsApp</p>
+                                <a 
+                                    href="https://wa.me/22890628029" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                                >
+                                    +228 90 62 80 29
+                                </a>
+                            </div>
+                            
+                            <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-green-400/10 flex items-center justify-center mx-auto mb-3">
+                                    <Phone className="w-6 h-6 text-green-600" />
+                                </div>
+                                <p className="text-sm font-semibold text-primary mb-1">Allemagne</p>
+                                <a 
+                                    href="tel:+491737201850" 
+                                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                                >
+                                    +49 173 720 1850
+                                </a>
+                            </div>
+                        </motion.div>
                     </div>
 
                     <motion.div
@@ -160,6 +211,22 @@ export function Contact() {
                                 </motion.div>
                             ) : (
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+                                    <div className="flex flex-col items-center gap-3 mb-8 pb-6 border-b border-slate-200/50">
+                                        <div className="relative">
+                                            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/10 to-accent/20 blur-xl -z-10" />
+                                            <Image
+                                                src="/images/logos/logo2.png"
+                                                alt="AQUA ROOKS Logo"
+                                                width={160}
+                                                height={50}
+                                                className="h-12 w-auto object-contain drop-shadow-lg"
+                                                quality={95}
+                                            />
+                                        </div>
+                                        <p className="text-xs font-medium text-muted-foreground text-center tracking-wide">
+                                            AQUA ROOKS – L&apos;Eau Minérale – Source De Vie
+                                        </p>
+                                    </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="space-y-2">
                                             <label htmlFor="firstName" className="text-sm font-medium text-foreground">

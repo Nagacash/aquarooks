@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Download } from "lucide-react";
@@ -12,6 +13,14 @@ const navLinks = [
     { href: "#mission", label: { de: "Mission", en: "Mission", fr: "Mission" } },
     { href: "#source", label: { de: "Quelle", en: "Source", fr: "Source" } },
     { href: "#usp", label: { de: "Vorteile", en: "Benefits", fr: "Avantages" } },
+    {
+        href: "#marktentwicklung",
+        label: {
+            de: "Marktentwicklung",
+            en: "Market Development",
+            fr: "Développement du marché",
+        },
+    },
     { href: "#impressionen", label: { de: "Impressionen", en: "Impressions", fr: "Impressions" } },
     { href: "#contact", label: { de: "Kontakt", en: "Contact", fr: "Contact" } },
 ];
@@ -57,14 +66,27 @@ export function Navbar() {
         >
             <Container className="flex items-center justify-between">
                 {/* Logo */}
-                <a
-                    href="#"
-                    className={cn(
-                        "text-2xl font-bold font-heading tracking-tight transition-colors duration-300",
-                        isScrolled ? "text-primary" : "text-white"
-                    )}
-                >
-                    AQUA ROOKS
+                <a href="#" className="flex items-center gap-3 group">
+                    <div className="relative h-10 w-auto">
+                        <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/10 to-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                        <Image
+                            src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
+                            alt="Aqua Rooks Logo"
+                            width={140}
+                            height={45}
+                            className="h-10 w-auto object-contain transition-all duration-300 drop-shadow-sm group-hover:drop-shadow-md"
+                            priority
+                            quality={95}
+                        />
+                    </div>
+                    <span
+                        className={cn(
+                            "text-2xl font-bold font-heading tracking-tight transition-all duration-300",
+                            isScrolled ? "text-primary group-hover:text-accent" : "text-white group-hover:text-accent/90"
+                        )}
+                    >
+                        AQUA ROOKS
+                    </span>
                 </a>
 
                 {/* Desktop Navigation */}
@@ -77,9 +99,21 @@ export function Navbar() {
                                 e.stopPropagation();
                                 playClickSound();
                             }}
-                            className="text-sm font-medium text-foreground/80 hover:text-accent transition-all duration-300 relative group"
+                            className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent transition-all duration-300 relative group"
                         >
-                            {link.label[language]}
+                            {link.href === "#marktentwicklung" && (
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-accent/20 blur-sm rounded -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <Image
+                                        src="/images/logos/bottle.png"
+                                        alt="PET Bottle Icon"
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300 group-hover:scale-110"
+                                    />
+                                </div>
+                            )}
+                            <span>{link.label[language]}</span>
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
                         </a>
                     ))}
@@ -142,9 +176,21 @@ export function Navbar() {
                                             playClickSound();
                                             setIsMobileMenuOpen(false);
                                         }}
-                                        className="text-3xl md:text-4xl font-bold font-heading text-foreground hover:text-accent transition-colors"
+                                        className="flex items-center gap-3 text-3xl md:text-4xl font-bold font-heading text-foreground hover:text-accent transition-colors"
                                     >
-                                        {link.label[language]}
+                                        {link.href === "#marktentwicklung" && (
+                                            <div className="relative">
+                                                <div className="absolute inset-0 bg-accent/20 blur-md rounded -z-10" />
+                                                <Image
+                                                    src="/images/logos/bottle.png"
+                                                    alt="PET Bottle Icon"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain drop-shadow-lg filter brightness-110"
+                                                />
+                                            </div>
+                                        )}
+                                        <span>{link.label[language]}</span>
                                     </motion.a>
                                 ))}
                             </nav>
