@@ -213,8 +213,8 @@ export function Navbar() {
 
                             {/* Scrollable Content Area */}
                             <div className="flex-1 overflow-y-auto overscroll-contain">
-                                <Container className="flex flex-col justify-center min-h-full py-4 sm:py-6">
-                                    <nav className="flex flex-col gap-2 sm:gap-3 md:gap-4 items-center justify-center px-4 py-4">
+                                <Container className="flex flex-col py-6 sm:py-8">
+                                    <nav className="flex flex-col gap-3 sm:gap-4 items-center px-4 w-full">
                                         {navLinks.map((link, index) => (
                                             <motion.a
                                                 key={link.href}
@@ -228,24 +228,24 @@ export function Navbar() {
                                                     playClickSound();
                                                     setIsMobileMenuOpen(false);
                                                 }}
-                                                className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-3 sm:px-4 rounded-xl hover:bg-slate-50"
+                                                className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold font-heading text-slate-800 hover:text-accent transition-colors w-full justify-center py-3 px-4 rounded-xl hover:bg-slate-50 active:bg-slate-100"
                                             >
-                                        {link.href === "#marktentwicklung" && (
-                                            <div className="relative">
-                                                <div className="absolute inset-0 bg-accent/20 blur-md rounded -z-10" />
-                                                <Image
-                                                    src="/images/logos/bottle.png"
-                                                    alt="PET Bottle Icon"
-                                                    width={40}
-                                                    height={40}
-                                                    className="w-10 h-10 object-contain drop-shadow-lg filter brightness-110"
-                                                    unoptimized
-                                                />
-                                            </div>
-                                        )}
-                                        <span>{link.label[language]}</span>
-                                    </motion.a>
-                                ))}
+                                                {link.href === "#marktentwicklung" && (
+                                                    <div className="relative flex-shrink-0">
+                                                        <div className="absolute inset-0 bg-accent/20 blur-md rounded -z-10" />
+                                                        <Image
+                                                            src="/images/logos/bottle.png"
+                                                            alt="PET Bottle Icon"
+                                                            width={40}
+                                                            height={40}
+                                                            className="w-10 h-10 object-contain drop-shadow-lg filter brightness-110"
+                                                            unoptimized
+                                                        />
+                                                    </div>
+                                                )}
+                                                <span className="whitespace-nowrap">{link.label[language]}</span>
+                                            </motion.a>
+                                        ))}
                                     </nav>
 
                                     <motion.div
