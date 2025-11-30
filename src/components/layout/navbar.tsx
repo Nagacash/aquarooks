@@ -78,22 +78,22 @@ export function Navbar() {
         >
             <Container className="flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-3 group">
-                    <div className="relative h-10 w-auto">
+                <a href="#" className="flex items-center gap-2 sm:gap-3 group">
+                    <div className="relative h-8 w-auto sm:h-10">
                         <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/10 to-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                         <Image
                             src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
                             alt="Aqua Rooks Logo"
                             width={140}
                             height={45}
-                            className="h-10 w-auto object-contain transition-all duration-300 drop-shadow-sm group-hover:drop-shadow-md"
+                            className="h-8 w-auto sm:h-10 object-contain transition-all duration-300 drop-shadow-sm group-hover:drop-shadow-md"
                             priority
                             quality={95}
                         />
                     </div>
                     <span
                         className={cn(
-                            "text-2xl font-bold font-heading tracking-tight transition-all duration-300",
+                            "text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-heading tracking-tight transition-all duration-300",
                             isScrolled ? "text-primary group-hover:text-accent" : "text-white group-hover:text-accent/90"
                         )}
                     >

@@ -113,12 +113,12 @@ export function Source() {
             />
 
             <Container className="relative z-10">
-                <div className="max-w-4xl mx-auto text-center mb-20">
+                <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+                        className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
                     >
                         {content.subtitle}
                     </motion.span>
@@ -127,7 +127,7 @@ export function Source() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold mb-6"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
                     >
                         {content.title}
                     </motion.h2>
@@ -136,7 +136,7 @@ export function Source() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-300 leading-relaxed space-y-4 text-left md:text-center"
+                        className="text-base sm:text-lg text-slate-300 leading-relaxed space-y-3 sm:space-y-4 text-left md:text-center px-4"
                     >
                         {language === "de" && (
                             <>
@@ -294,9 +294,9 @@ export function Source() {
                         },
                     }}
                     whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                    className="flex justify-center mb-20"
+                    className="flex justify-center mb-12 sm:mb-16 md:mb-20"
                 >
-                    <div className="relative w-full max-w-md lg:max-w-lg">
+                    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                         <Image
                             src="/images/logos/bottle.png"
                             alt="ROOK'S AQUA PET Bottle"

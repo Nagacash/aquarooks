@@ -126,9 +126,9 @@ export function Mission() {
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="flex justify-center mb-8"
+                        className="flex justify-center mb-6 sm:mb-8"
                     >
-                        <div className="relative w-32 h-32 md:w-40 md:h-40">
+                        <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40">
                             <Image
                                 src="/images/logos/AR_LogoDrop.png"
                                 alt="AQUA ROOKS Logo Drop"
@@ -144,7 +144,7 @@ export function Mission() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+                        className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
                     >
                         {content.subtitle}
                     </motion.span>
@@ -153,7 +153,7 @@ export function Mission() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-4xl md:text-5xl font-bold text-primary mb-6"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6"
                     >
                         {content.title}
                     </motion.h2>

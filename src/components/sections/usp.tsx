@@ -177,12 +177,12 @@ export function USP() {
             <div className="absolute top-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
             <Container className="relative z-10">
-                <div className="max-w-3xl mx-auto text-center mb-20">
+                <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+                        className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
                     >
                         {content.subtitle}
                     </motion.span>
@@ -191,7 +191,7 @@ export function USP() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold text-primary mb-6"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6"
                     >
                         {content.title}
                     </motion.h2>
@@ -200,11 +200,11 @@ export function USP() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-4xl mx-auto"
+                        className="max-w-4xl mx-auto px-4"
                     >
                         {language === "de" && (
                             <>
-                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-8 sm:mb-12">
                                     Wir setzen neue Standards für Qualität und Reinheit im togolesischen Mineralwassermarkt.
                                 </p>
 

@@ -239,12 +239,12 @@ export function Market() {
 
       <Container className="relative z-10">
         {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+            className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
           >
             {content.subtitle}
           </motion.span>
@@ -253,7 +253,7 @@ export function Market() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6"
           >
             {content.title}
           </motion.h2>
@@ -262,7 +262,7 @@ export function Market() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4"
           >
             {content.intro}
           </motion.p>
@@ -395,7 +395,7 @@ export function Market() {
           </div>
 
           {/* Right: Bottle Image */}
-          <div className="relative mx-auto lg:mx-0 w-full max-w-lg lg:max-w-xl xl:max-w-2xl lg:sticky lg:top-32">
+          <div className="relative mx-auto lg:mx-0 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl lg:sticky lg:top-32">
             <div className="relative flex items-center justify-center">
               {/* Main image container */}
               <motion.div
@@ -423,7 +423,7 @@ export function Market() {
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 className="relative z-10"
               >
-                <div className="relative w-full max-w-[600px] xl:max-w-[700px]">
+                <div className="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] xl:max-w-[700px]">
                   <Image
                     src="/images/logos/bottle.png"
                     alt="ROOK'S AQUA PET Bottle"

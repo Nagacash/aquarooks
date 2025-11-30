@@ -140,7 +140,7 @@ export function Hero() {
 
                 <h1
                     ref={titleRef}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-10 tracking-tight font-heading px-8 py-6 md:px-12 md:py-8 rounded-3xl bg-primary/20 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/30 relative overflow-hidden"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 md:mb-10 tracking-tight font-heading px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 lg:px-12 lg:py-8 rounded-2xl md:rounded-3xl bg-primary/20 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/30 relative overflow-hidden"
                 >
                     {/* Shimmer effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer" />
