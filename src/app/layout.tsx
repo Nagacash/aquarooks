@@ -140,6 +140,11 @@ const ysabeau = localFont({
 export const metadata: Metadata = {
   title: "AQUA ROOKS | L'Eau Minérale – Source De Vie",
   description: "Premium mineral water from natural sources in Togo. Promoting sustainability and social responsibility.",
+  icons: {
+    icon: "/images/logos/logo.ico",
+    shortcut: "/images/logos/logo.ico",
+    apple: "/images/logos/logo.ico",
+  },
 };
 
 export default function RootLayout({
