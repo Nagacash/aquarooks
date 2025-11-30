@@ -98,13 +98,63 @@ export function Contact() {
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        console.log(data);
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        reset();
-        setTimeout(() => setIsSuccess(false), 5000);
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    phone: data.phone,
+                    message: data.message,
+                }),
+            });
+
+            let result;
+            try {
+                result = await response.json();
+            } catch (jsonError) {
+                // If JSON parsing fails, get text response
+                const textResponse = await response.text();
+                console.error("Failed to parse JSON response:", textResponse);
+                throw new Error("Failed to process server response");
+            }
+
+            if (!response.ok) {
+                const errorMsg = result.error || result.message || `Server error: ${response.status}`;
+                console.error("API Error:", {
+                    status: response.status,
+                    statusText: response.statusText,
+                    result,
+                });
+                throw new Error(errorMsg);
+            }
+
+            setIsSuccess(true);
+            reset();
+            setTimeout(() => setIsSuccess(false), 5000);
+        } catch (error: any) {
+            console.error("Error submitting form:", {
+                error,
+                message: error?.message,
+                stack: error?.stack,
+            });
+            
+            // Show user-friendly error message
+            const errorMessage = error?.message || 
+                (language === "de"
+                    ? "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
+                    : language === "fr"
+                    ? "Erreur lors de l'envoi du message. Veuillez réessayer plus tard."
+                    : "Error sending message. Please try again later.");
+            
+            alert(errorMessage);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

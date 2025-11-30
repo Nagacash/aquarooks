@@ -32,6 +32,7 @@ export function Hero() {
     const { language } = useLanguageStore();
     const content = heroContent[language];
     const heroRef = useRef<HTMLElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const subtitleRef = useRef<HTMLSpanElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
@@ -39,6 +40,36 @@ export function Hero() {
     const gradientRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        // Ensure video plays on mobile
+        const video = videoRef.current;
+        if (video) {
+            // Set video properties for mobile compatibility
+            video.muted = true;
+            video.playsInline = true;
+            video.setAttribute("playsinline", "true");
+            video.setAttribute("webkit-playsinline", "true");
+            
+            // Attempt to play the video
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        console.log("Video autoplay started");
+                    })
+                    .catch((error) => {
+                        console.log("Video autoplay prevented:", error);
+                        // If autoplay fails, try again on user interaction
+                        const handleInteraction = () => {
+                            video.play().catch(() => {});
+                            document.removeEventListener("touchstart", handleInteraction);
+                            document.removeEventListener("click", handleInteraction);
+                        };
+                        document.addEventListener("touchstart", handleInteraction, { once: true });
+                        document.addEventListener("click", handleInteraction, { once: true });
+                    });
+            }
+        }
+
         const ctx = gsap.context(() => {
             // Animate subtitle
             gsap.fromTo(
@@ -105,14 +136,17 @@ export function Hero() {
         <section ref={heroRef} className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-slate-900 to-primary flex items-center justify-center">
             {/* Video Background */}
             <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 style={{ zIndex: 0 }}
             >
                 <source src="/clips/aqua brooks3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
             </video>
 
             {/* Overlay with gradient */}
