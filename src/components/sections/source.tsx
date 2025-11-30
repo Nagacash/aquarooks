@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { Droplet, Mountain, MapPin, TestTube } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { useLanguageStore } from "@/store/language-store";
@@ -268,6 +269,44 @@ export function Source() {
                         );
                     })}
                 </div>
+
+                {/* Bottle Image */}
+                <motion.div
+                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true }}
+                    animate={{
+                        y: [0, -15, 0],
+                        rotate: [0, 2, -2, 0],
+                    }}
+                    transition={{
+                        opacity: { duration: 0.8, ease: "easeOut" },
+                        scale: { duration: 0.8, ease: "easeOut" },
+                        y: {
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        },
+                        rotate: {
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        },
+                    }}
+                    whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                    className="flex justify-center mb-20"
+                >
+                    <div className="relative w-full max-w-md lg:max-w-lg">
+                        <Image
+                            src="/images/logos/bottle.png"
+                            alt="ROOK'S AQUA PET Bottle"
+                            width={500}
+                            height={1250}
+                            className="w-full h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] filter brightness-105 contrast-110 saturate-105"
+                            quality={95}
+                        />
+                    </div>
+                </motion.div>
 
                 {/* Unsere Mission Section */}
                 <motion.div
