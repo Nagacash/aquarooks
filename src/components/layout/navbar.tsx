@@ -168,14 +168,51 @@ export function Navbar() {
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl lg:hidden flex flex-col"
-                    >
-                        <Container className="flex-1 flex flex-col py-24">
-                            <nav className="flex flex-col gap-6 items-center justify-center flex-1">
+                    <>
+                        {/* Backdrop Overlay */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        />
+                        
+                        {/* Mobile Menu Content */}
+                        <motion.div
+                            initial={{ opacity: 0, x: "100%" }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: "100%" }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col overflow-y-auto"
+                        >
+                            {/* Top Bar with Close Button */}
+                            <div className="flex items-center justify-between p-4 border-b border-slate-200/60 bg-white/95 backdrop-blur-sm">
+                                <div className="flex items-center gap-2 sm:gap-3">
+                                    <Image
+                                        src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
+                                        alt="Aqua Rooks Logo"
+                                        width={140}
+                                        height={45}
+                                        className="h-8 w-auto sm:h-10 object-contain"
+                                        quality={95}
+                                    />
+                                    <span className="text-lg sm:text-xl font-bold font-heading text-primary">
+                                        AQUA ROOKS
+                                    </span>
+                                </div>
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                                    aria-label="Close menu"
+                                >
+                                    <X className="w-6 h-6 text-slate-600" />
+                                </button>
+                            </div>
+
+                            <Container className="flex-1 flex flex-col py-8 sm:py-12">
+                            <nav className="flex flex-col gap-4 sm:gap-6 items-center justify-center flex-1 px-4">
                                 {navLinks.map((link, index) => (
                                     <motion.a
                                         key={link.href}
@@ -189,7 +226,7 @@ export function Navbar() {
                                             playClickSound();
                                             setIsMobileMenuOpen(false);
                                         }}
-                                        className="flex items-center gap-3 text-3xl md:text-4xl font-bold font-heading text-foreground hover:text-accent transition-colors"
+                                        className="flex items-center gap-3 text-2xl sm:text-3xl md:text-4xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-4 rounded-xl hover:bg-slate-50"
                                     >
                                         {link.href === "#marktentwicklung" && (
                                             <div className="relative">
@@ -241,6 +278,7 @@ export function Navbar() {
                             </motion.div>
                         </Container>
                     </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </header>

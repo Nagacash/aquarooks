@@ -209,21 +209,21 @@ export function USP() {
                                 </p>
 
                                 {/* Alleinstellungsmerkmal & Vision Card */}
-                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
-                                    <div className="text-center mb-8">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl border border-slate-200/60 p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8">
+                                    <div className="text-center mb-6 sm:mb-8">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 px-2">
                                             Alleinstellungsmerkmal &amp; Vision
                                         </h3>
                                         <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-4 sm:space-y-6">
                                         {/* Key Stat Highlight */}
-                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
-                                            <div className="flex items-center gap-4 mb-3">
-                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
-                                                <div className="flex-1">
-                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                        <div className="p-4 sm:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
                                                         des importierten Wassers aus <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (u. a. Coca-Cola, Nestlé) besitzen nachweislich <span className="font-semibold text-accent">nicht die Wasserqualität</span> von ROOK&apos;S AQUA.
                                                     </p>
                                                 </div>
@@ -231,12 +231,12 @@ export function USP() {
                                         </div>
 
                                         {/* Main Content */}
-                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
-                                            <p className="text-base md:text-lg">
+                                        <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – das in PET-Flaschen abgefüllte, qualitativ erstklassige Mineralwasser – wird im Durchschnitt <span className="font-semibold text-accent">preisgünstiger als die Importware</span> und dennoch profitabel auf dem togolesischen Markt angeboten.
                                             </p>
                                             
-                                            <p className="text-base md:text-lg">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 Unsere Vision ist es, ROOK&apos;S AQUA zukünftig zu <span className="font-semibold text-primary">der Water Brand</span> im togolesischen Markt für bestes Trink- bzw. Mineralwasser zu machen.
                                             </p>
                                         </div>
@@ -268,21 +268,21 @@ export function USP() {
                                 </p>
 
                                 {/* Unique Selling Proposition & Vision Card */}
-                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
-                                    <div className="text-center mb-8">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl border border-slate-200/60 p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8">
+                                    <div className="text-center mb-6 sm:mb-8">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 px-2">
                                             Unique Selling Proposition &amp; Vision
                                         </h3>
                                         <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-4 sm:space-y-6">
                                         {/* Key Stat Highlight */}
-                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
-                                            <div className="flex items-center gap-4 mb-3">
-                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
-                                                <div className="flex-1">
-                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                        <div className="p-4 sm:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
                                                         of imported water from <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (including brands such as Coca-Cola and Nestlé) demonstrably <span className="font-semibold text-accent">does not reach the water quality</span> of ROOK&apos;S AQUA.
                                                     </p>
                                                 </div>
@@ -290,12 +290,12 @@ export function USP() {
                                         </div>
 
                                         {/* Main Content */}
-                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
-                                            <p className="text-base md:text-lg">
+                                        <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – a premium-quality mineral water bottled in PET – is offered on the Togolese market at, on average, a <span className="font-semibold text-accent">lower price than imported products</span>, while remaining profitable.
                                             </p>
                                             
-                                            <p className="text-base md:text-lg">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 Our vision is to make ROOK&apos;S AQUA <span className="font-semibold text-primary">the water brand</span> in the Togolese market for the best drinking and mineral water.
                                             </p>
                                         </div>
@@ -327,21 +327,21 @@ export function USP() {
                                 </p>
 
                                 {/* Proposition unique & vision Card */}
-                                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/60 p-8 md:p-12 mb-8">
-                                    <div className="text-center mb-8">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                                <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl border border-slate-200/60 p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8">
+                                    <div className="text-center mb-6 sm:mb-8">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 px-2">
                                             Proposition unique &amp; vision
                                         </h3>
                                         <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-4 sm:space-y-6">
                                         {/* Key Stat Highlight */}
-                                        <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
-                                            <div className="flex items-center gap-4 mb-3">
-                                                <div className="text-5xl md:text-6xl font-bold text-accent">70%</div>
-                                                <div className="flex-1">
-                                                    <p className="text-base md:text-lg text-foreground leading-relaxed">
+                                        <div className="p-4 sm:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
                                                         de l&apos;eau importée du <span className="font-semibold text-primary">Ghana, du Bénin et du Burkina Faso</span> (y compris des marques comme Coca-Cola et Nestlé) <span className="font-semibold text-accent">n&apos;atteignent pas la qualité</span> de l&apos;eau de ROOK&apos;S AQUA.
                                                     </p>
                                                 </div>
@@ -349,12 +349,12 @@ export function USP() {
                                         </div>
 
                                         {/* Main Content */}
-                                        <div className="space-y-4 text-muted-foreground leading-relaxed">
-                                            <p className="text-base md:text-lg">
+                                        <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – une eau minérale de première qualité embouteillée en PET – est proposée sur le marché togolais à un prix en moyenne <span className="font-semibold text-accent">inférieur à celui des produits importés</span>, tout en restant rentable.
                                             </p>
                                             
-                                            <p className="text-base md:text-lg">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
                                                 Notre vision est de faire de ROOK&apos;S AQUA <span className="font-semibold text-primary">la marque d&apos;eau de référence</span> sur le marché togolais pour la meilleure eau potable et minérale.
                                             </p>
                                         </div>
