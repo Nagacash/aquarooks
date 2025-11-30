@@ -40,7 +40,7 @@ export function Hero() {
     const gradientRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Ensure video plays on mobile
+        // Ensure video plays on mobile - aggressive autoplay approach
         const video = videoRef.current;
         if (video) {
             // Set video properties for mobile compatibility
@@ -48,26 +48,69 @@ export function Hero() {
             video.playsInline = true;
             video.setAttribute("playsinline", "true");
             video.setAttribute("webkit-playsinline", "true");
+            video.setAttribute("x5-playsinline", "true");
+            video.setAttribute("x5-video-player-type", "h5");
+            video.setAttribute("x5-video-player-fullscreen", "true");
+            video.setAttribute("x5-video-orientation", "portraint");
             
-            // Attempt to play the video
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise
-                    .then(() => {
-                        console.log("Video autoplay started");
-                    })
-                    .catch((error) => {
-                        console.log("Video autoplay prevented:", error);
-                        // If autoplay fails, try again on user interaction
-                        const handleInteraction = () => {
+            // Force video to load
+            video.load();
+            
+            // Function to attempt playing the video
+            const attemptPlay = async () => {
+                try {
+                    await video.play();
+                    console.log("Video autoplay started successfully");
+                    return true;
+                } catch (error) {
+                    console.log("Video autoplay attempt failed:", error);
+                    return false;
+                }
+            };
+
+            // Try to play immediately
+            attemptPlay();
+
+            // Try multiple times with different events
+            const playAttempts = [
+                () => attemptPlay(),
+                () => {
+                    video.addEventListener("loadeddata", () => attemptPlay(), { once: true });
+                },
+                () => {
+                    video.addEventListener("canplay", () => attemptPlay(), { once: true });
+                },
+                () => {
+                    video.addEventListener("canplaythrough", () => attemptPlay(), { once: true });
+                },
+                () => {
+                    video.addEventListener("loadedmetadata", () => attemptPlay(), { once: true });
+                },
+            ];
+
+            // Execute all play attempts
+            playAttempts.forEach((attempt, index) => {
+                setTimeout(() => attempt(), index * 50);
+            });
+
+            // Use Intersection Observer to play when video is visible
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting && video.paused) {
                             video.play().catch(() => {});
-                            document.removeEventListener("touchstart", handleInteraction);
-                            document.removeEventListener("click", handleInteraction);
-                        };
-                        document.addEventListener("touchstart", handleInteraction, { once: true });
-                        document.addEventListener("click", handleInteraction, { once: true });
+                        }
                     });
-            }
+                },
+                { threshold: 0.1 }
+            );
+
+            observer.observe(video);
+
+            // Cleanup
+            return () => {
+                observer.disconnect();
+            };
         }
 
         const ctx = gsap.context(() => {
@@ -143,7 +186,9 @@ export function Hero() {
                 playsInline
                 preload="auto"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                style={{ zIndex: 0 }}
+                style={{ 
+                    zIndex: 0,
+                }}
             >
                 <source src="/clips/aqua brooks3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
