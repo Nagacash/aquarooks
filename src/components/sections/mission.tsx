@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Target, Heart, Globe, Leaf } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Accordion } from "@/components/ui/accordion";
 import { useLanguageStore } from "@/store/language-store";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,10 +121,29 @@ export function Mission() {
         <section ref={sectionRef} id="mission" className="py-28 md:py-40 bg-gradient-to-b from-white via-slate-50/30 to-white scroll-mt-20">
             <Container>
                 <div className="max-w-3xl mx-auto text-center mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="flex justify-center mb-8"
+                    >
+                        <div className="relative w-32 h-32 md:w-40 md:h-40">
+                            <Image
+                                src="/images/logos/AR_LogoDrop.png"
+                                alt="AQUA ROOKS Logo Drop"
+                                width={160}
+                                height={160}
+                                className="w-full h-full object-contain drop-shadow-lg"
+                                quality={95}
+                            />
+                        </div>
+                    </motion.div>
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
                         className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
                     >
                         {content.subtitle}
@@ -133,7 +152,7 @@ export function Mission() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        transition={{ delay: 0.2 }}
                         className="text-4xl md:text-5xl font-bold text-primary mb-6"
                     >
                         {content.title}
@@ -391,88 +410,6 @@ export function Mission() {
                         );
                     })}
                 </div>
-
-                {language === "de" && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4 }}
-                        className="mt-20 max-w-4xl mx-auto text-left space-y-6 text-muted-foreground bg-white/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/30 shadow-xl"
-                    >
-                        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
-                            Unser Ursprung
-                        </h3>
-                        <p>
-                            Die Quelle von AQUA ROOKS befindet sich in der wasserreichsten Region Togos, in der Gemeinde Lac 2, Präfektur „Lacs au Togo”, unweit der Küste des Golfs von Guinea. Dort fördern wir natürliches Mineralwasser aus einer Tiefe von 80 bis 120 Metern aus unterirdischen Becken mit konstantem Durchfluss. Dort befindet sich der unterirdische Teil der „Commune Du Lac 2”, wo das Mineralwasser von AQUA ROOKS fließt. Dieser Prozess schafft einen gigantischen natürlichen Filter. So entstand im Herzen der „Commune Du Lac” die natürliche Quelle unseres Mineralwassers, geschaffen von der Natur.
-                        </p>
-                        <p>
-                            Die ausgezeichnete Qualität des Wassers wurde im April 2023 durch ein geologisches Gutachten der Universität Lomé / LAMICODA bestätigt. (Labor für Mikrobiologie und Qualitätskontrolle von Lebensmitteln (LAMICODA), Universität Lomé, Togo)
-                        </p>
-                        <p>
-                            Um sicherzustellen, dass sich die Quelle AQUA ROOKS im Einklang mit dem natürlichen Wasserkreislauf erneuert, sorgen unsere Mitarbeiter und Hydrogeologen für eine rationelle Bewirtschaftung der Quelle. Und dafür, dass die Ressource in Bezug auf Quantität erhalten und in Bezug auf Qualität geschützt wird. Getreu unserem Credo: Nicht mehr nehmen, als die Natur uns zur Verfügung stellt.
-                        </p>
-
-                        <div className="pt-6">
-                            <Accordion title="Wissenschaftlicher Bericht & Geologische Analyse">
-                                <div className="space-y-6">
-                                    <div>
-                                        <h4 className="text-xl font-semibold text-primary mb-3">
-                                            Lithologie (Gesteinsarten / stratigraphische Struktur)
-                                        </h4>
-                                        <div className="space-y-2">
-                                            <p>
-                                                In Oberflächennähe findet man lockeres Sandmaterial aus dem Quartär (Sand, teilweise mit Kies).
-                                            </p>
-                                            <p>
-                                                Darunter befindet sich die sogenannte „Continental Terminal”-Formation, die aus klastischen Sedimenten (Sand, teilweise mit Lehmeinschlüssen, Kies) besteht.
-                                            </p>
-                                            <p>
-                                                In größerer Tiefe findet man eine Kalksteinschicht aus dem Paläozän (Dolomit-/Kalkstein-Grundwasserleiter), die hauptsächlich aus Karbonatgestein besteht.
-                                            </p>
-                                            <p>
-                                                Noch tiefer befindet sich eine sandige oder sandige Kalksteinformation aus dem Maastrichtium (Oberkreide).
-                                            </p>
-                                            <p>
-                                                Diese verschiedenen Grundwasserleiter sind durch eher undurchlässige (geringe Durchlässigkeit) Deckschichten und Zwischenschichten (Aquiluden) voneinander getrennt.
-                                            </p>
-                                            <p className="text-sm italic opacity-70">
-                                                (Quelle: earthwise.bgs.ac.uk+1)
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="text-xl font-semibold text-primary mb-3">
-                                            Hydrogeologische Bedingungen – Grundwasserleiter und Wasserressourcen
-                                        </h4>
-                                        <p className="mb-2">
-                                            Die wichtigsten Grundwasserleiter sind (von oben nach unten):
-                                        </p>
-                                        <ol className="list-decimal list-inside space-y-1 ml-2">
-                                            <li>Quartärer Sandgrundwasserleiter (oberflächennah, nicht begrenzt)</li>
-                                            <li>Kontinentaler Endgrundwasserleiter (CT) (häufig genutzt)</li>
-                                            <li>Paläozäner Grundwasserleiter (Kalkstein, tief)</li>
-                                            <li>Maastricht-Grundwasserleiter (Sand/Sandstein)</li>
-                                        </ol>
-                                        <p className="text-sm italic opacity-70 mt-2">
-                                            (Quelle: piahs.copernicus.org)
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="text-xl font-semibold text-primary mb-3">
-                                            Hydraulische Eigenschaften und Produktivität
-                                        </h4>
-                                        <p>
-                                            Der CT-Grundwasserleiter wird häufig genutzt (z. B. für Trinkwasser, insbesondere für lokale Brunnen). Die Durchlässigkeit (Leitfähigkeit) des kontinentalen Endaquifers wird in Studien mit Größenordnungen von ~5-8 ×
-                                        </p>
-                                    </div>
-                                </div>
-                            </Accordion>
-                        </div>
-                    </motion.div>
-                )}
             </Container>
         </section>
     );

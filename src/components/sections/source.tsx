@@ -299,16 +299,45 @@ export function Source() {
                     </h3>
 
                     {language === "de" && (
-                        <div className="space-y-6 leading-relaxed">
-                            <p>
-                                Die Quelle von AQUA ROOKS befindet sich in der wasserreichsten Region Togos, in der Gemeinde Lac 2, Präfektur „Lacs au Togo", unweit der Küste des Golfs von Guinea. Dort fördern wir natürliches Mineralwasser aus einer Tiefe von 80 bis 120 Metern aus unterirdischen Becken mit konstantem Durchfluss. Dort befindet sich der unterirdische Teil der „Commune Du Lac 2", wo das Mineralwasser von AQUA ROOKS fließt. Dieser Prozess schafft einen gigantischen natürlichen Filter. So entstand im Herzen der „Commune Du Lac" die natürliche Quelle unseres Mineralwassers, geschaffen von der Natur.
-                            </p>
-                            <p>
-                                Die ausgezeichnete Qualität des Wassers wurde im April 2023 durch ein geologisches Gutachten der Universität Lomé / LAMICODA bestätigt. (Labor für Mikrobiologie und Qualitätskontrolle von Lebensmitteln (LAMICODA), Universität Lomé, Togo)
-                            </p>
-                            <p>
-                                Um sicherzustellen, dass sich die Quelle AQUA ROOKS im Einklang mit dem natürlichen Wasserkreislauf erneuert, sorgen unsere Mitarbeiter und Hydrogeologen für eine rationelle Bewirtschaftung der Quelle. Und dafür, dass die Ressource in Bezug auf Quantität erhalten und in Bezug auf Qualität geschützt wird. Getreu unserem Credo: Nicht mehr nehmen, als die Natur uns zur Verfügung stellt.
-                            </p>
+                        <div className="space-y-8 leading-relaxed">
+                            <div className="bg-gradient-to-br from-accent/10 via-transparent to-primary/10 rounded-2xl p-6 md:p-8 border border-accent/20">
+                                <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
+                                    Die Quelle von <span className="font-semibold text-accent">AQUA ROOKS</span> befindet sich in der wasserreichsten Region Togos, in der Gemeinde <span className="font-semibold">Lac 2</span>, Präfektur „Lacs au Togo", unweit der Küste des Golfs von Guinea. Dort fördern wir natürliches Mineralwasser aus einer Tiefe von <span className="font-semibold text-accent">80 bis 120 Metern</span> aus unterirdischen Becken mit konstantem Durchfluss.
+                                </p>
+                                <p className="text-lg md:text-xl text-white leading-relaxed">
+                                    Dort befindet sich der unterirdische Teil der „Commune Du Lac 2", wo das Mineralwasser von AQUA ROOKS fließt. Dieser Prozess schafft einen <span className="font-semibold text-accent">gigantischen natürlichen Filter</span>. So entstand im Herzen der „Commune Du Lac" die natürliche Quelle unseres Mineralwassers, geschaffen von der Natur.
+                                </p>
+                            </div>
+
+                            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                                        <span className="text-accent text-xl font-bold">✓</span>
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-base md:text-lg text-slate-200 leading-relaxed">
+                                            Die ausgezeichnete Qualität des Wassers wurde im <span className="font-semibold">April 2023</span> durch ein geologisches Gutachten der <span className="font-semibold text-accent">Universität Lomé / LAMICODA</span> bestätigt.
+                                        </p>
+                                        <p className="text-sm text-slate-400 italic mt-3 border-l-4 border-accent/30 pl-4">
+                                            (Labor für Mikrobiologie und Qualitätskontrolle von Lebensmitteln (LAMICODA), Universität Lomé, Togo)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <div className="pl-6">
+                                    <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
+                                        Um sicherzustellen, dass sich die Quelle AQUA ROOKS im Einklang mit dem natürlichen Wasserkreislauf erneuert, sorgen unsere Mitarbeiter und Hydrogeologen für eine <span className="font-semibold">rationelle Bewirtschaftung</span> der Quelle. Und dafür, dass die Ressource in Bezug auf Quantität erhalten und in Bezug auf Qualität geschützt wird.
+                                    </p>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                        <p className="text-lg md:text-xl text-white font-semibold italic text-center">
+                                            Getreu unserem Credo: <span className="text-accent">Nicht mehr nehmen, als die Natur uns zur Verfügung stellt.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="pt-6 border-t border-white/20">
                                 <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -372,16 +401,45 @@ export function Source() {
                     )}
 
                     {language === "en" && (
-                        <div className="space-y-6 leading-relaxed">
-                            <p>
-                                The source of AQUA ROOKS is located in Togo&apos;s most water-rich region, in the municipality of Lac 2, prefecture &quot;Lacs au Togo&quot;, not far from the coast of the Gulf of Guinea. Here we extract natural mineral water from a depth of 80 to 120 meters from underground basins with constant flow. This is where the underground part of the &quot;Commune Du Lac 2&quot; is located, where AQUA ROOKS mineral water flows. This process creates a gigantic natural filter. This is how the natural source of our mineral water was created in the heart of the &quot;Commune Du Lac&quot;, created by nature.
-                            </p>
-                            <p>
-                                The excellent quality of the water was confirmed in April 2023 by a geological report from the University of Lomé / LAMICODA. (Laboratory for Microbiology and Food Quality Control (LAMICODA), University of Lomé, Togo)
-                            </p>
-                            <p>
-                                To ensure that the AQUA ROOKS source renews itself in harmony with the natural water cycle, our employees and hydrogeologists ensure rational management of the source. And that the resource is preserved in terms of quantity and protected in terms of quality. True to our credo: Not taking more than nature provides us.
-                            </p>
+                        <div className="space-y-8 leading-relaxed">
+                            <div className="bg-gradient-to-br from-accent/10 via-transparent to-primary/10 rounded-2xl p-6 md:p-8 border border-accent/20">
+                                <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
+                                    The source of <span className="font-semibold text-accent">AQUA ROOKS</span> is located in Togo&apos;s most water-rich region, in the municipality of <span className="font-semibold">Lac 2</span>, prefecture &quot;Lacs au Togo&quot;, not far from the coast of the Gulf of Guinea. Here we extract natural mineral water from a depth of <span className="font-semibold text-accent">80 to 120 meters</span> from underground basins with constant flow.
+                                </p>
+                                <p className="text-lg md:text-xl text-white leading-relaxed">
+                                    This is where the underground part of the &quot;Commune Du Lac 2&quot; is located, where AQUA ROOKS mineral water flows. This process creates a <span className="font-semibold text-accent">gigantic natural filter</span>. This is how the natural source of our mineral water was created in the heart of the &quot;Commune Du Lac&quot;, created by nature.
+                                </p>
+                            </div>
+
+                            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                                        <span className="text-accent text-xl font-bold">✓</span>
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-base md:text-lg text-slate-200 leading-relaxed">
+                                            The excellent quality of the water was confirmed in <span className="font-semibold">April 2023</span> by a geological report from the <span className="font-semibold text-accent">University of Lomé / LAMICODA</span>.
+                                        </p>
+                                        <p className="text-sm text-slate-400 italic mt-3 border-l-4 border-accent/30 pl-4">
+                                            (Laboratory for Microbiology and Food Quality Control (LAMICODA), University of Lomé, Togo)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <div className="pl-6">
+                                    <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
+                                        To ensure that the source AQUA ROOKS renews itself in harmony with the natural water cycle, our employees and hydrogeologists ensure <span className="font-semibold">rational management</span> of the source. And that the resource is preserved in terms of quantity and protected in terms of quality.
+                                    </p>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                        <p className="text-lg md:text-xl text-white font-semibold italic text-center">
+                                            True to our credo: <span className="text-accent">Not taking more than nature provides us.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="pt-6 border-t border-white/20">
                                 <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -445,16 +503,45 @@ export function Source() {
                     )}
 
                     {language === "fr" && (
-                        <div className="space-y-6 leading-relaxed">
-                            <p>
-                                La source d&apos;AQUA ROOKS se trouve dans la région la plus riche en eau du Togo, dans la commune de Lac 2, préfecture &quot;Lacs au Togo&quot;, non loin de la côte du golfe de Guinée. Nous y extrayons de l&apos;eau minérale naturelle à une profondeur de 80 à 120 mètres depuis des bassins souterrains à débit constant. C&apos;est là que se trouve la partie souterraine de la &quot;Commune Du Lac 2&quot;, où coule l&apos;eau minérale d&apos;AQUA ROOKS. Ce processus crée un filtre naturel gigantesque. C&apos;est ainsi qu&apos;est née la source naturelle de notre eau minérale au cœur de la &quot;Commune Du Lac&quot;, créée par la nature.
-                            </p>
-                            <p>
-                                L&apos;excellente qualité de l&apos;eau a été confirmée en avril 2023 par un rapport géologique de l&apos;Université de Lomé / LAMICODA. (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
-                            </p>
-                            <p>
-                                Pour garantir que la source AQUA ROOKS se renouvelle en harmonie avec le cycle naturel de l&apos;eau, nos employés et hydrogéologues assurent une gestion rationnelle de la source. Et que la ressource soit préservée en termes de quantité et protégée en termes de qualité. Fidèles à notre credo : Ne pas prendre plus que ce que la nature nous fournit.
-                            </p>
+                        <div className="space-y-8 leading-relaxed">
+                            <div className="bg-gradient-to-br from-accent/10 via-transparent to-primary/10 rounded-2xl p-6 md:p-8 border border-accent/20">
+                                <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
+                                    La source d&apos;<span className="font-semibold text-accent">AQUA ROOKS</span> se trouve dans la région la plus riche en eau du Togo, dans la commune de <span className="font-semibold">Lac 2</span>, préfecture &quot;Lacs au Togo&quot;, non loin de la côte du golfe de Guinée. Nous y extrayons de l&apos;eau minérale naturelle à une profondeur de <span className="font-semibold text-accent">80 à 120 mètres</span> depuis des bassins souterrains à débit constant.
+                                </p>
+                                <p className="text-lg md:text-xl text-white leading-relaxed">
+                                    C&apos;est là que se trouve la partie souterraine de la &quot;Commune Du Lac 2&quot;, où coule l&apos;eau minérale d&apos;AQUA ROOKS. Ce processus crée un <span className="font-semibold text-accent">filtre naturel gigantesque</span>. C&apos;est ainsi qu&apos;est née la source naturelle de notre eau minérale au cœur de la &quot;Commune Du Lac&quot;, créée par la nature.
+                                </p>
+                            </div>
+
+                            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                                        <span className="text-accent text-xl font-bold">✓</span>
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-base md:text-lg text-slate-200 leading-relaxed">
+                                            L&apos;excellente qualité de l&apos;eau a été confirmée en <span className="font-semibold">avril 2023</span> par un rapport géologique de l&apos;<span className="font-semibold text-accent">Université de Lomé / LAMICODA</span>.
+                                        </p>
+                                        <p className="text-sm text-slate-400 italic mt-3 border-l-4 border-accent/30 pl-4">
+                                            (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <div className="pl-6">
+                                    <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
+                                        Pour garantir que la source AQUA ROOKS se renouvelle en harmonie avec le cycle naturel de l&apos;eau, nos employés et hydrogéologues assurent une <span className="font-semibold">gestion rationnelle</span> de la source. Et que la ressource soit préservée en termes de quantité et protégée en termes de qualité.
+                                    </p>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                        <p className="text-lg md:text-xl text-white font-semibold italic text-center">
+                                            Fidèles à notre credo : <span className="text-accent">Ne pas prendre plus que ce que la nature nous fournit.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="pt-6 border-t border-white/20">
                                 <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">

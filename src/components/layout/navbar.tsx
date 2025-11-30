@@ -25,6 +25,18 @@ const navLinks = [
     { href: "#contact", label: { de: "Kontakt", en: "Contact", fr: "Contact" } },
 ];
 
+const pitchDeckText = {
+    de: "Pitch Deck",
+    en: "Pitch Deck",
+    fr: "Présentation",
+};
+
+const downloadPitchDeckText = {
+    de: "Pitch Deck herunterladen",
+    en: "Download Pitch Deck",
+    fr: "Télécharger la présentation",
+};
+
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -140,7 +152,7 @@ export function Navbar() {
                         onClick={handlePitchDeckClick}
                     >
                         <Download className="w-4 h-4" />
-                        <span>Pitch Deck</span>
+                        <span>{pitchDeckText[language]}</span>
                     </Button>
                 </div>
 
@@ -224,7 +236,7 @@ export function Navbar() {
                                     }}
                                 >
                                     <Download className="w-5 h-5" />
-                                    <span>Download Pitch Deck</span>
+                                    <span>{downloadPitchDeckText[language]}</span>
                                 </Button>
                             </motion.div>
                         </Container>
