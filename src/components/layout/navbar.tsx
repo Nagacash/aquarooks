@@ -185,7 +185,7 @@ export function Navbar() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: "100%" }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col overflow-y-auto"
+                            className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col overflow-hidden"
                         >
                             {/* Top Bar with Close Button */}
                             <div className="flex items-center justify-between p-4 border-b border-slate-200/60 bg-white/95 backdrop-blur-sm">
@@ -211,8 +211,8 @@ export function Navbar() {
                                 </button>
                             </div>
 
-                            <Container className="flex-1 flex flex-col py-8 sm:py-12">
-                            <nav className="flex flex-col gap-4 sm:gap-6 items-center justify-center flex-1 px-4">
+                            <Container className="flex-1 flex flex-col py-6 sm:py-8 overflow-hidden">
+                            <nav className="flex flex-col gap-3 sm:gap-4 items-center justify-center flex-1 px-4 overflow-hidden">
                                 {navLinks.map((link, index) => (
                                     <motion.a
                                         key={link.href}
@@ -226,7 +226,7 @@ export function Navbar() {
                                             playClickSound();
                                             setIsMobileMenuOpen(false);
                                         }}
-                                        className="flex items-center gap-3 text-2xl sm:text-3xl md:text-4xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-4 rounded-xl hover:bg-slate-50"
+                                        className="flex items-center gap-3 text-xl sm:text-2xl md:text-3xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-4 rounded-xl hover:bg-slate-50 flex-shrink-0"
                                     >
                                         {link.href === "#marktentwicklung" && (
                                             <div className="relative">
@@ -251,7 +251,7 @@ export function Navbar() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 20 }}
                                 transition={{ delay: 0.6, duration: 0.5 }}
-                                className="flex flex-col gap-4 mt-auto max-w-sm mx-auto w-full"
+                                className="flex flex-col gap-3 sm:gap-4 mt-auto max-w-sm mx-auto w-full pb-4 flex-shrink-0"
                             >
                                 <Button
                                     type="button"
