@@ -107,9 +107,10 @@ export function Navbar() {
                                     <Image
                                         src="/images/logos/bottle.png"
                                         alt="PET Bottle Icon"
-                                        width={20}
-                                        height={20}
-                                        className="w-5 h-5 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300 group-hover:scale-110"
+                                        width={40}
+                                        height={40}
+                                        className="w-10 h-10 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300 group-hover:scale-110"
+                                        unoptimized
                                     />
                                 </div>
                             )}
@@ -184,9 +185,10 @@ export function Navbar() {
                                                 <Image
                                                     src="/images/logos/bottle.png"
                                                     alt="PET Bottle Icon"
-                                                    width={32}
-                                                    height={32}
-                                                    className="w-8 h-8 object-contain drop-shadow-lg filter brightness-110"
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-10 h-10 object-contain drop-shadow-lg filter brightness-110"
+                                                    unoptimized
                                                 />
                                             </div>
                                         )}

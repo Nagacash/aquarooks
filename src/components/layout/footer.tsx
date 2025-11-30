@@ -130,9 +130,9 @@ export function Footer() {
                                 <Image
                                     src="/images/logos/logo1.png"
                                     alt="AQUA ROOKS Logo"
-                                    width={40}
-                                    height={40}
-                                    className="h-10 w-auto object-contain"
+                                    width={50}
+                                    height={50}
+                                    className="h-12 w-auto object-contain"
                                 />
                                 <h3 className="text-2xl font-bold font-heading">
                                     {content.company.title}
@@ -246,20 +246,22 @@ export function Footer() {
                                 <li className="flex items-start gap-3">
                                     <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
                                     <a
-                                        href={`mailto:${content.contact.email}`}
+                                        href="mailto:office@aqua-rooks.com"
                                         className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                                     >
-                                        {content.contact.email}
+                                        office@aqua-rooks.com
                                     </a>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                                    <div className="flex flex-col text-sm text-primary-foreground/80">
+                                    <div className="flex flex-col text-sm text-primary-foreground/80 gap-1">
                                         <a
-                                            href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
+                                            href="https://wa.me/22890628029"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="hover:text-accent transition-colors"
                                         >
-                                            Togo WhatsApp: {content.contact.phone}
+                                            Togo WhatsApp: +228 90 62 80 29
                                         </a>
                                         <a
                                             href="tel:+491737201850"

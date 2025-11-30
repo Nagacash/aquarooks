@@ -21,7 +21,7 @@ const impressumContent = {
         responsible: {
             title: "Kontakt Deutschland",
             name: "Xfaktor GmbH / Christoph Kreuzer",
-            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Deutschland",
+            address: "Königstrasse 43 (Oerscher Hof) / 43143 Münster, Deutschland",
             email: "kreuzer@aqua-rooks.com",
             phone: "+49 173 720 1850",
         },
@@ -47,7 +47,7 @@ const impressumContent = {
         responsible: {
             title: "Contact Germany",
             name: "Xfaktor GmbH / Christoph Kreuzer",
-            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Germany",
+            address: "Königstrasse 43 (Oerscher Hof) / 43143 Münster, Germany",
             email: "kreuzer@aqua-rooks.com",
             phone: "+49 173 720 1850",
         },
@@ -73,7 +73,7 @@ const impressumContent = {
         responsible: {
             title: "Contact Allemagne",
             name: "Xfaktor GmbH / Christoph Kreuzer",
-            address: "Königstrasse 43 (Oerscher Hof) / 48143 Münster, Allemagne",
+            address: "Königstrasse 43 (Oerscher Hof) / 43143 Münster, Allemagne",
             email: "kreuzer@aqua-rooks.com",
             phone: "+49 173 720 1850",
         },

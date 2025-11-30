@@ -148,31 +148,28 @@ export function Mission() {
                         {language === "de" && (
                             <>
                                 <p>
-                                    Das 2023 gegründete Unternehmen „ROOK´S AQUA“ hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
+                                    Das 2023 gegründete Unternehmen „ROOK´S AQUA" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in SACHETS („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
                                 </p>
                                 <p>
-                                    Aufgrund gesellschaftlicher Veränderungen und hygienischer Bedenken gegenüber den weitverbreiteten 0,25l „Mineralwasser-Plastikbeuteln“ der „sachets d&apos;eau minérale“ ist die Nachfrage nach PET-Flaschen („bouteilles“) stark angestiegen.
+                                    Auf Grund der gesellschaftlichen Veränderungen und der hygienischen Bedenken, nebst zahlreichen Krankheiten, der sehr oft „unsauberen" „Mineralwasser-Plastikbeutel", so genannte „Pure Water"-Beutel, ist die Nachfrage nach sauberen und kontrollierten Trinkwasserbeuteln („sachets d&apos;eau minérale") stark angestiegen. Um diese steigende Nachfrage nach bestem und sauberem Mineralwasser zu bedienen wurde „AQUA ROOKS" gegründet.
                                 </p>
                                 <p>
-                                    Um diese steigende Nachfrage nach Mineralwasser aus PET-Flaschen zu bedienen, wurde ROOK&apos;S AQUA gegründet.
-                                </p>
-                                <p>
-                                    Die dafür erschlossene Quelle auf eigenem Grund in der wasserreichen Region Atoèta-Alaroya / Commune Lac 2 in der Präfektur „LACS AU TOGO“ mit ihrer ausgezeichneten Wasserqualität wurde im geologischen Gutachten der Université de Lomé / Lamicoda vom April 2023 bestätigt.
+                                    Die dafür erschlossene Quelle auf eigenem Grund in der Wasser reichen Region Atoèta-Alaroya / Commune Lac 2 in der Präfektur „LACS AU TOGO" mit seiner ausgezeichneten Wasserqualität ist laut dem geologischen Gutachten der Université de Lomé / Lamicoda vom April 2023 bestätigt.
                                 </p>
                                 <p>
                                     (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                 </p>
                                 <p>
-                                    „Unser in Atoéta / Commune Lac 2 vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen, die durch Sand, Ton und Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht“, so der Firmengründer Rodrigue Guedou Mahouton.
+                                    „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht" so der Firmengründer Rodrigue Guedou Mahouton.
                                 </p>
-                                <p className="font-semibold text-primary mt-4">
+                                <p className="font-semibold text-primary mt-6">
                                     Mission Statements:
                                 </p>
-                                <ul className="list-disc list-inside space-y-1">
-                                    <li>Wir generieren eine sehr gute Rentabilität.</li>
+                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
+                                    <li>Wir generieren eine sehr gute Rentabilität</li>
                                     <li>Wir wachsen mit Gewissen.</li>
-                                    <li>Wir machen Business, das allen zugutekommt.</li>
-                                    <li>Wichtig sind uns Umwelt-, Sozial- und Governance-Standards (ESG).</li>
+                                    <li>Wir machen Business das allen zu Gute kommt.</li>
+                                    <li>Wichtig sind uns Umwelt-, Sozial- und Governance-Standards (ESG)</li>
                                 </ul>
                             </>
                         )}
@@ -180,31 +177,28 @@ export function Mission() {
                         {language === "en" && (
                             <>
                                 <p>
-                                    Founded in 2023, ROOK&apos;S AQUA aims to ensure nationwide access to high-quality natural mineral water from a Togolese source – by developing, producing, marketing and distributing it in PET drinking bottles.
+                                    The company &quot;ROOK&apos;S AQUA&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in SACHETS (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
                                 </p>
                                 <p>
-                                    Due to social changes and hygiene concerns about the widespread 0.25 l mineral water plastic sachets (&quot;sachets d&apos;eau minérale&quot;), demand for PET bottles (&quot;bouteilles&quot;) has increased significantly.
+                                    Due to social changes and hygiene concerns, as well as numerous diseases caused by the often &quot;unclean&quot; mineral water plastic bags, so-called &quot;Pure Water&quot; bags, demand for clean and controlled drinking water bags (&quot;sachets d&apos;eau minérale&quot;) has increased significantly. To meet this growing demand for the best and cleanest mineral water, &quot;AQUA ROOKS&quot; was founded.
                                 </p>
                                 <p>
-                                    ROOK&apos;S AQUA was created to meet this growing demand for mineral water in PET bottles.
-                                </p>
-                                <p>
-                                    The company&apos;s own source in the water-rich region of Atoèta-Alaroya / Commune Lac 2 in the prefecture &quot;LACS AU TOGO&quot;, with its excellent water quality, was confirmed by a geological report from Université de Lomé / Lamicoda in April 2023.
+                                    The source developed for this purpose on the company&apos;s own land in the water-rich region of Atoèta-Alaroya / Commune Lac 2 in the prefecture &quot;LACS AU TOGO&quot; with its excellent water quality has been confirmed according to the geological report from Université de Lomé / Lamicoda from April 2023.
                                 </p>
                                 <p>
                                     (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                 </p>
                                 <p>
-                                    &quot;Our water available in Atoéta / Commune Lac 2 contains a mix of minerals and nutrients that are filtered through sand, clay and limestone, preserving valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot; says company founder Rodrigue Guedou Mahouton.
+                                    &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot; says company founder Rodrigue Guedou Mahouton.
                                 </p>
-                                <p className="font-semibold text-primary mt-4">
-                                    Mission statements:
+                                <p className="font-semibold text-primary mt-6">
+                                    Mission Statements:
                                 </p>
-                                <ul className="list-disc list-inside space-y-1">
-                                    <li>We generate very good profitability.</li>
+                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
+                                    <li>We generate very good profitability</li>
                                     <li>We grow with conscience.</li>
                                     <li>We do business that benefits everyone.</li>
-                                    <li>Environmental, social and governance (ESG) standards are essential to us.</li>
+                                    <li>Environmental, social and governance (ESG) standards are important to us</li>
                                 </ul>
                             </>
                         )}
@@ -212,31 +206,28 @@ export function Mission() {
                         {language === "fr" && (
                             <>
                                 <p>
-                                    Fondée en 2023, l&apos;entreprise ROOK&apos;S AQUA a pour objectif de promouvoir, produire et distribuer à l&apos;échelle nationale une eau minérale naturelle de très haute qualité, issue d&apos;une source togolaise, conditionnée en bouteilles PET pour la population.
+                                    L&apos;entreprise &quot;ROOK&apos;S AQUA&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en SACHETS (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
                                 </p>
                                 <p>
-                                    En raison des évolutions sociétales et des préoccupations hygiéniques liées aux sachets plastiques de 0,25 l d&apos;eau minérale (&quot;sachets d&apos;eau minérale&quot;), la demande en bouteilles PET (&quot;bouteilles&quot;) a fortement augmenté.
+                                    En raison des changements sociétaux et des préoccupations hygiéniques, ainsi que de nombreuses maladies causées par les sachets plastiques d&apos;eau minérale souvent &quot;impurs&quot;, appelés sachets &quot;Pure Water&quot;, la demande de sachets d&apos;eau potable propres et contrôlés (&quot;sachets d&apos;eau minérale&quot;) a considérablement augmenté. Pour répondre à cette demande croissante d&apos;eau minérale de la meilleure qualité et la plus propre, &quot;AQUA ROOKS&quot; a été fondée.
                                 </p>
                                 <p>
-                                    ROOK&apos;S AQUA a été créée pour répondre à cette demande croissante d&apos;eau minérale en bouteilles PET.
-                                </p>
-                                <p>
-                                    La source exploitée, située sur un terrain appartenant à l&apos;entreprise dans la région riche en eau d&apos;Atoèta-Alaroya / Commune Lac 2, dans la préfecture &quot;LACS AU TOGO&quot;, et sa qualité exceptionnelle ont été confirmées par un rapport géologique de l&apos;Université de Lomé / Lamicoda en avril 2023.
+                                    La source développée à cet effet sur le terrain propre de l&apos;entreprise dans la région riche en eau d&apos;Atoèta-Alaroya / Commune Lac 2 dans la préfecture &quot;LACS AU TOGO&quot; avec sa qualité d&apos;eau excellente a été confirmée selon le rapport géologique de l&apos;Université de Lomé / Lamicoda d&apos;avril 2023.
                                 </p>
                                 <p>
                                     (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                 </p>
                                 <p>
-                                    « Notre eau, disponible à Atoéta / Commune Lac 2, contient un mélange de minéraux et de nutriments filtrés à travers le sable, l&apos;argile et le calcaire, ce qui préserve les oligo-éléments précieux avec un pH optimal et donne naissance à une eau minérale naturellement pure et de haute qualité », explique le fondateur de l&apos;entreprise, Rodrigue Guedou Mahouton.
+                                    &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;, déclare le fondateur de l&apos;entreprise Rodrigue Guedou Mahouton.
                                 </p>
-                                <p className="font-semibold text-primary mt-4">
+                                <p className="font-semibold text-primary mt-6">
                                     Déclarations de mission :
                                 </p>
-                                <ul className="list-disc list-inside space-y-1">
-                                    <li>Nous générons une très bonne rentabilité.</li>
+                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
+                                    <li>Nous générons une très bonne rentabilité</li>
                                     <li>Nous grandissons avec conscience.</li>
                                     <li>Nous faisons des affaires qui profitent à tous.</li>
-                                    <li>Les normes environnementales, sociales et de gouvernance (ESG) sont essentielles pour nous.</li>
+                                    <li>Les normes environnementales, sociales et de gouvernance (ESG) sont importantes pour nous</li>
                                 </ul>
                             </>
                         )}

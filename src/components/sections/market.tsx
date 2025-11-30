@@ -395,30 +395,46 @@ export function Market() {
           </div>
 
           {/* Right: Bottle Image */}
-          <div className="relative mx-auto lg:mx-0 w-full max-w-xs lg:sticky lg:top-32">
-            <div className="relative">
-              {/* Enhanced glow effects - tighter around bottle */}
-              <div className="absolute inset-0 -inset-8 rounded-[2.5rem] bg-gradient-to-b from-accent/25 via-primary/12 to-accent/25 blur-3xl animate-pulse opacity-60" />
-              <div className="absolute inset-0 -inset-6 rounded-[2.5rem] bg-gradient-to-br from-accent/8 via-transparent to-primary/8 blur-xl" />
-              
+          <div className="relative mx-auto lg:mx-0 w-full max-w-lg lg:max-w-xl xl:max-w-2xl lg:sticky lg:top-32">
+            <div className="relative flex items-center justify-center">
               {/* Main image container */}
-              <div className="relative z-10 flex items-center justify-center transform hover:scale-110 transition-all duration-700 ease-out">
-                <div className="relative w-full max-w-[280px]">
-                  {/* Additional shadow layers for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/15 to-transparent blur-2xl -z-10 scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-accent/8 blur-xl -z-10 scale-105" />
-                  
+              <motion.div
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                animate={{
+                  y: [0, -15, 0],
+                  rotate: [0, 2, -2, 0],
+                }}
+                transition={{
+                  opacity: { duration: 0.8, ease: "easeOut" },
+                  scale: { duration: 0.8, ease: "easeOut" },
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
+                  rotate: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
+                }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                className="relative z-10"
+              >
+                <div className="relative w-full max-w-[600px] xl:max-w-[700px]">
                   <Image
                     src="/images/logos/bottle.png"
                     alt="ROOK'S AQUA PET Bottle"
-                    width={400}
-                    height={1000}
-                    className="w-full h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,191,255,0.3)] filter brightness-110 contrast-105 saturate-110"
+                    width={700}
+                    height={1750}
+                    className="w-full h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)] filter brightness-105 contrast-110 saturate-105"
                     priority
                     quality={95}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -429,23 +445,100 @@ export function Market() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-20 mb-12 flex flex-col items-center text-center space-y-6"
+          className="mt-20 mb-12"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-primary">
-            {language === "de" && "Zukunftsaussichten"}
-            {language === "en" && "Future Outlook"}
-            {language === "fr" && "Perspectives d'avenir"}
-          </h3>
-          <div className="relative w-56 md:w-72 lg:w-80">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-full blur-3xl -z-10 animate-pulse" />
-            <Image
-              src="/images/logos/SachetDirty.png"
-              alt="Sachet Water Illustration"
-              width={320}
-              height={320}
-              className="w-full h-auto object-contain drop-shadow-2xl filter brightness-110 contrast-105"
-              quality={95}
-            />
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              {language === "de" && "Zukunftsaussichten"}
+              {language === "en" && "Future Outlook"}
+              {language === "fr" && "Perspectives d'avenir"}
+            </h3>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.6fr] gap-12 items-center">
+              {/* Text Content */}
+              <div className="p-8 md:p-10 rounded-3xl bg-white/95 backdrop-blur-sm shadow-2xl border border-slate-200/60">
+                {language === "de" && (
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p>
+                      Das Hygiene- und Gesundheitsbewusstsein der Menschen hat zugenommen. Die Nachfrage nach abgefülltem Wasser steigt. Abgefülltes Wasser wird in den kommenden Jahren einen neuen Höchststand beim Pro-Kopf-Verbrauch erreichen.
+                    </p>
+                    <p>
+                      Der Markt für abgefülltes Wasser ist einer der florierendsten Sektoren, für den bis zum Ende des laufenden Jahrzehnts ein beträchtliches Wachstum erwartet wird, wenn die derzeitigen Trends anhalten. Erhöhte verfügbare Geldmittel der anwachsenden Mittelschicht, ein schwaches öffentliches Wasserversorgungssystem, die Infrastruktur und der Anstieg des Tourismus sind Faktoren, die zu einer raschen Expansion führen.
+                    </p>
+                    <p className="text-sm italic opacity-70 pt-4 border-t border-slate-200">
+                      (Study: &quot;Bottled Water Market Analysis: Size, Share and Forecast&quot; (2018-2028) / Makreo Research)
+                    </p>
+                  </div>
+                )}
+
+                {language === "en" && (
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p>
+                      People&apos;s awareness of hygiene and health has increased. Demand for bottled water is rising. Bottled water will reach a new peak in per capita consumption in the coming years.
+                    </p>
+                    <p>
+                      The bottled water market is one of the most flourishing sectors, for which considerable growth is expected by the end of the current decade if current trends continue. Increased available funds of the growing middle class, a weak public water supply system, infrastructure and the rise in tourism are factors leading to rapid expansion.
+                    </p>
+                    <p className="text-sm italic opacity-70 pt-4 border-t border-slate-200">
+                      (Study: &quot;Bottled Water Market Analysis: Size, Share and Forecast&quot; (2018-2028) / Makreo Research)
+                    </p>
+                  </div>
+                )}
+
+                {language === "fr" && (
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p>
+                      La prise de conscience en matière d&apos;hygiène et de santé a augmenté. La demande d&apos;eau en bouteille augmente. L&apos;eau en bouteille atteindra un nouveau sommet de consommation par habitant dans les années à venir.
+                    </p>
+                    <p>
+                      Le marché de l&apos;eau en bouteille est l&apos;un des secteurs les plus florissants, pour lequel une croissance considérable est attendue d&apos;ici la fin de la décennie actuelle si les tendances actuelles se maintiennent. L&apos;augmentation des fonds disponibles de la classe moyenne croissante, un système d&apos;approvisionnement en eau publique faible, l&apos;infrastructure et l&apos;essor du tourisme sont des facteurs qui conduisent à une expansion rapide.
+                    </p>
+                    <p className="text-sm italic opacity-70 pt-4 border-t border-slate-200">
+                      (Étude : &quot;Bottled Water Market Analysis: Size, Share and Forecast&quot; (2018-2028) / Makreo Research)
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Image */}
+              <div className="relative flex justify-center lg:justify-end">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  animate={{
+                    y: [0, -12, 0],
+                    rotate: [0, -1.5, 1.5, 0],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.8, ease: "easeOut" },
+                    scale: { duration: 0.8, ease: "easeOut" },
+                    y: {
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                    rotate: {
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
+                  whileHover={{ scale: 1.08, transition: { duration: 0.3 } }}
+                  className="relative w-72 md:w-96 lg:w-[420px]"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-full blur-3xl -z-10 animate-pulse" />
+                  <Image
+                    src="/images/logos/SachetDirty.png"
+                    alt="Sachet Water Illustration"
+                    width={420}
+                    height={420}
+                    className="w-full h-auto object-contain drop-shadow-2xl filter brightness-110 contrast-105"
+                    quality={95}
+                  />
+                </motion.div>
+              </div>
+            </div>
           </div>
         </motion.div>
 

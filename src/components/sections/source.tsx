@@ -245,7 +245,7 @@ export function Source() {
                 </div>
 
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     {content.features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
@@ -268,6 +268,255 @@ export function Source() {
                         );
                     })}
                 </div>
+
+                {/* Unsere Mission Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    className="max-w-4xl mx-auto text-center mb-20"
+                >
+                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
+                        {language === "de" && "Unsere Mission"}
+                        {language === "en" && "Our Mission"}
+                        {language === "fr" && "Notre Mission"}
+                    </h3>
+                </motion.div>
+
+                {/* Unser Ursprung - Detailed Text */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7 }}
+                    className="max-w-5xl mx-auto text-left space-y-6 text-slate-200 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl"
+                >
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                        {language === "de" && "Unser Ursprung"}
+                        {language === "en" && "Our Origin"}
+                        {language === "fr" && "Notre Origine"}
+                    </h3>
+
+                    {language === "de" && (
+                        <div className="space-y-6 leading-relaxed">
+                            <p>
+                                Die Quelle von AQUA ROOKS befindet sich in der wasserreichsten Region Togos, in der Gemeinde Lac 2, Präfektur „Lacs au Togo", unweit der Küste des Golfs von Guinea. Dort fördern wir natürliches Mineralwasser aus einer Tiefe von 80 bis 120 Metern aus unterirdischen Becken mit konstantem Durchfluss. Dort befindet sich der unterirdische Teil der „Commune Du Lac 2", wo das Mineralwasser von AQUA ROOKS fließt. Dieser Prozess schafft einen gigantischen natürlichen Filter. So entstand im Herzen der „Commune Du Lac" die natürliche Quelle unseres Mineralwassers, geschaffen von der Natur.
+                            </p>
+                            <p>
+                                Die ausgezeichnete Qualität des Wassers wurde im April 2023 durch ein geologisches Gutachten der Universität Lomé / LAMICODA bestätigt. (Labor für Mikrobiologie und Qualitätskontrolle von Lebensmitteln (LAMICODA), Universität Lomé, Togo)
+                            </p>
+                            <p>
+                                Um sicherzustellen, dass sich die Quelle AQUA ROOKS im Einklang mit dem natürlichen Wasserkreislauf erneuert, sorgen unsere Mitarbeiter und Hydrogeologen für eine rationelle Bewirtschaftung der Quelle. Und dafür, dass die Ressource in Bezug auf Quantität erhalten und in Bezug auf Qualität geschützt wird. Getreu unserem Credo: Nicht mehr nehmen, als die Natur uns zur Verfügung stellt.
+                            </p>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Lithologie (Gesteinsarten / stratigraphische Struktur)
+                                </h4>
+                                <div className="space-y-3">
+                                    <p>
+                                        In Oberflächennähe findet man lockeres Sandmaterial aus dem Quartär (Sand, teilweise mit Kies).
+                                    </p>
+                                    <p>
+                                        Darunter befindet sich die sogenannte „Continental Terminal"-Formation, die aus klastischen Sedimenten (Sand, teilweise mit Lehmeinschlüssen, Kies) besteht.
+                                    </p>
+                                    <p>
+                                        In größerer Tiefe findet man eine Kalksteinschicht aus dem Paläozän (Dolomit-/Kalkstein-Grundwasserleiter), die hauptsächlich aus Karbonatgestein besteht.
+                                    </p>
+                                    <p>
+                                        Noch tiefer befindet sich eine sandige oder sandige Kalksteinformation aus dem Maastrichtium (Oberkreide).
+                                    </p>
+                                    <p>
+                                        Diese verschiedenen Grundwasserleiter sind durch eher undurchlässige (geringe Durchlässigkeit) Deckschichten und Zwischenschichten (Aquiluden) voneinander getrennt.
+                                    </p>
+                                    <p className="text-sm italic opacity-70 mt-4">
+                                        (Quelle: earthwise.bgs.ac.uk+1)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Hydrogeologische Bedingungen – Grundwasserleiter und Wasserressourcen
+                                </h4>
+                                <p className="mb-3">
+                                    Die wichtigsten Grundwasserleiter sind (von oben nach unten):
+                                </p>
+                                <ol className="list-decimal list-inside space-y-2 ml-4">
+                                    <li>Quartärer Sandgrundwasserleiter (oberflächennah, nicht begrenzt)</li>
+                                    <li>Kontinentaler Endgrundwasserleiter (CT) (häufig genutzt)</li>
+                                    <li>Paläozäner Grundwasserleiter (Kalkstein, tief)</li>
+                                    <li>Maastricht-Grundwasserleiter (Sand/Sandstein)</li>
+                                </ol>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Quelle: piahs.copernicus.org)
+                                </p>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Hydraulische Eigenschaften und Produktivität
+                                </h4>
+                                <p>
+                                    Der CT-Grundwasserleiter wird häufig genutzt (z. B. für Trinkwasser, insbesondere für lokale Brunnen).
+                                </p>
+                                <p>
+                                    Die Durchlässigkeit (Leitfähigkeit) des kontinentalen Endaquifers wird in Studien mit Größenordnungen von ~5-8 × 10⁻³ m²/s angegeben.
+                                </p>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Quelle: piahs.copernicus.org)
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {language === "en" && (
+                        <div className="space-y-6 leading-relaxed">
+                            <p>
+                                The source of AQUA ROOKS is located in Togo&apos;s most water-rich region, in the municipality of Lac 2, prefecture &quot;Lacs au Togo&quot;, not far from the coast of the Gulf of Guinea. Here we extract natural mineral water from a depth of 80 to 120 meters from underground basins with constant flow. This is where the underground part of the &quot;Commune Du Lac 2&quot; is located, where AQUA ROOKS mineral water flows. This process creates a gigantic natural filter. This is how the natural source of our mineral water was created in the heart of the &quot;Commune Du Lac&quot;, created by nature.
+                            </p>
+                            <p>
+                                The excellent quality of the water was confirmed in April 2023 by a geological report from the University of Lomé / LAMICODA. (Laboratory for Microbiology and Food Quality Control (LAMICODA), University of Lomé, Togo)
+                            </p>
+                            <p>
+                                To ensure that the AQUA ROOKS source renews itself in harmony with the natural water cycle, our employees and hydrogeologists ensure rational management of the source. And that the resource is preserved in terms of quantity and protected in terms of quality. True to our credo: Not taking more than nature provides us.
+                            </p>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Lithology (Rock Types / Stratigraphic Structure)
+                                </h4>
+                                <div className="space-y-3">
+                                    <p>
+                                        Near the surface, loose sand material from the Quaternary (sand, partially with gravel) is found.
+                                    </p>
+                                    <p>
+                                        Below this is the so-called &quot;Continental Terminal&quot; formation, which consists of clastic sediments (sand, partially with clay inclusions, gravel).
+                                    </p>
+                                    <p>
+                                        At greater depth, a limestone layer from the Paleocene (dolomite/limestone aquifer) is found, which consists mainly of carbonate rock.
+                                    </p>
+                                    <p>
+                                        Even deeper is a sandy or sandy limestone formation from the Maastrichtian (Upper Cretaceous).
+                                    </p>
+                                    <p>
+                                        These various aquifers are separated from each other by rather impermeable (low permeability) cap layers and intermediate layers (aquicludes).
+                                    </p>
+                                    <p className="text-sm italic opacity-70 mt-4">
+                                        (Source: earthwise.bgs.ac.uk+1)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Hydrogeological Conditions – Aquifers and Water Resources
+                                </h4>
+                                <p className="mb-3">
+                                    The most important aquifers are (from top to bottom):
+                                </p>
+                                <ol className="list-decimal list-inside space-y-2 ml-4">
+                                    <li>Quaternary sand aquifer (near surface, unconfined)</li>
+                                    <li>Continental Terminal aquifer (CT) (frequently used)</li>
+                                    <li>Paleocene aquifer (limestone, deep)</li>
+                                    <li>Maastrichtian aquifer (sand/sandstone)</li>
+                                </ol>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Source: piahs.copernicus.org)
+                                </p>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Hydraulic Properties and Productivity
+                                </h4>
+                                <p>
+                                    The CT aquifer is frequently used (e.g., for drinking water, especially for local wells).
+                                </p>
+                                <p>
+                                    The permeability (conductivity) of the Continental Terminal aquifer is given in studies with orders of magnitude of ~5-8 × 10⁻³ m²/s.
+                                </p>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Source: piahs.copernicus.org)
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {language === "fr" && (
+                        <div className="space-y-6 leading-relaxed">
+                            <p>
+                                La source d&apos;AQUA ROOKS se trouve dans la région la plus riche en eau du Togo, dans la commune de Lac 2, préfecture &quot;Lacs au Togo&quot;, non loin de la côte du golfe de Guinée. Nous y extrayons de l&apos;eau minérale naturelle à une profondeur de 80 à 120 mètres depuis des bassins souterrains à débit constant. C&apos;est là que se trouve la partie souterraine de la &quot;Commune Du Lac 2&quot;, où coule l&apos;eau minérale d&apos;AQUA ROOKS. Ce processus crée un filtre naturel gigantesque. C&apos;est ainsi qu&apos;est née la source naturelle de notre eau minérale au cœur de la &quot;Commune Du Lac&quot;, créée par la nature.
+                            </p>
+                            <p>
+                                L&apos;excellente qualité de l&apos;eau a été confirmée en avril 2023 par un rapport géologique de l&apos;Université de Lomé / LAMICODA. (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
+                            </p>
+                            <p>
+                                Pour garantir que la source AQUA ROOKS se renouvelle en harmonie avec le cycle naturel de l&apos;eau, nos employés et hydrogéologues assurent une gestion rationnelle de la source. Et que la ressource soit préservée en termes de quantité et protégée en termes de qualité. Fidèles à notre credo : Ne pas prendre plus que ce que la nature nous fournit.
+                            </p>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Lithologie (Types de roches / Structure stratigraphique)
+                                </h4>
+                                <div className="space-y-3">
+                                    <p>
+                                        Près de la surface, on trouve du matériau sableux meuble du Quaternaire (sable, partiellement avec gravier).
+                                    </p>
+                                    <p>
+                                        En dessous se trouve la formation dite &quot;Continental Terminal&quot;, qui consiste en sédiments clastiques (sable, partiellement avec inclusions d&apos;argile, gravier).
+                                    </p>
+                                    <p>
+                                        À plus grande profondeur, on trouve une couche de calcaire du Paléocène (aquifère dolomitique/calcaire), qui consiste principalement en roche carbonatée.
+                                    </p>
+                                    <p>
+                                        Encore plus profond se trouve une formation calcaire sableuse ou sableuse du Maastrichtien (Crétacé supérieur).
+                                    </p>
+                                    <p>
+                                        Ces différents aquifères sont séparés les uns des autres par des couches de couverture et des couches intermédiaires (aquicludes) plutôt imperméables (faible perméabilité).
+                                    </p>
+                                    <p className="text-sm italic opacity-70 mt-4">
+                                        (Source : earthwise.bgs.ac.uk+1)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Conditions hydrogéologiques – Aquifères et ressources en eau
+                                </h4>
+                                <p className="mb-3">
+                                    Les aquifères les plus importants sont (de haut en bas) :
+                                </p>
+                                <ol className="list-decimal list-inside space-y-2 ml-4">
+                                    <li>Aquifère sableux quaternaire (près de la surface, non confiné)</li>
+                                    <li>Aquifère Continental Terminal (CT) (fréquemment utilisé)</li>
+                                    <li>Aquifère paléocène (calcaire, profond)</li>
+                                    <li>Aquifère maastrichtien (sable/grès)</li>
+                                </ol>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Source : piahs.copernicus.org)
+                                </p>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Propriétés hydrauliques et productivité
+                                </h4>
+                                <p>
+                                    L&apos;aquifère CT est fréquemment utilisé (par exemple, pour l&apos;eau potable, en particulier pour les puits locaux).
+                                </p>
+                                <p>
+                                    La perméabilité (conductivité) de l&apos;aquifère Continental Terminal est donnée dans les études avec des ordres de grandeur de ~5-8 × 10⁻³ m²/s.
+                                </p>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Source : piahs.copernicus.org)
+                                </p>
+                            </div>
+                        </div>
+                    )}
+                </motion.div>
             </Container>
         </section>
     );
