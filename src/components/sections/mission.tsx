@@ -143,92 +143,224 @@ export function Mission() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-5 text-left md:text-center max-w-4xl mx-auto"
+                        className="text-left max-w-5xl mx-auto space-y-8"
                     >
                         {language === "de" && (
                             <>
-                                <p>
-                                    Das 2023 gegründete Unternehmen „ROOK´S AQUA" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in SACHETS („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
-                                </p>
-                                <p>
-                                    Auf Grund der gesellschaftlichen Veränderungen und der hygienischen Bedenken, nebst zahlreichen Krankheiten, der sehr oft „unsauberen" „Mineralwasser-Plastikbeutel", so genannte „Pure Water"-Beutel, ist die Nachfrage nach sauberen und kontrollierten Trinkwasserbeuteln („sachets d&apos;eau minérale") stark angestiegen. Um diese steigende Nachfrage nach bestem und sauberem Mineralwasser zu bedienen wurde „AQUA ROOKS" gegründet.
-                                </p>
-                                <p>
-                                    Die dafür erschlossene Quelle auf eigenem Grund in der Wasser reichen Region Atoèta-Alaroya / Commune Lac 2 in der Präfektur „LACS AU TOGO" mit seiner ausgezeichneten Wasserqualität ist laut dem geologischen Gutachten der Université de Lomé / Lamicoda vom April 2023 bestätigt.
-                                </p>
-                                <p>
-                                    (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
-                                </p>
-                                <p>
-                                    „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht" so der Firmengründer Rodrigue Guedou Mahouton.
-                                </p>
-                                <p className="font-semibold text-primary mt-6">
-                                    Mission Statements:
-                                </p>
-                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
-                                    <li>Wir generieren eine sehr gute Rentabilität</li>
-                                    <li>Wir wachsen mit Gewissen.</li>
-                                    <li>Wir machen Business das allen zu Gute kommt.</li>
-                                    <li>Wichtig sind uns Umwelt-, Sozial- und Governance-Standards (ESG)</li>
-                                </ul>
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                    <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                                        Das 2023 gegründete Unternehmen „<span className="font-semibold text-primary">ROOK´S AQUA</span>" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in <span className="font-semibold">SACHETS</span> („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
+                                    </p>
+                                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                                        Auf Grund der gesellschaftlichen Veränderungen und der hygienischen Bedenken, nebst zahlreichen Krankheiten, der sehr oft „unsauberen" „Mineralwasser-Plastikbeutel", so genannte „Pure Water"-Beutel, ist die Nachfrage nach sauberen und kontrollierten Trinkwasserbeuteln („sachets d&apos;eau minérale") stark angestiegen. Um diese steigende Nachfrage nach bestem und sauberem Mineralwasser zu bedienen wurde „<span className="font-semibold text-primary">AQUA ROOKS</span>" gegründet.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                    <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+                                        Die dafür erschlossene Quelle auf eigenem Grund in der wasserreichen Region <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> in der Präfektur „LACS AU TOGO" mit seiner ausgezeichneten Wasserqualität ist laut dem geologischen Gutachten der <span className="font-semibold">Université de Lomé / Lamicoda</span> vom April 2023 bestätigt.
+                                    </p>
+                                    <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
+                                        (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
+                                    </p>
+                                </div>
+
+                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
+                                        „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht"
+                                    </blockquote>
+                                    <p className="text-base text-muted-foreground font-semibold pl-6">
+                                        — Rodrigue Guedou Mahouton, Firmengründer
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-primary/10 via-white/60 to-accent/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/30 shadow-xl">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 flex items-center gap-3">
+                                        <span className="w-1 h-8 bg-gradient-to-b from-accent to-primary rounded-full" />
+                                        Mission Statements
+                                    </h3>
+                                    <ul className="space-y-4 max-w-3xl">
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Wir generieren eine sehr gute Rentabilität
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Wir wachsen mit Gewissen.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Wir machen Business das allen zu Gute kommt.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Wichtig sind uns Umwelt-, Sozial- und Governance-Standards <span className="font-semibold text-primary">(ESG)</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </>
                         )}
 
                         {language === "en" && (
                             <>
-                                <p>
-                                    The company &quot;ROOK&apos;S AQUA&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in SACHETS (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
-                                </p>
-                                <p>
-                                    Due to social changes and hygiene concerns, as well as numerous diseases caused by the often &quot;unclean&quot; mineral water plastic bags, so-called &quot;Pure Water&quot; bags, demand for clean and controlled drinking water bags (&quot;sachets d&apos;eau minérale&quot;) has increased significantly. To meet this growing demand for the best and cleanest mineral water, &quot;AQUA ROOKS&quot; was founded.
-                                </p>
-                                <p>
-                                    The source developed for this purpose on the company&apos;s own land in the water-rich region of Atoèta-Alaroya / Commune Lac 2 in the prefecture &quot;LACS AU TOGO&quot; with its excellent water quality has been confirmed according to the geological report from Université de Lomé / Lamicoda from April 2023.
-                                </p>
-                                <p>
-                                    (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
-                                </p>
-                                <p>
-                                    &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot; says company founder Rodrigue Guedou Mahouton.
-                                </p>
-                                <p className="font-semibold text-primary mt-6">
-                                    Mission Statements:
-                                </p>
-                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
-                                    <li>We generate very good profitability</li>
-                                    <li>We grow with conscience.</li>
-                                    <li>We do business that benefits everyone.</li>
-                                    <li>Environmental, social and governance (ESG) standards are important to us</li>
-                                </ul>
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                    <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                                        The company &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
+                                    </p>
+                                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                                        Due to social changes and hygiene concerns, as well as numerous diseases caused by the often &quot;unclean&quot; mineral water plastic bags, so-called &quot;Pure Water&quot; bags, demand for clean and controlled drinking water bags (&quot;sachets d&apos;eau minérale&quot;) has increased significantly. To meet this growing demand for the best and cleanest mineral water, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; was founded.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                    <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+                                        The source developed for this purpose on the company&apos;s own land in the water-rich region of <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> in the prefecture &quot;LACS AU TOGO&quot; with its excellent water quality has been confirmed according to the geological report from <span className="font-semibold">Université de Lomé / Lamicoda</span> from April 2023.
+                                    </p>
+                                    <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
+                                        (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
+                                    </p>
+                                </div>
+
+                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
+                                        &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot;
+                                    </blockquote>
+                                    <p className="text-base text-muted-foreground font-semibold pl-6">
+                                        — Rodrigue Guedou Mahouton, Company Founder
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-primary/10 via-white/60 to-accent/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/30 shadow-xl">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 flex items-center gap-3">
+                                        <span className="w-1 h-8 bg-gradient-to-b from-accent to-primary rounded-full" />
+                                        Mission Statements
+                                    </h3>
+                                    <ul className="space-y-4 max-w-3xl">
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                We generate very good profitability
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                We grow with conscience.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                We do business that benefits everyone.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Environmental, social and governance <span className="font-semibold text-primary">(ESG)</span> standards are important to us
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </>
                         )}
 
                         {language === "fr" && (
                             <>
-                                <p>
-                                    L&apos;entreprise &quot;ROOK&apos;S AQUA&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en SACHETS (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
-                                </p>
-                                <p>
-                                    En raison des changements sociétaux et des préoccupations hygiéniques, ainsi que de nombreuses maladies causées par les sachets plastiques d&apos;eau minérale souvent &quot;impurs&quot;, appelés sachets &quot;Pure Water&quot;, la demande de sachets d&apos;eau potable propres et contrôlés (&quot;sachets d&apos;eau minérale&quot;) a considérablement augmenté. Pour répondre à cette demande croissante d&apos;eau minérale de la meilleure qualité et la plus propre, &quot;AQUA ROOKS&quot; a été fondée.
-                                </p>
-                                <p>
-                                    La source développée à cet effet sur le terrain propre de l&apos;entreprise dans la région riche en eau d&apos;Atoèta-Alaroya / Commune Lac 2 dans la préfecture &quot;LACS AU TOGO&quot; avec sa qualité d&apos;eau excellente a été confirmée selon le rapport géologique de l&apos;Université de Lomé / Lamicoda d&apos;avril 2023.
-                                </p>
-                                <p>
-                                    (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
-                                </p>
-                                <p>
-                                    &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;, déclare le fondateur de l&apos;entreprise Rodrigue Guedou Mahouton.
-                                </p>
-                                <p className="font-semibold text-primary mt-6">
-                                    Déclarations de mission :
-                                </p>
-                                <ul className="list-disc list-inside space-y-2 text-left max-w-2xl mx-auto">
-                                    <li>Nous générons une très bonne rentabilité</li>
-                                    <li>Nous grandissons avec conscience.</li>
-                                    <li>Nous faisons des affaires qui profitent à tous.</li>
-                                    <li>Les normes environnementales, sociales et de gouvernance (ESG) sont importantes pour nous</li>
-                                </ul>
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                    <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                                        L&apos;entreprise &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
+                                    </p>
+                                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                                        En raison des changements sociétaux et des préoccupations hygiéniques, ainsi que de nombreuses maladies causées par les sachets plastiques d&apos;eau minérale souvent &quot;impurs&quot;, appelés sachets &quot;Pure Water&quot;, la demande de sachets d&apos;eau potable propres et contrôlés (&quot;sachets d&apos;eau minérale&quot;) a considérablement augmenté. Pour répondre à cette demande croissante d&apos;eau minérale de la meilleure qualité et la plus propre, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; a été fondée.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                    <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+                                        La source développée à cet effet sur le terrain propre de l&apos;entreprise dans la région riche en eau d&apos;<span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> dans la préfecture &quot;LACS AU TOGO&quot; avec sa qualité d&apos;eau excellente a été confirmée selon le rapport géologique de l&apos;<span className="font-semibold">Université de Lomé / Lamicoda</span> d&apos;avril 2023.
+                                    </p>
+                                    <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
+                                        (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
+                                    </p>
+                                </div>
+
+                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
+                                        &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;
+                                    </blockquote>
+                                    <p className="text-base text-muted-foreground font-semibold pl-6">
+                                        — Rodrigue Guedou Mahouton, Fondateur de l&apos;entreprise
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-primary/10 via-white/60 to-accent/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/30 shadow-xl">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 flex items-center gap-3">
+                                        <span className="w-1 h-8 bg-gradient-to-b from-accent to-primary rounded-full" />
+                                        Déclarations de mission
+                                    </h3>
+                                    <ul className="space-y-4 max-w-3xl">
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Nous générons une très bonne rentabilité
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Nous grandissons avec conscience.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Nous faisons des affaires qui profitent à tous.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Les normes environnementales, sociales et de gouvernance <span className="font-semibold text-primary">(ESG)</span> sont importantes pour nous
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </>
                         )}
                     </motion.div>
