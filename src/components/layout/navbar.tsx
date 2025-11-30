@@ -185,20 +185,20 @@ export function Navbar() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: "100%" }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col overflow-hidden"
+                            className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col"
                         >
                             {/* Top Bar with Close Button */}
-                            <div className="flex items-center justify-between p-4 border-b border-slate-200/60 bg-white/95 backdrop-blur-sm">
+                            <div className="flex items-center justify-between p-3 sm:p-4 border-b border-slate-200/60 bg-white/95 backdrop-blur-sm flex-shrink-0">
                                 <div className="flex items-center gap-2 sm:gap-3">
                                     <Image
                                         src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
                                         alt="Aqua Rooks Logo"
                                         width={140}
                                         height={45}
-                                        className="h-8 w-auto sm:h-10 object-contain"
+                                        className="h-7 w-auto sm:h-9 object-contain"
                                         quality={95}
                                     />
-                                    <span className="text-lg sm:text-xl font-bold font-heading text-primary">
+                                    <span className="text-base sm:text-lg font-bold font-heading text-primary">
                                         AQUA ROOKS
                                     </span>
                                 </div>
@@ -207,27 +207,29 @@ export function Navbar() {
                                     className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
                                     aria-label="Close menu"
                                 >
-                                    <X className="w-6 h-6 text-slate-600" />
+                                    <X className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600" />
                                 </button>
                             </div>
 
-                            <Container className="flex-1 flex flex-col py-6 sm:py-8 overflow-hidden">
-                            <nav className="flex flex-col gap-3 sm:gap-4 items-center justify-center flex-1 px-4 overflow-hidden">
-                                {navLinks.map((link, index) => (
-                                    <motion.a
-                                        key={link.href}
-                                        href={link.href}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 20 }}
-                                        transition={{ delay: 0.1 + index * 0.1, duration: 0.5, ease: "easeOut" }}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            playClickSound();
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        className="flex items-center gap-3 text-xl sm:text-2xl md:text-3xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-4 rounded-xl hover:bg-slate-50 flex-shrink-0"
-                                    >
+                            {/* Scrollable Content Area */}
+                            <div className="flex-1 overflow-y-auto overscroll-contain">
+                                <Container className="flex flex-col justify-center min-h-full py-4 sm:py-6">
+                                    <nav className="flex flex-col gap-2 sm:gap-3 md:gap-4 items-center justify-center px-4 py-4">
+                                        {navLinks.map((link, index) => (
+                                            <motion.a
+                                                key={link.href}
+                                                href={link.href}
+                                                initial={{ opacity: 0, y: 30 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: 20 }}
+                                                transition={{ delay: 0.1 + index * 0.1, duration: 0.5, ease: "easeOut" }}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    playClickSound();
+                                                    setIsMobileMenuOpen(false);
+                                                }}
+                                                className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold font-heading text-primary hover:text-accent transition-colors w-full justify-center py-2 px-3 sm:px-4 rounded-xl hover:bg-slate-50"
+                                            >
                                         {link.href === "#marktentwicklung" && (
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-accent/20 blur-md rounded -z-10" />
@@ -244,40 +246,41 @@ export function Navbar() {
                                         <span>{link.label[language]}</span>
                                     </motion.a>
                                 ))}
-                            </nav>
+                                    </nav>
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 20 }}
-                                transition={{ delay: 0.6, duration: 0.5 }}
-                                className="flex flex-col gap-3 sm:gap-4 mt-auto max-w-sm mx-auto w-full pb-4 flex-shrink-0"
-                            >
-                                <Button
-                                    type="button"
-                                    variant="outline"
-                                    size="lg"
-                                    onClick={toggleLanguage}
-                                    className="w-full gap-2 text-lg h-12"
-                                >
-                                    <Globe className="w-5 h-5" />
-                                    <span className="uppercase">Switch Language ({language})</span>
-                                </Button>
-                                <Button
-                                    enableTilt
-                                    size="lg"
-                                    className="w-full gap-2 text-lg h-14 bg-accent hover:bg-accent/90 text-white shadow-xl shadow-accent/20"
-                                    onClick={() => {
-                                        handlePitchDeckClick();
-                                        setIsMobileMenuOpen(false);
-                                    }}
-                                >
-                                    <Download className="w-5 h-5" />
-                                    <span>{downloadPitchDeckText[language]}</span>
-                                </Button>
-                            </motion.div>
-                        </Container>
-                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 20 }}
+                                        transition={{ delay: 0.6, duration: 0.5 }}
+                                        className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-6 max-w-sm mx-auto w-full px-4 pb-4 sm:pb-6"
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="outline"
+                                            size="lg"
+                                            onClick={toggleLanguage}
+                                            className="w-full gap-2 text-sm sm:text-base h-10 sm:h-11"
+                                        >
+                                            <Globe className="w-4 h-4" />
+                                            <span className="uppercase text-xs sm:text-sm">Switch Language ({language})</span>
+                                        </Button>
+                                        <Button
+                                            enableTilt
+                                            size="lg"
+                                            className="w-full gap-2 text-sm sm:text-base h-11 sm:h-12 bg-accent hover:bg-accent/90 text-white shadow-xl shadow-accent/20"
+                                            onClick={() => {
+                                                handlePitchDeckClick();
+                                                setIsMobileMenuOpen(false);
+                                            }}
+                                        >
+                                            <Download className="w-4 h-4" />
+                                            <span className="text-xs sm:text-sm">{downloadPitchDeckText[language]}</span>
+                                        </Button>
+                                    </motion.div>
+                                </Container>
+                            </div>
+                        </motion.div>
                     </>
                 )}
             </AnimatePresence>
