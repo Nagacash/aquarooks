@@ -34,7 +34,7 @@ const images = [
     { src: "/images/gallery/3aqua.png", alt: "Aqua Gallery 3" },
     { src: "/images/gallery/4aqua.png", alt: "Aqua Gallery 4" },
     { src: "/images/gallery/5aqua.png", alt: "Aqua Gallery 5" },
-    { src: "/images/gallery/water.jpg", alt: "Water" },
+    { src: "/images/gallery/water.png", alt: "Water" },
 ];
 
 export function Impressionen() {
