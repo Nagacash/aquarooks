@@ -40,79 +40,130 @@ export function Hero() {
     const gradientRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Ensure video plays on mobile - aggressive autoplay approach
+        // Ensure video plays on mobile - most aggressive autoplay approach
         const video = videoRef.current;
-        if (video) {
-            // Set video properties for mobile compatibility
-            video.muted = true;
-            video.playsInline = true;
-            video.setAttribute("playsinline", "true");
-            video.setAttribute("webkit-playsinline", "true");
-            video.setAttribute("x5-playsinline", "true");
-            video.setAttribute("x5-video-player-type", "h5");
-            video.setAttribute("x5-video-player-fullscreen", "true");
-            video.setAttribute("x5-video-orientation", "portraint");
-            
-            // Force video to load
-            video.load();
-            
-            // Function to attempt playing the video
-            const attemptPlay = async () => {
+        if (!video) return;
+
+        // Set all mobile compatibility attributes immediately
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute("muted", "true");
+        video.setAttribute("playsinline", "true");
+        video.setAttribute("webkit-playsinline", "true");
+        video.setAttribute("x5-playsinline", "true");
+        video.setAttribute("x5-video-player-type", "h5");
+        video.setAttribute("x5-video-player-fullscreen", "true");
+        video.setAttribute("x5-video-orientation", "portraint");
+        
+        // Force video to load immediately
+        video.load();
+        
+        // Function to force play with multiple retries
+        const forcePlay = async (retries = 10) => {
+            for (let i = 0; i < retries; i++) {
                 try {
-                    await video.play();
-                    console.log("Video autoplay started successfully");
-                    return true;
-                } catch (error) {
-                    console.log("Video autoplay attempt failed:", error);
-                    return false;
+                    if (video.paused) {
+                        await video.play();
+                        console.log("Video autoplay started successfully");
+                        return true;
+                    }
+                } catch (error: any) {
+                    if (i < retries - 1) {
+                        await new Promise(resolve => setTimeout(resolve, 100 * (i + 1)));
+                    } else {
+                        console.log("Video autoplay failed after retries:", error);
+                    }
                 }
-            };
+            }
+            return false;
+        };
 
-            // Try to play immediately
-            attemptPlay();
+        // Immediate play attempt
+        forcePlay();
 
-            // Try multiple times with different events
-            const playAttempts = [
-                () => attemptPlay(),
-                () => {
-                    video.addEventListener("loadeddata", () => attemptPlay(), { once: true });
-                },
-                () => {
-                    video.addEventListener("canplay", () => attemptPlay(), { once: true });
-                },
-                () => {
-                    video.addEventListener("canplaythrough", () => attemptPlay(), { once: true });
-                },
-                () => {
-                    video.addEventListener("loadedmetadata", () => attemptPlay(), { once: true });
-                },
-            ];
+        // Play on every possible video event
+        const playOnEvent = (eventName: string) => {
+            video.addEventListener(eventName, () => {
+                if (video.paused) {
+                    video.play().catch(() => {});
+                }
+            }, { once: true });
+        };
 
-            // Execute all play attempts
-            playAttempts.forEach((attempt, index) => {
-                setTimeout(() => attempt(), index * 50);
-            });
+        // Try playing on all video events
+        [
+            "loadstart",
+            "loadedmetadata",
+            "loadeddata",
+            "canplay",
+            "canplaythrough",
+            "playing",
+            "play",
+        ].forEach(playOnEvent);
 
-            // Use Intersection Observer to play when video is visible
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting && video.paused) {
-                            video.play().catch(() => {});
+        // Use Intersection Observer with immediate play
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (video.paused) {
+                            video.play().catch(() => {
+                                // If play fails, try again after a short delay
+                                setTimeout(() => {
+                                    video.play().catch(() => {});
+                                }, 100);
+                            });
                         }
-                    });
-                },
-                { threshold: 0.1 }
-            );
+                    }
+                });
+            },
+            { threshold: 0 }
+        );
 
-            observer.observe(video);
+        observer.observe(video);
 
-            // Cleanup
-            return () => {
-                observer.disconnect();
-            };
+        // Also try playing on window load
+        const handleWindowLoad = () => {
+            if (video.paused) {
+                video.play().catch(() => {});
+            }
+        };
+        window.addEventListener("load", handleWindowLoad);
+
+        // Try playing on DOMContentLoaded
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", () => {
+                video.play().catch(() => {});
+            });
+        } else {
+            video.play().catch(() => {});
         }
 
+        // Periodic check to ensure video is playing (for mobile browsers that pause)
+        const playCheckInterval = setInterval(() => {
+            if (video.paused && document.visibilityState === "visible") {
+                video.play().catch(() => {});
+            }
+        }, 1000);
+
+        // Handle page visibility changes
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === "visible" && video.paused) {
+                video.play().catch(() => {});
+            }
+        };
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        // Cleanup
+        return () => {
+            observer.disconnect();
+            window.removeEventListener("load", handleWindowLoad);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            clearInterval(playCheckInterval);
+        };
+    }, []);
+
+    useEffect(() => {
         const ctx = gsap.context(() => {
             // Animate subtitle
             gsap.fromTo(
@@ -185,6 +236,8 @@ export function Hero() {
                 muted
                 playsInline
                 preload="auto"
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 style={{ 
                     zIndex: 0,
