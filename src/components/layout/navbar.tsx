@@ -10,31 +10,41 @@ import { useLanguageStore } from "@/store/language-store";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-    { href: "#mission", label: { de: "Mission", en: "Mission", fr: "Mission" } },
-    { href: "#source", label: { de: "Quelle", en: "Source", fr: "Source" } },
-    { href: "#usp", label: { de: "Vorteile", en: "Benefits", fr: "Avantages" } },
+    { href: "#mission", label: { de: "Mission", en: "Mission", fr: "Mission", ru: "Миссия" } },
+    { href: "#source", label: { de: "Quelle", en: "Source", fr: "Source", ru: "Источник" } },
+    { href: "#usp", label: { de: "Vorteile", en: "Benefits", fr: "Avantages", ru: "Преимущества" } },
     {
         href: "#marktentwicklung",
         label: {
             de: "Marktentwicklung",
             en: "Market Development",
             fr: "Développement du marché",
+            ru: "Развитие рынка",
         },
     },
-    { href: "#impressionen", label: { de: "Impressionen", en: "Impressions", fr: "Impressions" } },
-    { href: "#contact", label: { de: "Kontakt", en: "Contact", fr: "Contact" } },
+    { href: "#impressionen", label: { de: "Impressionen", en: "Impressions", fr: "Impressions", ru: "Впечатления" } },
+    { href: "#contact", label: { de: "Kontakt", en: "Contact", fr: "Contact", ru: "Контакты" } },
 ];
 
 const pitchDeckText = {
     de: "Pitch Deck",
     en: "Pitch Deck",
     fr: "Présentation",
+    ru: "Презентация",
 };
 
 const downloadPitchDeckText = {
     de: "Pitch Deck herunterladen",
     en: "Download Pitch Deck",
     fr: "Télécharger la présentation",
+    ru: "Скачать презентацию",
+};
+
+const switchLanguageText = {
+    de: "Sprache wechseln",
+    en: "Switch Language",
+    fr: "Changer de langue",
+    ru: "Сменить язык",
 };
 
 export function Navbar() {
@@ -53,7 +63,7 @@ export function Navbar() {
     const toggleLanguage = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
-        const nextLang = language === 'fr' ? 'en' : language === 'en' ? 'de' : 'fr';
+        const nextLang = language === 'fr' ? 'en' : language === 'en' ? 'de' : language === 'de' ? 'ru' : 'fr';
         setLanguage(nextLang);
     };
 
@@ -263,7 +273,7 @@ export function Navbar() {
                                             className="w-full gap-2 text-sm sm:text-base h-10 sm:h-11"
                                         >
                                             <Globe className="w-4 h-4" />
-                                            <span className="uppercase text-xs sm:text-sm">Switch Language ({language})</span>
+                                            <span className="uppercase text-xs sm:text-sm">{switchLanguageText[language]} ({language})</span>
                                         </Button>
                                         <Button
                                             enableTilt

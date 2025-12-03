@@ -104,6 +104,37 @@ const uspContent = {
             { value: "19.42%", label: "Sources d'eau améliorées au Togo" },
         ],
     },
+    ru: {
+        title: "Наши Преимущества",
+        subtitle: "Почему AQUA ROOKS?",
+        description: "Мы устанавливаем новые стандарты качества и чистоты на рынке минеральной воды Того.",
+        benefits: [
+            {
+                icon: Award,
+                title: "Высшее Качество",
+                description: "70% проданных пакетов минеральной воды в Того не соответствуют нашим стандартам качества. Мы гарантируем первоклассное качество воды.",
+            },
+            {
+                icon: Shield,
+                title: "Сертифицированная Чистота",
+                description: "Наш источник был протестирован и подтвержден Университетом Ломе / Lamicoda. Высшие стандарты гигиены.",
+            },
+            {
+                icon: DollarSign,
+                title: "Доступная Цена",
+                description: "Несмотря на премиальное качество, мы предлагаем конкурентные цены. Дешевле импорта, но прибыльно.",
+            },
+            {
+                icon: CheckCircle2,
+                title: "Устойчивость и Ответственность",
+                description: "Мы растем с совестью. Стандарты экологии, социальной ответственности и управления (ESG) важны для нас.",
+            },
+        ],
+        stats: [
+            { value: "70%", label: "Преимущество качества над конкурентами" },
+            { value: "19.42%", label: "Улучшенные источники воды в Того" },
+        ],
+    },
 };
 
 export function USP() {
@@ -363,6 +394,65 @@ export function USP() {
                                         <div className="mt-8 pt-8 border-t border-slate-200/60">
                                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                                 {["Rentable", "Sociale", "Régionale", "Nationale"].map((pillar, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"
+                                                    >
+                                                        <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                                                            {pillar}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+
+                        {language === "ru" && (
+                            <>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                                    Мы устанавливаем новые стандарты качества и чистоты на рынке минеральной воды Того.
+                                </p>
+
+                                {/* Уникальное торговое предложение и видение */}
+                                <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl border border-slate-200/60 p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8">
+                                    <div className="text-center mb-6 sm:mb-8">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 px-2">
+                                            Уникальное торговое предложение &amp; Видение
+                                        </h3>
+                                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
+                                    </div>
+
+                                    <div className="space-y-4 sm:space-y-6">
+                                        {/* Ключевая статистика */}
+                                        <div className="p-4 sm:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border border-accent/20">
+                                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
+                                                        импортированной воды из <span className="font-semibold text-primary">Ганы, Бенина и Буркина-Фасо</span> (включая такие бренды, как Coca-Cola и Nestlé) <span className="font-semibold text-accent">не достигает качества</span> воды ROOK&apos;S AQUA.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Основной контент */}
+                                        <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
+                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – премиальная минеральная вода, разлитая в ПЭТ-бутылки – предлагается на тоголезском рынке по цене в среднем <span className="font-semibold text-accent">ниже, чем импортированные продукты</span>, оставаясь при этом прибыльной.
+                                            </p>
+                                            
+                                            <p className="text-sm sm:text-base md:text-lg break-words">
+                                                Наше видение – сделать ROOK&apos;S AQUA <span className="font-semibold text-primary">ведущим брендом воды</span> на тоголезском рынке для лучшей питьевой и минеральной воды.
+                                            </p>
+                                        </div>
+
+                                        {/* Столпы видения */}
+                                        <div className="mt-8 pt-8 border-t border-slate-200/60">
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                {["Прибыльность", "Социальность", "Региональность", "Национальность"].map((pillar, idx) => (
                                                     <div
                                                         key={idx}
                                                         className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"

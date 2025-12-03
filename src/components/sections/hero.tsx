@@ -26,6 +26,11 @@ const heroContent = {
         subclaim: "Eau Minérale Premium du Togo",
         cta: "Découvrez Notre Mission",
     },
+    ru: {
+        claim: "L'Eau Minérale – Source De Vie",
+        subclaim: "Премиальная минеральная вода из Того",
+        cta: "Узнайте о нашей миссии",
+    },
 };
 
 export function Hero() {

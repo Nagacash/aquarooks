@@ -86,6 +86,32 @@ const sourceContent = {
             },
         ],
     },
+    ru: {
+        title: "Наш Источник",
+        subtitle: "Природная Чистота",
+        description: "Наша вода поступает из уникального природного источника в Того, известного своей исключительной минеральной композицией и чистотой.",
+        stats: [
+            { label: "Улучшенный Источник Воды", value: "19.42%", icon: Droplet },
+            { label: "Объем на Человека", value: "14.28 L", icon: TestTube },
+        ],
+        features: [
+            {
+                icon: Mountain,
+                title: "Природный Источник",
+                description: "Защищен в горах Того, вдали от загрязнения",
+            },
+            {
+                icon: MapPin,
+                title: "Географическое Происхождение",
+                description: "Премиальное расположение в Западной Африке с уникальными геологическими свойствами",
+            },
+            {
+                icon: TestTube,
+                title: "Минеральный Состав",
+                description: "Сбалансированные минералы для оптимального вкуса и здоровья",
+            },
+        ],
+    },
 };
 
 export function Source() {
@@ -215,6 +241,31 @@ export function Source() {
                                 </p>
                             </>
                         )}
+
+                        {language === "ru" && (
+                            <>
+                                <p>Вода — это жизнь.</p>
+                                <p>
+                                    Чистая питьевая вода улучшает и защищает здоровье и качество жизни. Тем не менее,
+                                    многие люди в Того все еще не имеют доступа к этому драгоценному ресурсу.
+                                </p>
+                                <p>
+                                    В 2022 году процент населения Того, имеющего доступ к питьевой воде из улучшенного
+                                    источника, составлял всего 19,42%.
+                                </p>
+                                <p>(Организация Объединенных Наций / ЦУР Цель 6.1)</p>
+                                <p>
+                                    Улучшенные источники воды (свободные от фекального, бактериального и химического
+                                    загрязнения) включают водопроводную воду, защищенные выкопанные колодцы, защищенные
+                                    источники, а также упакованную или доставленную воду.
+                                </p>
+                                <p>
+                                    Растущая урбанизация — перемещение людей из сельских районов в города — стимулирует
+                                    спрос на упакованные напитки. Действительно, жители городов, таких как столица Ломе,
+                                    обычно потребляют упакованные продукты и упакованную воду.
+                                </p>
+                            </>
+                        )}
                     </motion.div>
                 </div>
 
@@ -320,6 +371,7 @@ export function Source() {
                         {language === "de" && "Unsere Mission"}
                         {language === "en" && "Our Mission"}
                         {language === "fr" && "Notre Mission"}
+                        {language === "ru" && "Наша Миссия"}
                     </h3>
                 </motion.div>
 
@@ -335,6 +387,7 @@ export function Source() {
                         {language === "de" && "Unser Ursprung"}
                         {language === "en" && "Our Origin"}
                         {language === "fr" && "Notre Origine"}
+                        {language === "ru" && "Наше Происхождение"}
                     </h3>
 
                     {language === "de" && (
@@ -638,6 +691,108 @@ export function Source() {
                                 </p>
                                 <p className="text-sm italic opacity-70 mt-4">
                                     (Source : piahs.copernicus.org)
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {language === "ru" && (
+                        <div className="space-y-8 leading-relaxed">
+                            <div className="bg-gradient-to-br from-accent/10 via-transparent to-primary/10 rounded-2xl p-6 md:p-8 border border-accent/20">
+                                <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
+                                    Источник <span className="font-semibold text-accent">AQUA ROOKS</span> расположен в самом богатом водой регионе Того, в муниципалитете <span className="font-semibold">Lac 2</span>, префектура &quot;Lacs au Togo&quot;, недалеко от побережья Гвинейского залива. Здесь мы добываем природную минеральную воду с глубины <span className="font-semibold text-accent">80 до 120 метров</span> из подземных бассейнов с постоянным потоком.
+                                </p>
+                                <p className="text-lg md:text-xl text-white leading-relaxed">
+                                    Здесь находится подземная часть &quot;Commune Du Lac 2&quot;, где течет минеральная вода AQUA ROOKS. Этот процесс создает <span className="font-semibold text-accent">гигантский природный фильтр</span>. Так родился природный источник нашей минеральной воды в сердце &quot;Commune Du Lac&quot;, созданный природой.
+                                </p>
+                            </div>
+
+                            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                                        <span className="text-accent text-xl font-bold">✓</span>
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-base md:text-lg text-slate-200 leading-relaxed">
+                                            Отличное качество воды было подтверждено в <span className="font-semibold">апреле 2023 года</span> геологическим отчетом <span className="font-semibold text-accent">Университета Ломе / LAMICODA</span>.
+                                        </p>
+                                        <p className="text-sm text-slate-400 italic mt-3 border-l-4 border-accent/30 pl-4">
+                                            (Лаборатория микробиологии и контроля качества пищевых продуктов (LAMICODA), Университет Ломе, Того)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <div className="pl-6">
+                                    <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
+                                        Чтобы гарантировать, что источник AQUA ROOKS обновляется в гармонии с естественным водным циклом, наши сотрудники и гидрогеологи обеспечивают <span className="font-semibold">рациональное управление</span> источником. И чтобы ресурс сохранялся по количеству и защищался по качеству.
+                                    </p>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                        <p className="text-lg md:text-xl text-white font-semibold italic text-center">
+                                            Верны нашему кредо: <span className="text-accent">Не брать больше, чем природа нам предоставляет.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Литология (Типы пород / Стратиграфическая структура)
+                                </h4>
+                                <div className="space-y-3">
+                                    <p>
+                                        Близко к поверхности находится рыхлый песчаный материал из четвертичного периода (песок, частично с гравием).
+                                    </p>
+                                    <p>
+                                        Ниже находится так называемая формация &quot;Continental Terminal&quot;, состоящая из обломочных осадков (песок, частично с включениями глины, гравий).
+                                    </p>
+                                    <p>
+                                        На большей глубине находится известняковый слой из палеоцена (доломитовый/известняковый водоносный горизонт), состоящий в основном из карбонатной породы.
+                                    </p>
+                                    <p>
+                                        Еще глубже находится песчаная или песчаная известняковая формация из маастрихта (верхний мел).
+                                    </p>
+                                    <p>
+                                        Эти различные водоносные горизонты разделены друг от друга довольно непроницаемыми (низкая проницаемость) покрывающими слоями и промежуточными слоями (аквиклюдами).
+                                    </p>
+                                    <p className="text-sm italic opacity-70 mt-4">
+                                        (Источник: earthwise.bgs.ac.uk+1)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Гидрогеологические условия – Водоносные горизонты и водные ресурсы
+                                </h4>
+                                <p className="mb-3">
+                                    Наиболее важные водоносные горизонты (сверху вниз):
+                                </p>
+                                <ol className="list-decimal list-inside space-y-2 ml-4">
+                                    <li>Четвертичный песчаный водоносный горизонт (близко к поверхности, неограниченный)</li>
+                                    <li>Водоносный горизонт Continental Terminal (CT) (часто используемый)</li>
+                                    <li>Палеоценовый водоносный горизонт (известняк, глубокий)</li>
+                                    <li>Маастрихтский водоносный горизонт (песок/песчаник)</li>
+                                </ol>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Источник: piahs.copernicus.org)
+                                </p>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/20">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                                    Гидравлические свойства и продуктивность
+                                </h4>
+                                <p>
+                                    Водоносный горизонт CT часто используется (например, для питьевой воды, особенно для местных колодцев).
+                                </p>
+                                <p>
+                                    Проницаемость (проводимость) водоносного горизонта Continental Terminal в исследованиях указывается с порядками величины ~5-8 × 10⁻³ м²/с.
+                                </p>
+                                <p className="text-sm italic opacity-70 mt-4">
+                                    (Источник: piahs.copernicus.org)
                                 </p>
                             </div>
                         </div>

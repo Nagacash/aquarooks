@@ -69,6 +69,25 @@ const contactContent = {
             },
         },
     },
+    ru: {
+        title: "Контакты",
+        subtitle: "Свяжитесь с нами",
+        form: {
+            firstName: "Имя",
+            lastName: "Фамилия",
+            email: "Электронная почта",
+            phone: "Телефон",
+            message: "Сообщение",
+            send: "Отправить",
+            sending: "Отправка...",
+            success: "Сообщение успешно отправлено!",
+            errors: {
+                required: "Это поле обязательно",
+                email: "Неверный адрес электронной почты",
+                phone: "Неверный номер телефона",
+            },
+        },
+    },
 };
 
 const formSchema = z.object({
@@ -149,6 +168,8 @@ export function Contact() {
                     ? "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
                     : language === "fr"
                     ? "Erreur lors de l'envoi du message. Veuillez réessayer plus tard."
+                    : language === "ru"
+                    ? "Ошибка при отправке сообщения. Пожалуйста, попробуйте позже."
                     : "Error sending message. Please try again later.");
             
             alert(errorMessage);

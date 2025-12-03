@@ -89,6 +89,33 @@ const footerContent = {
         },
         copyright: "© 2024 AQUA ROOKS. Tous droits réservés.",
     },
+    ru: {
+        company: {
+            title: "AQUA ROOKS",
+            description: "Премиальная минеральная вода из природных источников в Того. Продвижение устойчивости и социальной ответственности.",
+        },
+        links: {
+            title: "Ссылки",
+            mission: "Миссия",
+            source: "Источник",
+            benefits: "Преимущества",
+            impressions: "Впечатления",
+            contact: "Контакты",
+        },
+        contact: {
+            title: "Контакты",
+            email: "office@aqua-rooks.com",
+            phone: "+228 90 62 80 29",
+            address: "Того, Западная Африка",
+        },
+        legal: {
+            title: "Правовая информация",
+            privacy: "Политика конфиденциальности",
+            terms: "Условия использования",
+            imprint: "Импрессум",
+        },
+        copyright: "© 2024 AQUA ROOKS. Все права защищены.",
+    },
 };
 
 export function Footer() {

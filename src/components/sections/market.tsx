@@ -171,6 +171,59 @@ const marketContent = {
       { name: "Petits fournisseurs", origin: "Togo", type: "Producteurs de sachets", share: "Non vérifiée", verified: false },
     ],
   },
+  ru: {
+    title: "Развитие рынка",
+    subtitle: "Вода в бутылках в Того",
+    intro: "Рынок бутилированной питьевой воды (ПЭТ-бутылки) в Того динамично растет и предлагает большой потенциал для высококачественной местной минеральной воды, такой как ROOK'S AQUA.",
+    stats: [
+      {
+        value: "62,02 млн $",
+        label: "Выручка 2023",
+        sublabel: "Сегмент бутилированной воды",
+        icon: DollarSign,
+        color: "from-accent/20 to-accent/10",
+        iconColor: "text-accent",
+      },
+      {
+        value: "5,08%",
+        label: "Годовой рост",
+        sublabel: "CAGR 2023–2027",
+        icon: TrendingUp,
+        color: "from-green-500/20 to-green-400/10",
+        iconColor: "text-green-600",
+      },
+      {
+        value: "143,70 млн л",
+        label: "Объем к 2027",
+        sublabel: "Прогноз",
+        icon: Droplet,
+        color: "from-blue-500/20 to-blue-400/10",
+        iconColor: "text-blue-600",
+      },
+      {
+        value: "14,28 л",
+        label: "На человека 2023",
+        sublabel: "Средний объем",
+        icon: ShoppingBag,
+        color: "from-primary/20 to-primary/10",
+        iconColor: "text-primary",
+      },
+    ],
+    points: [
+      "Выручка в сегменте бутилированной воды (ПЭТ-бутылки) составляет 62,02 миллиона долларов США в 2023 году, с ожидаемым годовым темпом роста 5,08% (CAGR 2023–2027).",
+      "В 2023 году выручка составляет 6,98 долларов США на человека, в среднем по всему населению (CAGR 2023–2027).",
+      "К 2027 году сегмент бутилированной воды, как ожидается, достигнет объема 143,70 миллионов литров. На 2024 год прогнозируется рост объема на 3,8% (CAGR 2023–2027).",
+      "Средний объем на человека в сегменте бутилированной воды, как ожидается, составит 14,28 литров в 2023 году (CAGR 2023–2027).",
+      "К 2027 году около 8% расходов в сегменте бутилированной воды, как ожидается, будет приходиться на потребление вне дома (например, в барах и ресторанах) (CAGR 2023–2027).",
+    ],
+    competitionTitle: "Конкуренты",
+    competitors: [
+      { name: "Voltic", origin: "Гана", type: "Импортер", share: "36%", verified: true },
+      { name: "Различные импортеры", origin: "Бенин и Буркина-Фасо", type: "Импортер", share: "33,5%", verified: true },
+      { name: "Cristal", origin: "Того", type: "Местный поставщик", share: "Не проверено", verified: false },
+      { name: "Мелкие поставщики", origin: "Того", type: "Производители пакетов", share: "Не проверено", verified: false },
+    ],
+  },
 };
 
 export function Market() {
@@ -324,7 +377,9 @@ export function Market() {
                     ? "Marktkennzahlen"
                     : language === "en"
                     ? "Market Indicators"
-                    : "Indicateurs du marché"}
+                    : language === "fr"
+                    ? "Indicateurs du marché"
+                    : "Рыночные показатели"}
                 </h3>
               </div>
               <ul className="space-y-4">
@@ -384,7 +439,7 @@ export function Market() {
                           {competitor.share}
                         </div>
                         <div className="text-xs text-muted-foreground">
-                          {language === "de" ? "Marktanteil" : language === "en" ? "Market Share" : "Part de marché"}
+                          {language === "de" ? "Marktanteil" : language === "en" ? "Market Share" : language === "fr" ? "Part de marché" : "Доля рынка"}
                         </div>
                       </div>
                     </div>
@@ -452,6 +507,7 @@ export function Market() {
               {language === "de" && "Zukunftsaussichten"}
               {language === "en" && "Future Outlook"}
               {language === "fr" && "Perspectives d'avenir"}
+              {language === "ru" && "Перспективы на будущее"}
             </h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.6fr] gap-12 items-center">
@@ -495,6 +551,20 @@ export function Market() {
                     </p>
                     <p className="text-sm italic opacity-70 pt-4 border-t border-slate-200">
                       (Étude : &quot;Bottled Water Market Analysis: Size, Share and Forecast&quot; (2018-2028) / Makreo Research)
+                    </p>
+                  </div>
+                )}
+
+                {language === "ru" && (
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p>
+                      Осведомленность людей о гигиене и здоровье возросла. Спрос на бутилированную воду растет. Бутилированная вода достигнет нового пика потребления на душу населения в ближайшие годы.
+                    </p>
+                    <p>
+                      Рынок бутилированной воды является одним из самых процветающих секторов, для которого ожидается значительный рост к концу текущего десятилетия, если текущие тенденции сохранятся. Увеличение доступных средств растущего среднего класса, слабая система общественного водоснабжения, инфраструктура и рост туризма являются факторами, ведущими к быстрому расширению.
+                    </p>
+                    <p className="text-sm italic opacity-70 pt-4 border-t border-slate-200">
+                      (Исследование: &quot;Анализ рынка бутилированной воды: размер, доля и прогноз&quot; (2018-2028) / Makreo Research)
                     </p>
                   </div>
                 )}
@@ -559,6 +629,8 @@ export function Market() {
                 "ROOK'S AQUA is positioned in a growing market with clear quality and price advantages."}
               {language === "fr" &&
                 "ROOK'S AQUA se positionne sur un marché en croissance avec des avantages clairs en termes de qualité et de prix."}
+              {language === "ru" &&
+                "ROOK'S AQUA позиционируется на растущем рынке с явными преимуществами в качестве и цене."}
             </p>
           </div>
         </motion.div>

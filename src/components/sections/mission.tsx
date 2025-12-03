@@ -78,6 +78,28 @@ const missionContent = {
             },
         ],
     },
+    ru: {
+        title: "Наша Миссия",
+        subtitle: "Источник Жизни",
+        description: "ROOK'S AQUA добывает, производит и продает природную минеральную воду из тоголезского источника в ПЭТ-бутылках – с акцентом на качество, устойчивость и социальную ответственность.",
+        values: [
+            {
+                icon: Target,
+                title: "Природный источник",
+                description: "Защищен в подземных водных бассейнах на юге Того, вдали от загрязнения окружающей среды.",
+            },
+            {
+                icon: Heart,
+                title: "Географическое происхождение",
+                description: "В Западной Африке с уникальными геологическими характеристиками.",
+            },
+            {
+                icon: Globe,
+                title: "Минеральный состав",
+                description: "Сбалансированный минеральный состав для оптимального вкуса и здоровья.",
+            },
+        ],
+    },
 };
 
 export function Mission() {
@@ -376,6 +398,79 @@ export function Mission() {
                                             </div>
                                             <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
                                                 Les normes environnementales, sociales et de gouvernance <span className="font-semibold text-primary">(ESG)</span> sont importantes pour nous
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </>
+                        )}
+
+                        {language === "ru" && (
+                            <>
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                    <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                                        Компания &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, основанная в 2023 году, поставила перед собой цель продвигать, производить, продавать и распространять по всей стране высококачественную природную минеральную воду из тоголезского источника для населения в <span className="font-semibold">ПАКЕТАХ</span> (&quot;sachets d&apos;eau minérale&quot; / пластиковые пакеты с минеральной водой) и позже в питьевых бутылках (ПЭТ).
+                                    </p>
+                                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                                        Из-за социальных изменений и гигиенических проблем, а также многочисленных заболеваний, вызванных часто &quot;нечистыми&quot; пластиковыми пакетами с минеральной водой, так называемыми пакетами &quot;Pure Water&quot;, спрос на чистые и контролируемые пакеты с питьевой водой (&quot;sachets d&apos;eau minérale&quot;) значительно вырос. Для удовлетворения этого растущего спроса на лучшую и самую чистую минеральную воду была основана &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                    <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+                                        Источник, разработанный для этой цели на собственной земле компании в богатом водой регионе <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> в префектуре &quot;LACS AU TOGO&quot; с его отличным качеством воды, был подтвержден согласно геологическому отчету <span className="font-semibold">Университета Ломе / Lamicoda</span> от апреля 2023 года.
+                                    </p>
+                                    <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
+                                        (Лаборатория микробиологии и контроля качества пищевых продуктов (LAMICODA), Университет Ломе, Того)
+                                    </p>
+                                </div>
+
+                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
+                                        &quot;Наша вода, доступная в Atoéta / Commune Lac 2, содержит смесь минералов и питательных веществ, которые фильтруются через песок, глину и известняк, сохраняя ценные микроэлементы с правильным уровнем pH и создавая естественно чистую, высококачественную минеральную воду&quot;
+                                    </blockquote>
+                                    <p className="text-base text-muted-foreground font-semibold pl-6">
+                                        — Родриг Гуэду Маутон, Основатель компании
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-primary/10 via-white/60 to-accent/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/30 shadow-xl">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 flex items-center gap-3">
+                                        <span className="w-1 h-8 bg-gradient-to-b from-accent to-primary rounded-full" />
+                                        Заявления о миссии
+                                    </h3>
+                                    <ul className="space-y-4 max-w-3xl">
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Мы генерируем очень хорошую прибыльность
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Мы растем с совестью.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Мы ведем бизнес, который приносит пользу всем.
+                                            </p>
+                                        </li>
+                                        <li className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:bg-gradient-to-br group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                                                <span className="text-accent font-bold text-sm">✓</span>
+                                            </div>
+                                            <p className="text-base md:text-lg text-foreground leading-relaxed flex-1 pt-1">
+                                                Стандарты экологии, социальной ответственности и управления <span className="font-semibold text-primary">(ESG)</span> важны для нас
                                             </p>
                                         </li>
                                     </ul>

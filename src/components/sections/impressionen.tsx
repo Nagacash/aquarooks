@@ -26,6 +26,11 @@ const impressionenContent = {
         subtitle: "Aperçus",
         description: "Découvrez la beauté de nos sources et la qualité de notre production.",
     },
+    ru: {
+        title: "Впечатления",
+        subtitle: "Обзор",
+        description: "Откройте для себя красоту наших источников и качество нашего производства.",
+    },
 };
 
 const images = [

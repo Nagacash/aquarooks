@@ -187,7 +187,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    alternateLocale: ["de_DE", "fr_FR"],
+    alternateLocale: ["de_DE", "fr_FR", "ru_RU"],
     url: "/",
     siteName: "AQUA ROOKS",
     title: "AQUA ROOKS | Premium Mineral Water from Togo",
@@ -224,6 +224,7 @@ export const metadata: Metadata = {
       "de-DE": "/de",
       "en-US": "/",
       "fr-FR": "/fr",
+      "ru-RU": "/ru",
     },
   },
   verification: {
