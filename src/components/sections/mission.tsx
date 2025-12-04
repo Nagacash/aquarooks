@@ -123,12 +123,12 @@ export function Mission() {
                         opacity: 1,
                         y: 0,
                         scale: 1,
-                        duration: 0.6,
-                        stagger: 0.15,
+                        duration: 0.5,
+                        stagger: 0.1,
                         ease: "power3.out",
                         scrollTrigger: {
                             trigger: cardsRef.current,
-                            start: "top 80%",
+                            start: "top 95%",
                             toggleActions: "play none none none"
                         }
                     }
@@ -146,8 +146,8 @@ export function Mission() {
                     <motion.div
                         initial={{ opacity: 0, y: 20, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
                         className="flex justify-center mb-6 sm:mb-8"
                     >
                         <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40">
@@ -164,8 +164,8 @@ export function Mission() {
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.05 }}
                         className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
                     >
                         {content.subtitle}
@@ -173,8 +173,8 @@ export function Mission() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6"
                     >
                         {content.title}
@@ -182,8 +182,8 @@ export function Mission() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
                         className="text-left max-w-5xl mx-auto space-y-8"
                     >
                         {language === "de" && (
@@ -193,8 +193,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
@@ -211,8 +211,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
@@ -229,8 +229,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht"
@@ -290,8 +290,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
@@ -308,8 +308,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
@@ -326,8 +326,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot;
@@ -387,8 +387,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
@@ -405,8 +405,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
@@ -423,8 +423,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;
@@ -484,8 +484,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
@@ -502,8 +502,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
@@ -520,8 +520,8 @@ export function Mission() {
                                         className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
                                         initial={{ height: 0 }}
                                         whileInView={{ height: "100%" }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                        viewport={{ once: true, margin: "-150px" }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                     />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Наша вода, доступная в Atoéta / Commune Lac 2, содержит смесь минералов и питательных веществ, которые фильтруются через песок, глину и известняк, сохраняя ценные микроэлементы с правильным уровнем pH и создавая естественно чистую, высококачественную минеральную воду&quot;

@@ -244,12 +244,12 @@ export function Market() {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.7,
-            stagger: 0.1,
+            duration: 0.5,
+            stagger: 0.08,
             ease: "back.out(1.7)",
             scrollTrigger: {
               trigger: statsRef.current,
-              start: "top 80%",
+              start: "top 95%",
               toggleActions: "play none none none",
             },
           }
@@ -264,12 +264,12 @@ export function Market() {
           {
             opacity: 1,
             x: 0,
-            duration: 0.6,
-            stagger: 0.1,
+            duration: 0.5,
+            stagger: 0.08,
             ease: "power3.out",
             scrollTrigger: {
               trigger: competitorsRef.current,
-              start: "top 85%",
+              start: "top 95%",
               toggleActions: "play none none none",
             },
           }
@@ -296,7 +296,8 @@ export function Market() {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-150px" }}
+            transition={{ duration: 0.4 }}
             className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
           >
             {content.subtitle}
@@ -304,8 +305,8 @@ export function Market() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            viewport={{ once: true, margin: "-150px" }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6"
           >
             {content.title}
@@ -313,8 +314,8 @@ export function Market() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            viewport={{ once: true, margin: "-150px" }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4"
           >
             {content.intro}
@@ -330,8 +331,8 @@ export function Market() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="group relative p-6 md:p-8 rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
               >
                 {/* Gradient overlay */}
@@ -364,8 +365,8 @@ export function Market() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="p-8 md:p-10 rounded-3xl bg-white/95 backdrop-blur-sm shadow-2xl border border-slate-200/60"
             >
               <div className="flex items-center gap-4 mb-6">
@@ -400,8 +401,8 @@ export function Market() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ duration: 0.4, delay: 0.15 }}
               className="p-8 md:p-10 rounded-3xl bg-white/95 backdrop-blur-sm shadow-2xl border border-slate-200/60"
             >
               <div className="flex items-center gap-4 mb-6">
@@ -456,7 +457,8 @@ export function Market() {
               <motion.div
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.4 }}
                 animate={{
                   y: [0, -15, 0],
                   rotate: [0, 2, -2, 0],
@@ -498,8 +500,8 @@ export function Market() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+          viewport={{ once: true, margin: "-150px" }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="mt-20 mb-12"
         >
           <div className="max-w-5xl mx-auto">
@@ -575,7 +577,8 @@ export function Market() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, y: 30 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-150px" }}
+                  transition={{ duration: 0.4 }}
                   animate={{
                     y: [0, -12, 0],
                     rotate: [0, -1.5, 1.5, 0],
@@ -616,8 +619,8 @@ export function Market() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
+          viewport={{ once: true, margin: "-150px" }}
+          transition={{ duration: 0.4, delay: 0.25 }}
           className="flex flex-col items-center justify-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 border border-primary/10"
         >
           <div className="flex items-center gap-3">

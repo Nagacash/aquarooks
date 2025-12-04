@@ -160,12 +160,12 @@ export function USP() {
                         opacity: 1,
                         y: 0,
                         scale: 1,
-                        duration: 0.7,
-                        stagger: 0.2,
+                        duration: 0.5,
+                        stagger: 0.1,
                         ease: "power3.out",
                         scrollTrigger: {
                             trigger: benefitsRef.current,
-                            start: "top 80%",
+                            start: "top 95%",
                             toggleActions: "play none none none"
                         }
                     }
@@ -186,12 +186,12 @@ export function USP() {
                         opacity: 1,
                         scale: 1,
                         y: 0,
-                        duration: 0.6,
-                        stagger: 0.15,
+                        duration: 0.5,
+                        stagger: 0.1,
                         ease: "back.out(1.7)",
                         scrollTrigger: {
                             trigger: statsRef.current,
-                            start: "top 85%",
+                            start: "top 95%",
                             toggleActions: "play none none none"
                         }
                     }
@@ -212,7 +212,8 @@ export function USP() {
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4 }}
                         className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4"
                     >
                         {content.subtitle}
@@ -220,8 +221,8 @@ export function USP() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.05 }}
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6"
                     >
                         {content.title}
@@ -229,8 +230,8 @@ export function USP() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
                         className="max-w-4xl mx-auto px-4"
                     >
                         {language === "de" && (

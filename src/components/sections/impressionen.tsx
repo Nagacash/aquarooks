@@ -62,12 +62,12 @@ export function Impressionen() {
                     y: 0,
                     opacity: 1,
                     scale: 1,
-                    duration: 1,
-                    stagger: 0.15,
+                    duration: 0.6,
+                    stagger: 0.1,
                     ease: "power2.out",
-                    scrollTrigger: {
+                        scrollTrigger: {
                         trigger: containerRef.current,
-                        start: "top 95%", // start animation just as the grid enters the viewport
+                        start: "top 100%", // start animation earlier
                         end: "bottom 5%",
                         toggleActions: "play none none none",
                     },
@@ -129,7 +129,8 @@ export function Impressionen() {
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4 }}
                         className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4"
                     >
                         {content.subtitle}
@@ -137,8 +138,8 @@ export function Impressionen() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.05 }}
                         className="text-4xl md:text-5xl font-bold text-white mb-6"
                     >
                         {content.title}
@@ -146,8 +147,8 @@ export function Impressionen() {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true, margin: "-150px" }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
                         className="text-lg text-slate-300 leading-relaxed"
                     >
                         {content.description}
