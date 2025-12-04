@@ -34,12 +34,12 @@ const impressionenContent = {
 };
 
 const images = [
-    { src: "/images/gallery/8aqua.png", alt: "Aqua Gallery 1" },
+    { src: "/images/gallery/10aqua.png", alt: "Aqua Gallery 1" },
     { src: "/images/gallery/2aqua.png", alt: "Aqua Gallery 2" },
     { src: "/images/gallery/3aqua.png", alt: "Aqua Gallery 3" },
     { src: "/images/gallery/4aqua.png", alt: "Aqua Gallery 4" },
     { src: "/images/gallery/5aqua.png", alt: "Aqua Gallery 5" },
-    { src: "/images/gallery/9aqua.png", alt: "Aqua Gallery Highlight" },
+    { src: "/images/gallery/water.png", alt: "Aqua Gallery Highlight" },
 ];
 
 export function Impressionen() {
@@ -50,13 +50,13 @@ export function Impressionen() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Staggered entrance animation
+            // Staggered entrance animation – trigger earlier so images are visible as soon as they enter the viewport
             gsap.fromTo(
                 imagesRef.current,
                 {
-                    y: 100,
+                    y: 40,
                     opacity: 0,
-                    scale: 0.9
+                    scale: 0.97,
                 },
                 {
                     y: 0,
@@ -64,13 +64,13 @@ export function Impressionen() {
                     scale: 1,
                     duration: 1,
                     stagger: 0.15,
-                    ease: "power3.out",
+                    ease: "power2.out",
                     scrollTrigger: {
                         trigger: containerRef.current,
-                        start: "top 70%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
+                        start: "top 95%", // start animation just as the grid enters the viewport
+                        end: "bottom 5%",
+                        toggleActions: "play none none none",
+                    },
                 }
             );
         }, containerRef);
