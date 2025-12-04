@@ -7,7 +7,30 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { useLanguageStore } from "@/store/language-store";
 
-const impressumContent = {
+type ImpressumLanguage = "de" | "en" | "fr";
+
+const impressumContent: Record<ImpressumLanguage, {
+    title: string;
+    subtitle: string;
+    company: {
+        title: string;
+        name: string;
+        address: string;
+        email: string;
+        phone: string;
+    };
+    responsible: {
+        title: string;
+        name: string;
+        address: string;
+        email?: string;
+        phone?: string;
+    };
+    disclaimer: {
+        title: string;
+        content: string[];
+    };
+}> = {
     de: {
         title: "Impressum",
         subtitle: "Angaben gemäß § 5 TMG",
@@ -90,7 +113,8 @@ const impressumContent = {
 
 export default function ImpressumPage() {
     const { language } = useLanguageStore();
-    const content = impressumContent[language];
+    const effectiveLanguage: ImpressumLanguage = language === "ru" ? "fr" : language;
+    const content = impressumContent[effectiveLanguage];
     const router = useRouter();
 
     return (
