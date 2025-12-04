@@ -622,7 +622,7 @@ export function Market() {
         >
           <div className="flex items-center gap-3">
             <TrendingUp className="w-6 h-6 text-accent" />
-            <p className="text-base md:text-lg font-semibold text-foreground text-center">
+            <p className="text-base md:text-lg font-semibold text-foreground text-center break-words leading-snug">
               {language === "de" &&
                 "AQUA ROOKS positioniert sich in einem wachsenden Markt mit klaren Qualitäts- und Preisvorteilen."}
               {language === "en" &&

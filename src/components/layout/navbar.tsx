@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Download } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { useLanguageStore } from "@/store/language-store";
@@ -51,6 +52,8 @@ export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { language, setLanguage } = useLanguageStore();
+    const pathname = usePathname();
+    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -75,6 +78,33 @@ export function Navbar() {
         const audio = new Audio("/sound/click.wav");
         audio.volume = 0.2;
         audio.play().catch(e => console.error("Audio play failed", e));
+    };
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        e.stopPropagation();
+        playClickSound();
+
+        const isHashLink = href.startsWith("#");
+        if (isHashLink) {
+            const hash = href;
+            if (pathname !== "/") {
+                router.push(`/${hash}`);
+                setTimeout(() => {
+                    const element = document.querySelector(hash);
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                }, 150);
+            } else {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }
+        } else {
+            router.push(href);
+        }
     };
 
     return (
@@ -117,10 +147,7 @@ export function Navbar() {
                         <a
                             key={link.href}
                             href={link.href}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                playClickSound();
-                            }}
+                            onClick={(e) => handleNavClick(e, link.href)}
                             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent transition-all duration-300 relative group"
                         >
                             {link.href === "#marktentwicklung" && (
@@ -234,8 +261,7 @@ export function Navbar() {
                                                 exit={{ opacity: 0, y: 20 }}
                                                 transition={{ delay: 0.1 + index * 0.1, duration: 0.5, ease: "easeOut" }}
                                                 onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    playClickSound();
+                                                    handleNavClick(e, link.href);
                                                     setIsMobileMenuOpen(false);
                                                 }}
                                                 className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold font-heading text-slate-800 hover:text-accent transition-colors w-full justify-center py-3 px-4 rounded-xl hover:bg-slate-50 active:bg-slate-100"

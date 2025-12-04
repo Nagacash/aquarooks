@@ -34,12 +34,12 @@ const impressionenContent = {
 };
 
 const images = [
-    { src: "/images/gallery/1aqua.png", alt: "Aqua Gallery 1" },
+    { src: "/images/gallery/8aqua.png", alt: "Aqua Gallery 1" },
     { src: "/images/gallery/2aqua.png", alt: "Aqua Gallery 2" },
     { src: "/images/gallery/3aqua.png", alt: "Aqua Gallery 3" },
     { src: "/images/gallery/4aqua.png", alt: "Aqua Gallery 4" },
     { src: "/images/gallery/5aqua.png", alt: "Aqua Gallery 5" },
-    { src: "/images/gallery/water.png", alt: "Water" },
+    { src: "/images/gallery/9aqua.png", alt: "Aqua Gallery Highlight" },
 ];
 
 export function Impressionen() {

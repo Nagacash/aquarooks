@@ -7,7 +7,82 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { useLanguageStore } from "@/store/language-store";
 
-const privacyContent = {
+type PrivacyLanguage = "de" | "en" | "fr";
+
+const privacyContent: Record<PrivacyLanguage, {
+    title: string;
+    subtitle: string;
+    company: {
+        title: string;
+        name: string;
+        address: string;
+        representative: string;
+        contact: string;
+        phone: string;
+        email: string;
+        register: string;
+        registerCourt: string;
+    };
+    responsible: {
+        title: string;
+        name: string;
+        address: string;
+    };
+    disclaimer: {
+        title: string;
+        content: {
+            title: string;
+            text: string;
+        };
+        links: {
+            title: string;
+            text: string;
+        };
+        copyright: {
+            title: string;
+            text: string;
+        };
+    };
+    dataCollection: {
+        title: string;
+        visit: {
+            title: string;
+            text: string;
+            items: string[];
+            purpose: string;
+        };
+        contact: {
+            title: string;
+            text: string;
+        };
+        cookies: {
+            title: string;
+            text: string;
+        };
+        sharing: {
+            title: string;
+            text: string;
+            items: string[];
+        };
+        analytics: {
+            title: string;
+            text: string;
+        };
+        rights: {
+            title: string;
+            text: string;
+            items: string[];
+        };
+        security: {
+            title: string;
+            text: string;
+        };
+        updates: {
+            title: string;
+            text: string;
+        };
+    };
+}> = {
     de: {
         title: "Datenschutzerklärung",
         subtitle: "Schutz Ihrer persönlichen Daten",
@@ -288,7 +363,8 @@ const privacyContent = {
 
 export default function PrivacyPage() {
     const { language } = useLanguageStore();
-    const content = privacyContent[language];
+    const effectiveLanguage: PrivacyLanguage = language === "ru" ? "fr" : language;
+    const content = privacyContent[effectiveLanguage];
     const router = useRouter();
 
     return (
