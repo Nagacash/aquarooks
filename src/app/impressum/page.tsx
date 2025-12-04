@@ -37,7 +37,7 @@ const impressumContent: Record<ImpressumLanguage, {
         company: {
             title: "Firmenangaben",
             name: "AQUA ROOKS S.A.",
-            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            address: "Rodrigue Mahouton Guedou & Oksana Fink, Gründer der Firma / Commune Lac 2 / Canton d`Aklakou, Togo",
             email: "office@aqua-rooks.com",
             phone: "+228 90 62 80 29",
         },
@@ -63,7 +63,7 @@ const impressumContent: Record<ImpressumLanguage, {
         company: {
             title: "Company Information",
             name: "AQUA ROOKS S.A.",
-            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            address: "Rodrigue Mahouton Guedou & Oksana Fink, Company Founders / Commune Lac 2 / Canton d`Aklakou, Togo",
             email: "office@aqua-rooks.com",
             phone: "+228 90 62 80 29",
         },
@@ -89,7 +89,7 @@ const impressumContent: Record<ImpressumLanguage, {
         company: {
             title: "Informations sur l'entreprise",
             name: "AQUA ROOKS S.A.",
-            address: "Rodrigue Mahouton Guedou / Commune Lac 2 / Canton d`Aklakou, Togo",
+            address: "Rodrigue Mahouton Guedou & Oksana Fink, Fondateur de l'entreprise / Commune Lac 2 / Canton d`Aklakou, Togo",
             email: "office@aqua-rooks.com",
             phone: "+228 90 62 80 29",
         },
