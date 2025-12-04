@@ -93,7 +93,7 @@ export function Navbar() {
                         <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/10 to-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                         <Image
                             src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
-                            alt="Aqua Rooks Logo"
+                            alt="AQUA ROOKS Logo"
                             width={140}
                             height={45}
                             className="h-8 w-auto sm:h-10 object-contain transition-all duration-300 drop-shadow-sm group-hover:drop-shadow-md"
@@ -202,7 +202,7 @@ export function Navbar() {
                                 <div className="flex items-center gap-2 sm:gap-3">
                                     <Image
                                         src={isScrolled ? "/images/logos/logo2.png" : "/images/logos/logo1.png"}
-                                        alt="Aqua Rooks Logo"
+                                        alt="AQUA ROOKS Logo"
                                         width={140}
                                         height={45}
                                         className="h-7 w-auto sm:h-9 object-contain"

@@ -64,7 +64,7 @@ const missionContent = {
             {
                 icon: Target,
                 title: "Source naturelle",
-                description: "Protégée dans les bassins d&apos;eau souterrains du sud du Togo, loin de toute pollution environnementale.",
+                description: "Protégée dans les bassins profonds du sud du Togo loin de la pollution environnementale",
             },
             {
                 icon: Heart,
@@ -81,7 +81,7 @@ const missionContent = {
     ru: {
         title: "Наша Миссия",
         subtitle: "Источник Жизни",
-        description: "ROOK'S AQUA добывает, производит и продает природную минеральную воду из тоголезского источника в ПЭТ-бутылках – с акцентом на качество, устойчивость и социальную ответственность.",
+        description: "AQUA ROOKS добывает, производит и продает природную минеральную воду из тоголезского источника в ПЭТ-бутылках – с акцентом на качество, устойчивость и социальную ответственность.",
         values: [
             {
                 icon: Target,
@@ -263,7 +263,7 @@ export function Mission() {
                             <>
                                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
-                                        The company &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
+                                        The company &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Due to social changes and hygiene concerns, as well as numerous diseases caused by the often &quot;unclean&quot; mineral water plastic bags, so-called &quot;Pure Water&quot; bags, demand for clean and controlled drinking water bags (&quot;sachets d&apos;eau minérale&quot;) has increased significantly. To meet this growing demand for the best and cleanest mineral water, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; was founded.
@@ -336,7 +336,7 @@ export function Mission() {
                             <>
                                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
-                                        L&apos;entreprise &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
+                                        L&apos;entreprise &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         En raison des changements sociétaux et des préoccupations hygiéniques, ainsi que de nombreuses maladies causées par les sachets plastiques d&apos;eau minérale souvent &quot;impurs&quot;, appelés sachets &quot;Pure Water&quot;, la demande de sachets d&apos;eau potable propres et contrôlés (&quot;sachets d&apos;eau minérale&quot;) a considérablement augmenté. Pour répondre à cette demande croissante d&apos;eau minérale de la meilleure qualité et la plus propre, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; a été fondée.
@@ -358,7 +358,7 @@ export function Mission() {
                                         &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Rodrigue Guedou Mahouton, Fondateur de l&apos;entreprise
+                                        — Rodrigue Mahouton Guedou &amp; Oksana Fink, Fondateur de l&apos;entreprise
                                     </p>
                                 </div>
 
@@ -409,7 +409,7 @@ export function Mission() {
                             <>
                                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
-                                        Компания &quot;<span className="font-semibold text-primary">ROOK&apos;S AQUA</span>&quot;, основанная в 2023 году, поставила перед собой цель продвигать, производить, продавать и распространять по всей стране высококачественную природную минеральную воду из тоголезского источника для населения в <span className="font-semibold">ПАКЕТАХ</span> (&quot;sachets d&apos;eau minérale&quot; / пластиковые пакеты с минеральной водой) и позже в питьевых бутылках (ПЭТ).
+                                        Компания &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, основанная в 2023 году, поставила перед собой цель продвигать, производить, продавать и распространять по всей стране высококачественную природную минеральную воду из тоголезского источника для населения в <span className="font-semibold">ПАКЕТАХ</span> (&quot;sachets d&apos;eau minérale&quot; / пластиковые пакеты с минеральной водой) и позже в питьевых бутылках (ПЭТ).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Из-за социальных изменений и гигиенических проблем, а также многочисленных заболеваний, вызванных часто &quot;нечистыми&quot; пластиковыми пакетами с минеральной водой, так называемыми пакетами &quot;Pure Water&quot;, спрос на чистые и контролируемые пакеты с питьевой водой (&quot;sachets d&apos;eau minérale&quot;) значительно вырос. Для удовлетворения этого растущего спроса на лучшую и самую чистую минеральную воду была основана &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;.

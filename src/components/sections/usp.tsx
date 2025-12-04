@@ -255,7 +255,7 @@ export function USP() {
                                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
                                                 <div className="flex-1 min-w-0">
                                                     <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
-                                                        des importierten Wassers aus <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (u. a. Coca-Cola, Nestlé) besitzen nachweislich <span className="font-semibold text-accent">nicht die Wasserqualität</span> von ROOK&apos;S AQUA.
+                                                        des importierten Wassers aus <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (u. a. Coca-Cola, Nestlé) besitzen nachweislich <span className="font-semibold text-accent">nicht die Wasserqualität</span> von AQUA ROOKS.
                                                     </p>
                                                 </div>
                                             </div>
@@ -264,11 +264,11 @@ export function USP() {
                                         {/* Main Content */}
                                         <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – das in PET-Flaschen abgefüllte, qualitativ erstklassige Mineralwasser – wird im Durchschnitt <span className="font-semibold text-accent">preisgünstiger als die Importware</span> und dennoch profitabel auf dem togolesischen Markt angeboten.
+                                                <span className="font-semibold text-primary">AQUA ROOKS</span> – das in PET-Flaschen abgefüllte, qualitativ erstklassige Mineralwasser – wird im Durchschnitt <span className="font-semibold text-accent">preisgünstiger als die Importware</span> und dennoch profitabel auf dem togolesischen Markt angeboten.
                                             </p>
                                             
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                Unsere Vision ist es, ROOK&apos;S AQUA zukünftig zu <span className="font-semibold text-primary">der Water Brand</span> im togolesischen Markt für bestes Trink- bzw. Mineralwasser zu machen.
+                                                Unsere Vision ist es, AQUA ROOKS zukünftig zu <span className="font-semibold text-primary">der Water Brand</span> im togolesischen Markt für bestes Trink- bzw. Mineralwasser zu machen.
                                             </p>
                                         </div>
 
@@ -314,7 +314,7 @@ export function USP() {
                                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
                                                 <div className="flex-1 min-w-0">
                                                     <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
-                                                        of imported water from <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (including brands such as Coca-Cola and Nestlé) demonstrably <span className="font-semibold text-accent">does not reach the water quality</span> of ROOK&apos;S AQUA.
+                                                        of imported water from <span className="font-semibold text-primary">Ghana, Benin, Burkina Faso</span> (including brands such as Coca-Cola and Nestlé) demonstrably <span className="font-semibold text-accent">does not reach the water quality</span> of AQUA ROOKS.
                                                     </p>
                                                 </div>
                                             </div>
@@ -323,11 +323,11 @@ export function USP() {
                                         {/* Main Content */}
                                         <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – a premium-quality mineral water bottled in PET – is offered on the Togolese market at, on average, a <span className="font-semibold text-accent">lower price than imported products</span>, while remaining profitable.
+                                                <span className="font-semibold text-primary">AQUA ROOKS</span> – a premium-quality mineral water bottled in PET – is offered on the Togolese market at, on average, a <span className="font-semibold text-accent">lower price than imported products</span>, while remaining profitable.
                                             </p>
                                             
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                Our vision is to make ROOK&apos;S AQUA <span className="font-semibold text-primary">the water brand</span> in the Togolese market for the best drinking and mineral water.
+                                                Our vision is to make AQUA ROOKS <span className="font-semibold text-primary">the water brand</span> in the Togolese market for the best drinking and mineral water.
                                             </p>
                                         </div>
 
@@ -373,7 +373,7 @@ export function USP() {
                                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
                                                 <div className="flex-1 min-w-0">
                                                     <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
-                                                        de l&apos;eau importée du <span className="font-semibold text-primary">Ghana, du Bénin et du Burkina Faso</span> (y compris des marques comme Coca-Cola et Nestlé) <span className="font-semibold text-accent">n&apos;atteignent pas la qualité</span> de l&apos;eau de ROOK&apos;S AQUA.
+                                                        de l&apos;eau importée du <span className="font-semibold text-primary">Ghana, du Bénin et du Burkina Faso</span> (y compris des marques comme Coca-Cola et Nestlé) <span className="font-semibold text-accent">n&apos;atteignent pas la qualité</span> de l&apos;eau de AQUA ROOKS.
                                                     </p>
                                                 </div>
                                             </div>
@@ -382,11 +382,11 @@ export function USP() {
                                         {/* Main Content */}
                                         <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – une eau minérale de première qualité embouteillée en PET – est proposée sur le marché togolais à un prix en moyenne <span className="font-semibold text-accent">inférieur à celui des produits importés</span>, tout en restant rentable.
+                                                <span className="font-semibold text-primary">AQUA ROOKS</span> – une eau minérale de première qualité embouteillée en PET – est proposée sur le marché togolais à un prix en moyenne <span className="font-semibold text-accent">inférieur à celui des produits importés</span>, tout en restant rentable.
                                             </p>
                                             
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                Notre vision est de faire de ROOK&apos;S AQUA <span className="font-semibold text-primary">la marque d&apos;eau de référence</span> sur le marché togolais pour la meilleure eau potable et minérale.
+                                                Notre vision est de faire de AQUA ROOKS <span className="font-semibold text-primary">la marque d&apos;eau de référence</span> sur le marché togolais pour la meilleure eau potable et minérale.
                                             </p>
                                         </div>
 
@@ -432,7 +432,7 @@ export function USP() {
                                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent flex-shrink-0">70%</div>
                                                 <div className="flex-1 min-w-0">
                                                     <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed break-words">
-                                                        импортированной воды из <span className="font-semibold text-primary">Ганы, Бенина и Буркина-Фасо</span> (включая такие бренды, как Coca-Cola и Nestlé) <span className="font-semibold text-accent">не достигает качества</span> воды ROOK&apos;S AQUA.
+                                                        импортированной воды из <span className="font-semibold text-primary">Ганы, Бенина и Буркина-Фасо</span> (включая такие бренды, как Coca-Cola и Nestlé) <span className="font-semibold text-accent">не достигает качества</span> воды AQUA ROOKS.
                                                     </p>
                                                 </div>
                                             </div>
@@ -441,11 +441,11 @@ export function USP() {
                                         {/* Основной контент */}
                                         <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed">
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                <span className="font-semibold text-primary">ROOK&apos;S AQUA</span> – премиальная минеральная вода, разлитая в ПЭТ-бутылки – предлагается на тоголезском рынке по цене в среднем <span className="font-semibold text-accent">ниже, чем импортированные продукты</span>, оставаясь при этом прибыльной.
+                                                <span className="font-semibold text-primary">AQUA ROOKS</span> – премиальная минеральная вода, разлитая в ПЭТ-бутылки – предлагается на тоголезском рынке по цене в среднем <span className="font-semibold text-accent">ниже, чем импортированные продукты</span>, оставаясь при этом прибыльной.
                                             </p>
                                             
                                             <p className="text-sm sm:text-base md:text-lg break-words">
-                                                Наше видение – сделать ROOK&apos;S AQUA <span className="font-semibold text-primary">ведущим брендом воды</span> на тоголезском рынке для лучшей питьевой и минеральной воды.
+                                                Наше видение – сделать AQUA ROOKS <span className="font-semibold text-primary">ведущим брендом воды</span> на тоголезском рынке для лучшей питьевой и минеральной воды.
                                             </p>
                                         </div>
 
@@ -457,7 +457,7 @@ export function USP() {
                                                         key={idx}
                                                         className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 text-center group hover:scale-105 transition-all duration-300"
                                                     >
-                                                        <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                                                        <div className="text-base sm:text-lg md:text-xl font-bold text-primary group-hover:text-accent transition-colors break-words leading-snug">
                                                             {pillar}
                                                         </div>
                                                     </div>

@@ -7,7 +7,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "AQUA ROOKS",
-    alternateName: "ROOK'S AQUA",
+  alternateName: "AQUA ROOKS",
     url: baseUrl,
     logo: `${baseUrl}/images/logos/logo1.png`,
     description:
@@ -28,10 +28,16 @@ export function StructuredData() {
       availableLanguage: ["de", "en", "fr"],
     },
     foundingDate: "2023",
-    founder: {
-      "@type": "Person",
-      name: "Rodrigue Mahouton Guedou",
-    },
+    founders: [
+      {
+        "@type": "Person",
+        name: "Rodrigue Mahouton Guedou",
+      },
+      {
+        "@type": "Person",
+        name: "Oksana Fink",
+      },
+    ],
     areaServed: {
       "@type": "Country",
       name: "Togo",

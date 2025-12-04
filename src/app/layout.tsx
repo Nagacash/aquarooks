@@ -147,7 +147,7 @@ export const metadata: Metadata = {
   description: "AQUA ROOKS - Premium natural mineral water from Togo, West Africa. High-quality bottled water company producing mineral water in PET bottles and sachets. Sustainable water production in Commune Lac 2, Togo. Leading water brand in Togo with superior quality compared to imported water from Ghana, Benin, and Burkina Faso.",
   keywords: [
     "AQUA ROOKS",
-    "ROOK'S AQUA",
+    "AQUA ROOKS",
     "mineral water Togo",
     "bottled water Togo",
     "water company Togo",

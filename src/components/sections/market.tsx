@@ -15,7 +15,7 @@ const marketContent = {
   de: {
     title: "Marktentwicklung",
     subtitle: "Bottled Water in Togo",
-    intro: "Der Markt für abgefülltes Trinkwasser (PET-Flaschen) in Togo wächst dynamisch und bietet großes Potenzial für qualitativ hochwertiges, lokal produziertes Mineralwasser wie ROOK'S AQUA.",
+    intro: "Der Markt für abgefülltes Trinkwasser (PET-Flaschen) in Togo wächst dynamisch und bietet großes Potenzial für qualitativ hochwertiges, lokal produziertes Mineralwasser wie AQUA ROOKS.",
     stats: [
       {
         value: "62,02 Mio. US$",
@@ -68,7 +68,7 @@ const marketContent = {
   en: {
     title: "Market Development",
     subtitle: "Bottled Water in Togo",
-    intro: "The bottled drinking water market (PET bottles) in Togo is growing dynamically and offers strong potential for high-quality, locally produced mineral water such as ROOK'S AQUA.",
+    intro: "The bottled drinking water market (PET bottles) in Togo is growing dynamically and offers strong potential for high-quality, locally produced mineral water such as AQUA ROOKS.",
     stats: [
       {
         value: "USD 62.02M",
@@ -121,7 +121,7 @@ const marketContent = {
   fr: {
     title: "Évolution du marché",
     subtitle: "Eau en bouteille au Togo",
-    intro: "Le marché de l'eau potable en bouteille (bouteilles PET) au Togo est en forte croissance et offre un grand potentiel pour une eau minérale locale de haute qualité comme ROOK'S AQUA.",
+    intro: "Le marché de l'eau potable en bouteille (bouteilles PET) au Togo est en forte croissance et offre un grand potentiel pour une eau minérale locale de haute qualité comme AQUA ROOKS.",
     stats: [
       {
         value: "62,02 M$ US",
@@ -174,7 +174,7 @@ const marketContent = {
   ru: {
     title: "Развитие рынка",
     subtitle: "Вода в бутылках в Того",
-    intro: "Рынок бутилированной питьевой воды (ПЭТ-бутылки) в Того динамично растет и предлагает большой потенциал для высококачественной местной минеральной воды, такой как ROOK'S AQUA.",
+    intro: "Рынок бутилированной питьевой воды (ПЭТ-бутылки) в Того динамично растет и предлагает большой потенциал для высококачественной местной минеральной воды, такой как AQUA ROOKS.",
     stats: [
       {
         value: "62,02 млн $",
@@ -479,9 +479,9 @@ export function Market() {
                 className="relative z-10"
               >
                 <div className="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] xl:max-w-[700px]">
-                  <Image
+                    <Image
                     src="/images/logos/bottle.png"
-                    alt="ROOK'S AQUA PET Bottle"
+                    alt="AQUA ROOKS PET Bottle"
                     width={700}
                     height={1750}
                     className="w-full h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)] filter brightness-105 contrast-110 saturate-105"
@@ -624,13 +624,13 @@ export function Market() {
             <TrendingUp className="w-6 h-6 text-accent" />
             <p className="text-base md:text-lg font-semibold text-foreground text-center">
               {language === "de" &&
-                "ROOK'S AQUA positioniert sich in einem wachsenden Markt mit klaren Qualitäts- und Preisvorteilen."}
+                "AQUA ROOKS positioniert sich in einem wachsenden Markt mit klaren Qualitäts- und Preisvorteilen."}
               {language === "en" &&
-                "ROOK'S AQUA is positioned in a growing market with clear quality and price advantages."}
+                "AQUA ROOKS is positioned in a growing market with clear quality and price advantages."}
               {language === "fr" &&
-                "ROOK'S AQUA se positionne sur un marché en croissance avec des avantages clairs en termes de qualité et de prix."}
+                "AQUA ROOKS se positionne sur un marché en croissance avec des avantages clairs en termes de qualité et de prix."}
               {language === "ru" &&
-                "ROOK'S AQUA позиционируется на растущем рынке с явными преимуществами в качестве и цене."}
+                "AQUA ROOKS позиционируется на растущем рынке с явными преимуществами в качестве и цене."}
             </p>
           </div>
         </motion.div>

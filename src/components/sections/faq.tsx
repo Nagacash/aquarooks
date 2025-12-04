@@ -12,12 +12,12 @@ const faqContent = {
         subtitle: "Wissenswertes",
         items: [
             {
-                question: "Woher kommt das Aqua Rooks Wasser?",
+                question: "Woher kommt das AQUA ROOKS Wasser?",
                 answer: "Unser Wasser entspringt einer geschützten alpinen Quelle in unberührter Natur. Es wird direkt am Quellort abgefüllt, um seine ursprüngliche Reinheit und Mineralisierung zu bewahren."
             },
             {
                 question: "Wie hoch ist der pH-Wert?",
-                answer: "Aqua Rooks hat einen natürlich balancierten pH-Wert von 7,4. Dies entspricht dem pH-Wert des menschlichen Blutes und trägt zu einer optimalen Verträglichkeit bei."
+                answer: "AQUA ROOKS hat einen natürlich balancierten pH-Wert von 7,4. Dies entspricht dem pH-Wert des menschlichen Blutes und trägt zu einer optimalen Verträglichkeit bei."
             },
             {
                 question: "Ist die Verpackung nachhaltig?",
@@ -34,12 +34,12 @@ const faqContent = {
         subtitle: "Good to know",
         items: [
             {
-                question: "Where does Aqua Rooks water come from?",
+                question: "Where does AQUA ROOKS water come from?",
                 answer: "Our water originates from a protected alpine spring in untouched nature. It is bottled directly at the source to preserve its original purity and mineralization."
             },
             {
                 question: "What is the pH level?",
-                answer: "Aqua Rooks has a naturally balanced pH level of 7.4. This corresponds to the pH level of human blood and contributes to optimal tolerability."
+                answer: "AQUA ROOKS has a naturally balanced pH level of 7.4. This corresponds to the pH level of human blood and contributes to optimal tolerability."
             },
             {
                 question: "Is the packaging sustainable?",
@@ -56,12 +56,12 @@ const faqContent = {
         subtitle: "Bon à savoir",
         items: [
             {
-                question: "D'où vient l'eau Aqua Rooks ?",
-                answer: "Notre eau provient d'une source alpine protégée dans une nature intacte. Elle est mise en bouteille directement à la source pour préserver sa pureté et sa minéralisation d'origine."
+                question: "D'où vient l'eau AQUA ROOKS ?",
+                answer: "Notre eau provient d'une source profonde protégée située dans une nature intacte au sud du Togo.",
             },
             {
                 question: "Quel est le niveau de pH ?",
-                answer: "Aqua Rooks a un pH naturellement équilibré de 7,4. Cela correspond au pH du sang humain et contribue à une tolérance optimale."
+                answer: "AQUA ROOKS a un pH naturellement équilibré de 7,4. Cela correspond au pH du sang humain et contribue à une tolérance optimale."
             },
             {
                 question: "L'emballage est-il durable ?",
@@ -69,7 +69,7 @@ const faqContent = {
             },
             {
                 question: "Livrez-vous à l'international ?",
-                answer: "Actuellement, nous nous concentrons sur la région DACH (Allemagne, Autriche, Suisse) pour garantir des trajets de transport courts et une fraîcheur maximale. Cependant, une expansion est prévue."
+                answer: "Actuellement, nous nous concentrons sur la région togolaise afin de garantir des trajets de transport courts et une fraîcheur maximale. Une expansion est toutefois prévue."
             }
         ]
     },
@@ -78,12 +78,12 @@ const faqContent = {
         subtitle: "Полезно знать",
         items: [
             {
-                question: "Откуда берется вода Aqua Rooks?",
+                question: "Откуда берется вода AQUA ROOKS?",
                 answer: "Наша вода берет начало из защищенного альпийского источника в нетронутой природе. Она разливается непосредственно у источника, чтобы сохранить ее первоначальную чистоту и минерализацию."
             },
             {
                 question: "Какой уровень pH?",
-                answer: "Aqua Rooks имеет естественно сбалансированный уровень pH 7,4. Это соответствует уровню pH человеческой крови и способствует оптимальной переносимости."
+                answer: "AQUA ROOKS имеет естественно сбалансированный уровень pH 7,4. Это соответствует уровню pH человеческой крови и способствует оптимальной переносимости."
             },
             {
                 question: "Устойчива ли упаковка?",

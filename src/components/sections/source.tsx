@@ -72,7 +72,7 @@ const sourceContent = {
             {
                 icon: Mountain,
                 title: "Source Naturelle",
-                description: "Protégée dans les montagnes du Togo, loin de la pollution",
+                description: "Protégée dans les bassins profonds du sud du Togo loin de la pollution environnementale",
             },
             {
                 icon: MapPin,
@@ -350,7 +350,7 @@ export function Source() {
                     <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                         <Image
                             src="/images/logos/bottle.png"
-                            alt="ROOK'S AQUA PET Bottle"
+                            alt="AQUA ROOKS PET Bottle"
                             width={500}
                             height={1250}
                             className="w-full h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] filter brightness-105 contrast-110 saturate-105"
