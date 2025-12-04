@@ -212,7 +212,7 @@ export function Mission() {
                                         „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht"
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Rodrigue Guedou Mahouton, Firmengründer
+                                        — Rodrigue Mahouton Guedou & Oksana Fink, Firmengründer
                                     </p>
                                 </div>
 
@@ -285,7 +285,7 @@ export function Mission() {
                                         &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot;
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Rodrigue Guedou Mahouton, Company Founder
+                                        — Rodrigue Mahouton Guedou & Oksana Fink, Company Founders
                                     </p>
                                 </div>
 
@@ -431,7 +431,7 @@ export function Mission() {
                                         &quot;Наша вода, доступная в Atoéta / Commune Lac 2, содержит смесь минералов и питательных веществ, которые фильтруются через песок, глину и известняк, сохраняя ценные микроэлементы с правильным уровнем pH и создавая естественно чистую, высококачественную минеральную воду&quot;
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Родриг Гуэду Маутон, Основатель компании
+                                        — Родриг Маутон Гуэду & Оксана Финк, Основатели компании
                                     </p>
                                 </div>
 
