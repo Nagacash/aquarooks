@@ -188,31 +188,55 @@ export function Mission() {
                     >
                         {language === "de" && (
                             <>
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
                                         Das 2023 gegründete Unternehmen „<span className="font-semibold text-primary">ROOK´S AQUA</span>" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in <span className="font-semibold">SACHETS</span> („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Auf Grund der gesellschaftlichen Veränderungen und der hygienischen Bedenken, nebst zahlreichen Krankheiten, der sehr oft „unsauberen" „Mineralwasser-Plastikbeutel", so genannte „Pure Water"-Beutel, ist die Nachfrage nach sauberen und kontrollierten Trinkwasserbeuteln („sachets d&apos;eau minérale") stark angestiegen. Um diese steigende Nachfrage nach bestem und sauberem Mineralwasser zu bedienen wurde „<span className="font-semibold text-primary">AQUA ROOKS</span>" gegründet.
                                     </p>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
                                         Die dafür erschlossene Quelle auf eigenem Grund in der wasserreichen Region <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> in der Präfektur „LACS AU TOGO" mit seiner ausgezeichneten Wasserqualität ist laut dem geologischen Gutachten der <span className="font-semibold">Université de Lomé / Lamicoda</span> vom April 2023 bestätigt.
                                     </p>
                                     <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
                                         (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                     </p>
+                                    </div>
                                 </div>
 
                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         „Unser in Atoéta / Commune Lac 2, vorhandenes Wasser enthält eine Mischung aus Mineralien und Nährstoffen die durch Sand, Ton, Kalkstein gefiltert werden, wodurch die wertvollen Spurenelemente mit dem richtigen pH-Wert erhalten bleiben und ein natürlich reines, hochwertiges Mineralwasser entsteht"
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Rodrigue Mahouton Guedou & Oksana Fink, Firmengründer
+                                        — Rodrigue Mahouton Guedou &amp; Oksana Fink, Firmengründer
                                     </p>
                                 </div>
 
@@ -261,31 +285,55 @@ export function Mission() {
 
                         {language === "en" && (
                             <>
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
                                         The company &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, founded in 2023, has set itself the goal of promoting, producing, marketing and distributing high-quality natural mineral water from a Togolese source nationwide for the population in <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / mineral water plastic bags) and later in drinking bottles (PET).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Due to social changes and hygiene concerns, as well as numerous diseases caused by the often &quot;unclean&quot; mineral water plastic bags, so-called &quot;Pure Water&quot; bags, demand for clean and controlled drinking water bags (&quot;sachets d&apos;eau minérale&quot;) has increased significantly. To meet this growing demand for the best and cleanest mineral water, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; was founded.
                                     </p>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
                                         The source developed for this purpose on the company&apos;s own land in the water-rich region of <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> in the prefecture &quot;LACS AU TOGO&quot; with its excellent water quality has been confirmed according to the geological report from <span className="font-semibold">Université de Lomé / Lamicoda</span> from April 2023.
                                     </p>
                                     <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
                                         (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                     </p>
+                                    </div>
                                 </div>
 
                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Our water available in Atoéta / Commune Lac 2 contains a mixture of minerals and nutrients that are filtered through sand, clay, and limestone, preserving the valuable trace elements with the right pH value and creating naturally pure, high-quality mineral water,&quot;
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Rodrigue Mahouton Guedou & Oksana Fink, Company Founders
+                                        — Rodrigue Mahouton Guedou &amp; Oksana Fink, Company Founders
                                     </p>
                                 </div>
 
@@ -334,26 +382,50 @@ export function Mission() {
 
                         {language === "fr" && (
                             <>
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
                                         L&apos;entreprise &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, fondée en 2023, s&apos;est fixé pour objectif de promouvoir, produire, commercialiser et distribuer à l&apos;échelle nationale une eau minérale naturelle de première qualité provenant d&apos;une source togolaise pour la population en <span className="font-semibold">SACHETS</span> (&quot;sachets d&apos;eau minérale&quot; / sachets plastiques d&apos;eau minérale) et plus tard en bouteilles de boisson (PET).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         En raison des changements sociétaux et des préoccupations hygiéniques, ainsi que de nombreuses maladies causées par les sachets plastiques d&apos;eau minérale souvent &quot;impurs&quot;, appelés sachets &quot;Pure Water&quot;, la demande de sachets d&apos;eau potable propres et contrôlés (&quot;sachets d&apos;eau minérale&quot;) a considérablement augmenté. Pour répondre à cette demande croissante d&apos;eau minérale de la meilleure qualité et la plus propre, &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot; a été fondée.
                                     </p>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
                                         La source développée à cet effet sur le terrain propre de l&apos;entreprise dans la région riche en eau d&apos;<span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> dans la préfecture &quot;LACS AU TOGO&quot; avec sa qualité d&apos;eau excellente a été confirmée selon le rapport géologique de l&apos;<span className="font-semibold">Université de Lomé / Lamicoda</span> d&apos;avril 2023.
                                     </p>
                                     <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
                                         (Laboratoire de Microbiologie et de Contrôle de Qualité des Denrées Alimentaires (LAMICODA), Université de Lomé, Togo)
                                     </p>
+                                    </div>
                                 </div>
 
                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Notre eau disponible à Atoéta / Commune Lac 2 contient un mélange de minéraux et de nutriments qui sont filtrés à travers le sable, l&apos;argile et le calcaire, préservant les oligo-éléments précieux avec le bon pH et créant une eau minérale naturellement pure et de haute qualité&quot;
                                     </blockquote>
@@ -407,31 +479,55 @@ export function Mission() {
 
                         {language === "ru" && (
                             <>
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg">
+                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/40 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
                                         Компания &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;, основанная в 2023 году, поставила перед собой цель продвигать, производить, продавать и распространять по всей стране высококачественную природную минеральную воду из тоголезского источника для населения в <span className="font-semibold">ПАКЕТАХ</span> (&quot;sachets d&apos;eau minérale&quot; / пластиковые пакеты с минеральной водой) и позже в питьевых бутылках (ПЭТ).
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Из-за социальных изменений и гигиенических проблем, а также многочисленных заболеваний, вызванных часто &quot;нечистыми&quot; пластиковыми пакетами с минеральной водой, так называемыми пакетами &quot;Pure Water&quot;, спрос на чистые и контролируемые пакеты с питьевой водой (&quot;sachets d&apos;eau minérale&quot;) значительно вырос. Для удовлетворения этого растущего спроса на лучшую и самую чистую минеральную воду была основана &quot;<span className="font-semibold text-primary">AQUA ROOKS</span>&quot;.
                                     </p>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg">
+                                <div className="bg-gradient-to-br from-accent/5 via-white/40 to-primary/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-accent/20 shadow-lg relative overflow-hidden">
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
+                                    <div className="pl-6">
                                     <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
                                         Источник, разработанный для этой цели на собственной земле компании в богатом водой регионе <span className="font-semibold">Atoèta-Alaroya / Commune Lac 2</span> в префектуре &quot;LACS AU TOGO&quot; с его отличным качеством воды, был подтвержден согласно геологическому отчету <span className="font-semibold">Университета Ломе / Lamicoda</span> от апреля 2023 года.
                                     </p>
                                     <p className="text-sm text-muted-foreground italic border-l-4 border-accent/30 pl-4">
                                         (Лаборатория микробиологии и контроля качества пищевых продуктов (LAMICODA), Университет Ломе, Того)
                                     </p>
+                                    </div>
                                 </div>
 
                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary/20 shadow-lg relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                    <motion.div 
+                                        className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                        initial={{ height: 0 }}
+                                        whileInView={{ height: "100%" }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
+                                    />
                                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic mb-4 pl-6">
                                         &quot;Наша вода, доступная в Atoéta / Commune Lac 2, содержит смесь минералов и питательных веществ, которые фильтруются через песок, глину и известняк, сохраняя ценные микроэлементы с правильным уровнем pH и создавая естественно чистую, высококачественную минеральную воду&quot;
                                     </blockquote>
                                     <p className="text-base text-muted-foreground font-semibold pl-6">
-                                        — Родриг Маутон Гуэду & Оксана Финк, Основатели компании
+                                        — Родриг Маутон Гуэду &amp; Оксана Финк, Основатели компании
                                     </p>
                                 </div>
 

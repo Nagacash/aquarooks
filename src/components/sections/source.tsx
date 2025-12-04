@@ -418,7 +418,13 @@ export function Source() {
                             </div>
 
                             <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <motion.div 
+                                    className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                    initial={{ height: 0 }}
+                                    whileInView={{ height: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.2, ease: "easeOut" }}
+                                />
                                 <div className="pl-6">
                                     <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
                                         Um sicherzustellen, dass sich die Quelle AQUA ROOKS im Einklang mit dem natürlichen Wasserkreislauf erneuert, sorgen unsere Mitarbeiter und Hydrogeologen für eine <span className="font-semibold">rationelle Bewirtschaftung</span> der Quelle. Und dafür, dass die Ressource in Bezug auf Quantität erhalten und in Bezug auf Qualität geschützt wird.
@@ -520,7 +526,13 @@ export function Source() {
                             </div>
 
                             <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <motion.div 
+                                    className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                    initial={{ height: 0 }}
+                                    whileInView={{ height: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.2, ease: "easeOut" }}
+                                />
                                 <div className="pl-6">
                                     <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
                                         To ensure that the source AQUA ROOKS renews itself in harmony with the natural water cycle, our employees and hydrogeologists ensure <span className="font-semibold">rational management</span> of the source. And that the resource is preserved in terms of quantity and protected in terms of quality.
@@ -622,7 +634,13 @@ export function Source() {
                             </div>
 
                             <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <motion.div 
+                                    className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                    initial={{ height: 0 }}
+                                    whileInView={{ height: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.2, ease: "easeOut" }}
+                                />
                                 <div className="pl-6">
                                     <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
                                         Pour garantir que la source AQUA ROOKS se renouvelle en harmonie avec le cycle naturel de l&apos;eau, nos employés et hydrogéologues assurent une <span className="font-semibold">gestion rationnelle</span> de la source. Et que la ressource soit préservée en termes de quantité et protégée en termes de qualité.
@@ -724,7 +742,13 @@ export function Source() {
                             </div>
 
                             <div className="bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-primary" />
+                                <motion.div 
+                                    className="absolute top-0 left-0 w-1 bg-gradient-to-b from-accent to-primary"
+                                    initial={{ height: 0 }}
+                                    whileInView={{ height: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.2, ease: "easeOut" }}
+                                />
                                 <div className="pl-6">
                                     <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-4">
                                         Чтобы гарантировать, что источник AQUA ROOKS обновляется в гармонии с естественным водным циклом, наши сотрудники и гидрогеологи обеспечивают <span className="font-semibold">рациональное управление</span> источником. И чтобы ресурс сохранялся по количеству и защищался по качеству.

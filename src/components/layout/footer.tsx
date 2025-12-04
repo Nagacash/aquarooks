@@ -33,7 +33,7 @@ const footerContent = {
             terms: "Nutzungsbedingungen",
             imprint: "Impressum",
         },
-        copyright: "© 2024 AQUA ROOKS. Alle Rechte vorbehalten.",
+        copyright: "© 2026 AQUA ROOKS. Alle Rechte vorbehalten.",
     },
     en: {
         company: {
@@ -60,7 +60,7 @@ const footerContent = {
             terms: "Terms of Service",
             imprint: "Imprint",
         },
-        copyright: "© 2024 AQUA ROOKS. All rights reserved.",
+        copyright: "© 2026 AQUA ROOKS. All rights reserved.",
     },
     fr: {
         company: {
@@ -87,7 +87,7 @@ const footerContent = {
             terms: "Conditions d'utilisation",
             imprint: "Mentions légales",
         },
-        copyright: "© 2024 AQUA ROOKS. Tous droits réservés.",
+        copyright: "© 2026 AQUA ROOKS. Tous droits réservés.",
     },
     ru: {
         company: {
@@ -114,7 +114,7 @@ const footerContent = {
             terms: "Условия использования",
             imprint: "Импрессум",
         },
-        copyright: "© 2024 AQUA ROOKS. Все права защищены.",
+        copyright: "© 2026 AQUA ROOKS. Все права защищены.",
     },
 };
 
