@@ -458,7 +458,6 @@ export function Market() {
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-150px" }}
-                transition={{ duration: 0.4 }}
                 animate={{
                   y: [0, -15, 0],
                   rotate: [0, 2, -2, 0],
@@ -578,7 +577,6 @@ export function Market() {
                   initial={{ opacity: 0, scale: 0.8, y: 30 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: "-150px" }}
-                  transition={{ duration: 0.4 }}
                   animate={{
                     y: [0, -12, 0],
                     rotate: [0, -1.5, 1.5, 0],
