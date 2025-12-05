@@ -15,7 +15,7 @@ const missionContent = {
     de: {
         title: "Unsere Mission",
         subtitle: "Quelle des Lebens",
-        description: "ROOK´S AQUA fördert, produziert und vermarktet natürliches Mineralwasser aus togolesischer Quelle in PET-Flaschen – mit Fokus auf Qualität, Nachhaltigkeit und gesellschaftliche Verantwortung.",
+        description: "AQUA ROOKS fördert, produziert und vermarktet natürliches Mineralwasser aus togolesischer Quelle in PET-Flaschen – mit Fokus auf Qualität, Nachhaltigkeit und gesellschaftliche Verantwortung.",
         values: [
             {
                 icon: Target,
@@ -198,7 +198,7 @@ export function Mission() {
                                     />
                                     <div className="pl-6">
                                     <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
-                                        Das 2023 gegründete Unternehmen „<span className="font-semibold text-primary">ROOK´S AQUA</span>" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in <span className="font-semibold">SACHETS</span> („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
+                                        Das 2023 gegründete Unternehmen „<span className="font-semibold text-primary">AQUA ROOKS</span>" hat es sich zum Ziel gemacht, eine Versorgung von qualitativ erstklassigem, natürlichem Mineralwasser aus togolesischer Quelle landesweit für die Bevölkerung zu fördern, zu produzieren und in <span className="font-semibold">SACHETS</span> („sachets d&apos;eau minérale" / Mineralwasser-Plastikbeutel") und später in Trinkflaschen (PET) zu vermarkten und zu distribuieren.
                                     </p>
                                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                                         Auf Grund der gesellschaftlichen Veränderungen und der hygienischen Bedenken, nebst zahlreichen Krankheiten, der sehr oft „unsauberen" „Mineralwasser-Plastikbeutel", so genannte „Pure Water"-Beutel, ist die Nachfrage nach sauberen und kontrollierten Trinkwasserbeuteln („sachets d&apos;eau minérale") stark angestiegen. Um diese steigende Nachfrage nach bestem und sauberem Mineralwasser zu bedienen wurde „<span className="font-semibold text-primary">AQUA ROOKS</span>" gegründet.
